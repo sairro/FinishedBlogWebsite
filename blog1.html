@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigate My Everyday - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #0a1929;
+      }
+
+      .contact-btn {
+        background: #0a1929;
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      }
+
+      .contact-btn:hover {
+        background: #162a3d;
+      }
+
+      .article-section {
+        margin-top: 80px;
+        padding: 64px 48px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .article-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+
+      .article-badge {
+        display: inline-block;
+        background: #0a1929;
+        color: #ffffff;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+
+      .article-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        color: #0a1929;
+      }
+
+      .article-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      .article-container {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      .article-content {
+        margin-bottom: 64px;
+      }
+
+      .content-section {
+        margin-bottom: 48px;
+      }
+
+      .content-section h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #0a1929;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .content-section p {
+        line-height: 1.9;
+        color: #1a1a1a;
+        font-size: 17px;
+        margin-bottom: 20px;
+        text-align: justify;
+        font-weight: 500;
+      }
+
+      .content-section strong {
+        color: #0a1929;
+        font-weight: 700;
+      }
+
+      .section-divider {
+        margin: 48px 0;
+        border: none;
+        height: 1px;
+        background-color: #e5e7eb;
+      }
+
+      .article-footer {
+        margin-top: 64px;
+        padding-top: 40px;
+        border-top: 2px solid #e5e7eb;
+      }
+
+      .author-box {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .author-box h3 {
+        color: #0a1929;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .author-box p {
+        color: #6b7280;
+        font-size: 16px;
+        margin: 4px 0;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 24px;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo-name">
+          <span>Gentle Progress</span>
+        </a>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+          </ul>
+          <a href="index.html#contact" class="contact-btn">Reach</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="article-section">
+      <div class="article-container">
+        <div class="article-header">
+          <span class="article-badge">Blog Story Part 1</span>
+          <h1 class="article-title">Navigate My Everyday</h1>
+          <div class="article-meta">
+            <span>January 9, 2026</span>
+            <span>•</span>
+            <span>4 min read</span>
+            <span>•</span>
+            <span>Ailexander Kylle Cusi</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <div class="content-section">
+            <h2>Overview</h2>
+            <p>
+              As an IT student, technology is an essential part of my everyday
+              life. I rely on different tools to help me study, travel, and stay
+              organized. These tools make my daily tasks easier and more
+              efficient.
+            </p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <div class="content-section">
+            <h2>Dive Deep</h2>
+            <p>
+              One IT tool I cannot live without is
+              <strong>Google Maps.</strong> It helps me navigate unfamiliar
+              places, find the fastest routes, and avoid traffic. As a student
+              who often travels to school and other locations, Google Maps saves
+              me time and reduces stress. I'm a traveler by heart I have gone to
+              several places alone <strong>enjoying solitude,</strong> and most
+              of the time I get lost.
+            </p>
+            <p>
+              I also use Google Maps to look for nearby establishments such as
+              restaurants, stores, and study spots. Especially when I'm in an
+              unfamiliar place to hang out, the reviews and location details
+              help me decide where to go, even if it's a rainy day and I need a
+              place to pass the time.
+            </p>
+            <p>
+              Another benefit of Google Maps is its
+              <strong>real-time updates.</strong> It provides accurate
+              directions and public transportation routes, making my daily
+              commute more convenient.
+            </p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <div class="content-section">
+            <h2>Final Act</h2>
+            <p>
+              Google Maps is more than just a navigation tool for me. It helps
+              me manage my time, move efficiently, and feel more confident when
+              traveling to different places.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-footer">
+          <div class="author-box">
+            <h3>About the Author</h3>
+            <p><strong>Ailexander Kylle Maulion Cusi</strong></p>
+            <p>IT Student, Aspiring Full-Stack Developer</p>
+          </div>
+          <div class="copyright">
+            2026 All Rights Reserved - Ailexander Kylle Cusi
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

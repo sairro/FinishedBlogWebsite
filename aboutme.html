@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #0a1929;
+      }
+
+      .contact-btn {
+        background: #0a1929;
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      }
+
+      .contact-btn:hover {
+        background: #162a3d;
+      }
+
+      .story-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 48px 40px;
+      }
+
+      .page-title {
+        font-size: 48px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .story-section {
+        margin-bottom: 60px;
+      }
+
+      .section-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .section-content p {
+        font-size: 17px;
+        line-height: 1.9;
+        margin-bottom: 20px;
+        color: #1a1a1a;
+        text-align: justify;
+      }
+
+      .section-images {
+        margin: 24px 0;
+      }
+
+      .image-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .image-single {
+        margin-bottom: 24px;
+      }
+
+      .story-image {
+        background: #f3f4f6;
+        border-radius: 8px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .story-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .video-container {
+        background: #000000;
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+      }
+
+      .video-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 9 / 16;
+      }
+
+      .achievements-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .achievements-list li {
+        font-size: 17px;
+        line-height: 1.9;
+        margin-bottom: 12px;
+        padding-left: 24px;
+        position: relative;
+      }
+
+      .achievements-list li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #0a1929;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .shoes-simple-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 24px;
+      }
+
+      .shoe-simple {
+        background: #f3f4f6;
+        border-radius: 8px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .shoe-simple img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hobbies-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .hobbies-list li {
+        font-size: 17px;
+        line-height: 1.9;
+        margin-bottom: 12px;
+        padding-left: 24px;
+        position: relative;
+      }
+
+      .hobbies-list li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #0a1929;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .story-footer {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 30px;
+        border-top: 2px solid #e5e7eb;
+      }
+
+      .story-footer p {
+        font-size: 16px;
+        color: #6b7280;
+        margin-bottom: 24px;
+      }
+
+      .back-btn {
+        display: inline-block;
+        background: #0a1929;
+        color: #ffffff;
+        padding: 12px 32px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo-name">
+          <span>Gentle Progress</span>
+        </a>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#who-i-am">About</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+          </ul>
+          <a href="index.html#contact" class="contact-btn">Reach</a>
+        </div>
+      </div>
+    </nav>
+    <div class="story-container">
+      <h1 class="page-title">Welcome</h1>
+      <section class="story-section" id="who-i-am">
+        <h2 class="section-title">Who I Am</h2>
+        <div class="section-content">
+          <p>
+            Hey guys, welcome to my blog website. This section answers the only
+            question why you're here in the first place, Who am i? i hope you
+            like my website as i put a lot of hours in making this,
+            <strong
+              >to be transparent yes i needed the help of ai tools for some of
+              the css sections</strong
+            >
+            to better understand how i should use each function, feel free to
+            dive deep in this website. Im much more happy to serve you best blog
+            stories about myself. <strong>Godspeed!</strong>
+          </p>
+          <p>
+            Im close to being who i wanna be, A professional Full Stack
+            Developer working in one of the biggest companies working remotely
+            while having the time of my life with the person i value most and i
+            promise the little kid in the home page that i will bring him there
+            by hook or by crook.
+          </p>
+          <p>
+            Delusional Self Belief is prolly one of the reasons why i came so
+            far right now, i may not be there yet but with all i have, what i
+            promised will be.
+          </p>
+        </div>
+        <div class="section-images">
+          <div class="video-container">
+            <video controls preload="auto" playsinline>
+              <source
+                src="video/aboutmevid.mp4"
+                type="video/mp4; codecs=avc1.42E01E,mp4a.40.2"
+              />
+              No Video? Check Internet Connection
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section" id="partner">
+        <h2 class="section-title">My Partner</h2>
+        <div class="section-content">
+          <p>
+            <strong>Angelie zahara Ramos Nate</strong>
+          </p>
+          <p>
+            We met in such an unexpected way and she has been my only love since
+            then, she doesnt know it but shes such a huge impact in my life
+            right now
+          </p>
+        </div>
+        <div class="section-images">
+          <div class="image-single">
+            <div class="story-image">
+              <img src="images/partner1.jpeg" alt="Partner" />
+            </div>
+          </div>
+          <div class="image-row">
+            <div class="story-image">
+              <img src="images/partner2.jpg" alt="Together 1" />
+            </div>
+            <div class="story-image">
+              <img src="images/partner3.jpg" alt="Together 2" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section" id="achievements">
+        <h2 class="section-title">My Achievements</h2>
+        <div class="section-content">
+          <ul class="achievements-list">
+            <li>PMCL North America - Champion</li>
+            <li>PPGL SEASON 2 - Champion (NA)</li>
+            <li>PMNC NA - Champion</li>
+            <li>ACADEMIC ACHIEVER</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="story-section" id="shoes">
+        <h2 class="section-title">My Shoe Collection</h2>
+        <div class="section-content">
+          <p>
+            Feet down to earth, Eyes towards the sun. My passion in collecting
+            shoes has a meaning it means that i need my support as i progress
+            each day
+          </p>
+        </div>
+        <div class="shoes-simple-grid">
+          <div class="shoe-simple">
+            <img src="images/shoes1.png" alt="Shoe 1" />
+          </div>
+          <div class="shoe-simple">
+            <img src="images/shoes2.png" alt="Shoe 2" />
+          </div>
+          <div class="shoe-simple">
+            <img src="images/shoes3.png" alt="Shoe 3" />
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section" id="hobbies">
+        <h2 class="section-title">My Hobbies</h2>
+        <div class="section-content">
+          <ul class="hobbies-list">
+            <li>Gaming - Competitive esports and strategic gameplay</li>
+            <li>Traveling - Exploring new places and embracing solitude</li>
+            <li>
+              Sneaker Collecting - Building a collection of unique and
+              meaningful shoes
+            </li>
+            <li>Coding - Learning new technologies and building projects</li>
+            <li>
+              Football - Making new friends and honing my foot coordination
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="story-footer">
+        <p>Thanks for reading my story.</p>
+        <a href="index.html" class="back-btn">Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>

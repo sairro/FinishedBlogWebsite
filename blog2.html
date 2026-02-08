@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Praise of the Generalist - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #0a1929;
+      }
+
+      .contact-btn {
+        background: #0a1929;
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      }
+
+      .contact-btn:hover {
+        background: #162a3d;
+      }
+
+      .article-section {
+        margin-top: 80px;
+        padding: 64px 48px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .article-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+
+      .article-badge {
+        display: inline-block;
+        background: #0a1929;
+        color: #ffffff;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+
+      .article-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        color: #0a1929;
+      }
+
+      .article-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      .article-container {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      .article-content {
+        margin-bottom: 64px;
+      }
+
+      .content-section {
+        margin-bottom: 48px;
+      }
+
+      .content-section h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #0a1929;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .content-section p {
+        line-height: 1.9;
+        color: #1a1a1a;
+        font-size: 17px;
+        margin-bottom: 20px;
+        text-align: justify;
+        font-weight: 500;
+      }
+
+      .content-section strong {
+        color: #0a1929;
+        font-weight: 700;
+      }
+
+      .achievements-title {
+        font-weight: 700;
+        color: #0a1929;
+        font-size: 16px;
+        margin: 32px 0 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .achievements-list {
+        line-height: 1.8;
+        color: #1a1a1a;
+        font-size: 16px;
+        margin: 16px 0;
+        padding-left: 20px;
+        list-style: none;
+      }
+
+      .achievements-list li {
+        margin-bottom: 8px;
+        padding-left: 24px;
+        position: relative;
+        font-weight: 500;
+      }
+
+      .achievements-list li:before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: #0a1929;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .article-footer {
+        margin-top: 64px;
+        padding-top: 40px;
+        border-top: 2px solid #e5e7eb;
+      }
+
+      .author-box {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .author-box h3 {
+        color: #0a1929;
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .author-box p {
+        color: #6b7280;
+        font-size: 16px;
+        margin: 4px 0;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 24px;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo-name">
+          <span>Gentle Progress</span>
+        </a>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+          </ul>
+          <a href="index.html#contact" class="contact-btn">Reach</a>
+        </div>
+      </div>
+    </nav>
+    <section class="article-section">
+      <div class="article-container">
+        <div class="article-header">
+          <span class="article-badge">Blog Story Part 2</span>
+          <h1 class="article-title">In Praise of the Generalist</h1>
+          <div class="article-meta">
+            <span>January 9, 2026</span>
+            <span>•</span>
+            <span>3 min read</span>
+            <span>•</span>
+            <span>Ailexander Kylle Cusi</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <div class="content-section">
+            <h2>Opening</h2>
+            <p>
+              Siguro you're wondering, why the weird and short title? Actually
+              that sums up <strong>20 years</strong> of my life living in this,
+              no trees (almost, just give a few more years), polluted, poverty
+              on top world. I'm a single entity living peacefully waking up in
+              the morning with the same old coffee in my hand. A warrior with
+              many skills, I possess strength beyond a single blade being
+              poetic, but in reality? I'm just a
+              <strong>Lost kid forged by many paths.</strong> I always think
+              only about balance and the value of many skills, but never the
+              mastery hence, <strong>The Generalist.</strong> I've always wanted
+              to play with kids my age but they all seem to be better than me in
+              their field and then there's me, the so called average, the so
+              called "pwede na yan", it seems like the time where the lime light
+              would be on my feet will never arrive.
+            </p>
+          </div>
+
+          <hr />
+
+          <div class="content-section">
+            <h2>The Details</h2>
+            <p>
+              <strong>I'm a champion,</strong> I have 3 championships on my name
+              sa larong siguro kalahati sa mga kasama ko ngayon hindi nila alam,
+              even tho I'm a <strong>Jack of All Trades,</strong> I seem to
+              balance everything in my life, from playing games to studying and
+              learning how to code properly because that's my chosen field. Okay
+              wait I know you're wondering, what do I mean by meron akong 3
+              championships on my name? well, you're in for a story. Gaming has
+              been one of the most significant parts of my life. What started as
+              a simple hobby eventually became a platform for growth,
+              discipline, and achievement. I dedicated just a bit few hours
+              playing online, learning strategies, improving my skills, and
+              understanding how to work effectively with a team. I became part
+              of a <strong>PUBG Mobile Esports Team called GodPlay</strong> kung
+              saan nakalaro, nakakampi, at nakalaban ko ang mga halimaw sa
+              larangan na pinasok ko, I competed on the North America server.
+              Representing my team and performing in tournaments was both
+              challenging and rewarding. Becoming an esports tournament champion
+              was not just about winning it was about patience, leadership,
+              communication, and resilience. Oh? why did I bother to tell the
+              story? because I believe that adaptation will always be on top
+              against specialization. I adapted through countless pressures,
+              criticism, hell even trashtalk hence,
+              <strong>The Generalist.</strong>
+            </p>
+
+            <p class="achievements-title">
+              ACHIEVEMENTS OVER 1 YEAR OF COMPETITIVE GAMING
+            </p>
+            <ul class="achievements-list">
+              <li>PMCL North America - Champion</li>
+              <li>PPGL SEASON 2 - Champion (NA)</li>
+              <li>PMNC NA - Champion</li>
+              <li>REDBULL MEO SEASON 4 - Top 8 (NA)</li>
+              <li>MINESKI MASTERS TOURNAMENT (PH) - Finalist</li>
+              <li>HOTDROP SERIES 2022 - Top 5</li>
+              <li>PUBGMOBILE SEA GAMES (PH QUALIFIERS) - Top 19</li>
+            </ul>
+          </div>
+
+          <hr />
+
+          <div class="content-section">
+            <h2>Resolution</h2>
+            <p>
+              Looking back at these 20 years, being a
+              <strong>jack of all trades</strong> has shaped me into someone who
+              can adapt to any situation life throws my way. While others may
+              have mastered single skills, I've built a foundation of
+              versatility that allows me to balance gaming championships, coding
+              studies, and everything in between. Sure oo, there were moments
+              when I felt like I was always second best and to be honest, 9
+              times out of ten nafefeel ko, never quite reaching that spotlight
+              I craved, but I've learned that my strength lies in my ability to
+              navigate multiple worlds easily. Through countless pressures,
+              criticism, and challenges, I've discovered that adaptation isn't
+              just a survival skill it's a superpower that keeps me resilient in
+              this damned world. These two decades have taught me that being
+              <strong>"pwede na yan"</strong>
+              in many things is actually more valuable than being perfect in
+              just one, because life demands flexibility, not just expertise.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-footer">
+          <div class="author-box">
+            <h3>About the Author</h3>
+            <p><strong>Ailexander Kylle Maulion Cusi</strong></p>
+            <p>IT Student, Aspiring Full-Stack Developer & Esports Champion</p>
+          </div>
+          <div class="copyright">
+            2026 All Rights Reserved - Ailexander Kylle Cusi
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
