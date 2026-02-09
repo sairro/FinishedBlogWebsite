@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigate My Everyday - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #0a1929;
+      }
+
+      .contact-btn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      }
+
+      .contact-btn:hover {
+        background: #162a3d;
+      }
+
+      .article-section {
+        margin-top: 80px;
+        padding: 64px 48px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .article-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+
+      .article-badge {
+        display: inline-block;
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+
+      .article-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        color: #0a1929;
+      }
+
+      .article-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        color: #6b7280;
+        font-size: 14px;
+      }
+
+      .article-container {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      .article-content {
+        margin-bottom: 64px;
+      }
+
+      .content-section {
+        margin-bottom: 48px;
+      }
+
+      .content-section h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: rgba(10, 25, 41, 1);
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .content-section p {
+        line-height: 1.9;
+        color: #1a1a1a;
+        font-size: 17px;
+        margin-bottom: 20px;
+        text-align: justify;
+        font-weight: 500;
+      }
+
+      .content-section strong {
+        color: rgba(10, 25, 41, 1);
+        font-weight: 700;
+      }
+
+      .section-divider {
+        margin: 48px 0;
+        border: none;
+        height: 1px;
+        background-color: #e5e7eb;
+      }
+
+      .article-footer {
+        margin-top: 64px;
+        padding-top: 40px;
+        border-top: 2px solid #e5e7eb;
+      }
+
+      .author-box {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .author-box h3 {
+        color: rgba(10, 25, 41, 1);
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .author-box p {
+        color: #6b7280;
+        font-size: 16px;
+        margin: 4px 0;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 24px;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .nav-container {
+          padding: 16px 24px;
+        }
+
+        .nav-links {
+          gap: 20px;
+          font-size: 14px;
+        }
+
+        .hero {
+          padding: 32px 24px;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .hero-title {
+          font-size: 36px;
+        }
+
+        .hero-image {
+          height: 300px;
+        }
+
+        .posts-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .expertisegrid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-content {
+          grid-template-columns: 1fr;
+        }
+
+        .featured,
+        .expertise,
+        .contact {
+          padding: 48px 24px;
+        }
+      }
+      .go-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo-name">
+          <span>Gentle Progress</span>
+        </a>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+          </ul>
+          <a href="index.html#contact" class="contact-btn">Reach</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="article-section">
+      <div class="article-container">
+        <div class="article-header">
+          <h1 class="article-title">Biography Section</h1>
+          <div class="article-meta">
+            <span>January 9, 2026</span>
+            <span>•</span>
+            <span>6 min read</span>
+            <span>•</span>
+            <span>Ailexander Kylle Cusi</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+          <div class="content-section">
+            <h2>Childhood Years</h2>
+            <p>
+              <sup>1</sup>I was born in a <strong>small barangay</strong> where
+              everyone knew each other. <sup>2</sup>Growing up, I spent most of
+              my days playing outside with my neighbors. <sup>3</sup>Our street
+              became our playground, filled with running, shouting, and
+              <em>endless laughter</em>. <sup>4</sup>I enjoyed climbing trees
+              even though my mother always told me to be careful.
+              <sup>5</sup>Every afternoon, I looked forward to the sound of the
+              <i>sorbetero’s bell</i>. <sup>6</sup>I loved the simple joy of
+              eating <b>dirty ice cream</b> under the hot sun. <sup>7</sup>My
+              father often brought home <u>pasalubong</u>, and it always made me
+              excited. <sup>8</sup>My mother taught me basic household chores
+              while telling stories about her childhood. <sup>9</sup>I always
+              felt warmth in our home even if it was small. <sup>10</sup>I
+              remember listening to the radio with my grandparents after dinner.
+              <sup>11</sup>Weekend mornings meant going to the
+              <mark>palengke</mark> with my parents. <sup>12</sup>I liked
+              watching the vendors arrange colorful fruits and vegetables.
+              <sup>13</sup>Whenever it rained, my siblings and I played outside
+              and jumped in puddles. <sup>14</sup>At night, I loved staring at
+              the stars because my grandmother said each one had a story.
+              <sup>15</sup>I enjoyed helping my father water the plants in our
+              tiny garden. <sup>16</sup>Sometimes, I pretended to be a superhero
+              while running around the house. <sup>17</sup>I also loved joining
+              the barangay fiestas every year, amazed by the colorful parols and
+              street decorations. <sup>18</sup>I remember helping my mother cook
+              <em>puto</em> and <em>bibingka</em> for the neighbors.
+              <sup>19</sup>On Sundays, we went to the chapel, and I loved the
+              sound of church bells. <sup>20</sup>Those moments taught me
+              kindness, gratitude, and the value of community.
+            </p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <div class="content-section">
+            <h2>Teenage Years</h2>
+            <p>
+              <sup>1</sup>My teenage years were filled with big changes and new
+              challenges. <sup>2</sup>I started to become more aware of my
+              responsibilities. <sup>3</sup>High school life felt exciting but
+              stressful at the same time. <sup>4</sup>I met new friends who
+              understood my personality. <sup>5</sup>We loved hanging out after
+              class even if we didn’t have much money. <sup>6</sup>I learned how
+              important it was to balance fun and schoolwork. <sup>7</sup>There
+              were days when I felt pressured to get good grades. <sup>8</sup>My
+              parents always reminded me to stay focused and patient.
+              <sup>9</sup>I joined different school activities to explore my
+              interests. <sup>10</sup>Sometimes, I struggled with
+              self-confidence. <sup>11</sup>I experienced my first crush during
+              those years, which made my heart race and my days brighter.
+              <sup>12</sup>I joined the school’s cultural dance club and
+              performed during Independence Day celebrations.
+              <sup>13</sup>Sometimes, I stayed after class to tutor younger
+              students in math and Filipino. <sup>14</sup>I discovered that
+              helping others gave me a sense of pride and accomplishment.
+              <sup>15</sup>My weekends were often spent at the basketball court,
+              practicing with friends. <sup>16</sup>I loved attending Simbang
+              Gabi during Christmas with my family, feeling connected to my
+              Filipino roots. <sup>17</sup>I sometimes felt anxious about
+              fitting in, but I learned to embrace my uniqueness. <sup>18</sup>I
+              experimented with hobbies like sketching and writing short
+              stories. <sup>19</sup>Teenage life taught me resilience,
+              creativity, and self-awareness. <sup>20</sup>By the end of high
+              school, I felt more ready to face the challenges of the future.
+            </p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <div class="content-section">
+            <h2>College Years</h2>
+            <p>
+              <sup>1</sup>College life felt like entering a completely different
+              world. <sup>2</sup>I was excited but nervous on my first day.
+              <sup>3</sup>Everything looked bigger and more overwhelming than
+              high school. <sup>4</sup>I met classmates from various places in
+              the Philippines. <sup>5</sup>We bonded over group projects,
+              late-night studying, and shared struggles. <sup>6</sup>I learned
+              to manage my time more wisely. <sup>7</sup>There were days when I
+              barely slept because of deadlines. <sup>8</sup>I experienced
+              moments when I doubted my abilities but pushed myself to keep
+              going. <sup>9</sup>I joined organizations that helped me grow
+              socially and academically. <sup>10</sup>College taught me that
+              mistakes are part of learning. <sup>11</sup>I discovered my
+              passion for technology and coding through challenging assignments.
+              <sup>12</sup>I sometimes cooked simple meals in the dorm, like
+              sinigang or adobo, and shared them with friends. <sup>13</sup>I
+              made lifelong friends who became like siblings, supporting me
+              emotionally and academically. <sup>14</sup>I learned to budget my
+              allowance carefully, prioritizing essentials over wants.
+              <sup>15</sup>College allowed me to travel for competitions and
+              events, experiencing places I had never visited before.
+              <sup>16</sup>I sometimes volunteered in outreach programs, helping
+              local communities and teaching kids basic skills. <sup>17</sup>I
+              learned to handle stress through meditation, journaling, or
+              listening to music. <sup>18</sup>I became more confident in
+              presenting my ideas in class. <sup>19</sup>I appreciated the
+              diversity around me, learning about traditions, languages, and
+              cultures from different parts of the Philippines. <sup>20</sup>By
+              the end of college, I felt ready to face the challenges of the
+              real world, carrying memories, friendships, and lessons that would
+              stay with me forever.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-footer">
+          <div class="author-box">
+            <h3>About the Author</h3>
+            <p><strong>Ailexander Kylle Maulion Cusi</strong></p>
+            <p>IT Student, Aspiring Full-Stack Developer</p>
+          </div>
+          <div class="copyright">
+            2026 All Rights Reserved - Ailexander Kylle Cusi
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#top" class="go-to-top">↑</a>
+  </body>
+</html>

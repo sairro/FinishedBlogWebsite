@@ -18,6 +18,10 @@
         line-height: 1.6;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       nav {
         position: fixed;
         top: 0;
@@ -72,7 +76,7 @@
       }
 
       .contact-btn {
-        background: #0a1929;
+        background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
         border-radius: 25px;
@@ -102,7 +106,7 @@
 
       .article-badge {
         display: inline-block;
-        background: #0a1929;
+        background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 8px 20px;
         border-radius: 20px;
@@ -144,7 +148,7 @@
       .content-section h2 {
         font-size: 32px;
         font-weight: 700;
-        color: #0a1929;
+        color: rgba(10, 25, 41, 1);
         margin-bottom: 24px;
         padding-bottom: 12px;
         border-bottom: 2px solid #e5e7eb;
@@ -160,7 +164,7 @@
       }
 
       .content-section strong {
-        color: #0a1929;
+        color: rgba(10, 25, 41, 1);
         font-weight: 700;
       }
 
@@ -183,7 +187,7 @@
       }
 
       .author-box h3 {
-        color: #0a1929;
+        color: rgba(10, 25, 41, 1);
         font-size: 20px;
         margin-bottom: 12px;
       }
@@ -248,9 +252,30 @@
           padding: 48px 24px;
         }
       }
+
+      .go-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
     </style>
   </head>
   <body>
+    <div id="top"></div>
     <nav>
       <div class="nav-container">
         <a href="index.html" class="logo-name">
@@ -344,5 +369,7 @@
         </div>
       </div>
     </section>
+
+    <a href="#top" class="go-to-top">↑</a>
   </body>
 </html>

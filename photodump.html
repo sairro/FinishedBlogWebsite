@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Dump - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .contact-btn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+
+      .photo-dump {
+        margin-top: 80px;
+        padding: 64px 48px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-header {
+        margin-bottom: 48px;
+      }
+
+      .section-title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1a1a1a;
+      }
+
+      .section-subtitle {
+        color: #6b7280;
+        font-size: 16px;
+        margin-top: 8px;
+      }
+
+      .photos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 33.333%);
+        gap: 32px;
+      }
+
+      .photo-card {
+        background: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .photo-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .photo-image {
+        width: 100%;
+        height: 280px;
+        background: #f3f4f6;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .photo-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .photo-badge {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .photo-content {
+        padding: 24px;
+        text-decoration: none;
+      }
+
+      .photo-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+        line-height: 1.4;
+        text-decoration: none;
+      }
+
+      .photo-description {
+        color: #6b7280;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .photo-date {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #0a1929;
+        font-size: 14px;
+      }
+
+      .back-button {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 32px;
+      }
+
+      .anchor-text {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      @media (max-width: 768px) {
+        .nav-container {
+          padding: 16px 24px;
+        }
+
+        .nav-links {
+          gap: 20px;
+          font-size: 14px;
+        }
+
+        .photo-dump {
+          padding: 32px 24px;
+        }
+
+        .photos-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo-name">
+          <span>Gentle Progress</span>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contact-btn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="photo-dump">
+      <div class="section-header">
+        <h2 class="section-title">Photo Dump</h2>
+        <p class="section-subtitle">Moments captured along the way.</p>
+      </div>
+
+      <div class="photos-grid">
+        <article class="photo-card">
+          <a href="selfies.html" class="anchor-text"
+            ><div class="photo-image">
+              <img src="images/selfies/photo14.jpg" alt="Photo 1" />
+              <span class="photo-badge">Me</span>
+            </div>
+            <div class="photo-content">
+              <h3 class="photo-title">Selfies</h3>
+              <p class="photo-description">This is just me, nothing special.</p>
+            </div></a
+          >
+        </article>
+
+        <article class="photo-card">
+          <a href="footballsection.html" class="anchor-text"
+            ><div class="photo-image">
+              <img src="images/football/f2.jpeg" alt="Photo 2" />
+              <span class="photo-badge">Hobby</span>
+            </div>
+            <div class="photo-content">
+              <h3 class="photo-title">Footy</h3>
+              <p class="photo-description">
+                This is just the sport i love playing.
+              </p>
+            </div></a
+          >
+        </article>
+
+        <article class="photo-card">
+          <a href="randomdump.html" class="anchor-text"
+            ><div class="photo-image">
+              <img src="images/randomphotodump/photo3.jpeg" alt="Photo 4" />
+              <span class="photo-badge">Randoms</span>
+            </div>
+            <div class="photo-content">
+              <h3 class="photo-title">Random Flicks Yehurd</h3>
+              <p class="photo-description">
+                Basically nonsense photos i take on a daily.
+              </p>
+            </div></a
+          >
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
