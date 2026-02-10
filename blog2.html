@@ -250,6 +250,34 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         z-index: 999;
       }
+
+      .next-page {
+        text-decoration: none;
+      }
+
+      .posts-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 32px;
+        position: inherit;
+      }
+
+      .img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        object-fit: cover;
+      }
+
+      .post-image {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+      }
     </style>
   </head>
   <body>
@@ -371,6 +399,32 @@
               in many things is actually more valuable than being perfect in
               just one, because life demands flexibility, not just expertise.
             </p>
+          </div>
+
+          <div class="posts-grid">
+            <article class="post-card-1">
+              <div class="post-image">
+                <a href="images/generalist/gen1.png" target="_blank">
+                  <img
+                    src="images/generalist/gen1.png"
+                    class="img"
+                    title="football"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="post-card-1">
+              <div class="post-image">
+                <a href="images/generalist/gen2.png" target="_blank">
+                  <img
+                    src="images/generalist/gen2.png"
+                    class="img"
+                    title="gym"
+                  />
+                </a>
+              </div>
+            </article>
           </div>
         </div>
 

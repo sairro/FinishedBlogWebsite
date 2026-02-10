@@ -265,6 +265,34 @@
         transition: all 0.3s ease;
         z-index: 999;
       }
+
+      .next-page {
+        text-decoration: none;
+      }
+
+      .posts-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 32px;
+        position: inherit;
+      }
+
+      .img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        object-fit: cover;
+      }
+
+      .post-image {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+      }
     </style>
   </head>
   <body>
@@ -369,6 +397,32 @@
               effort and perseverance, I am confident that I can turn my goals
               into reality.
             </p>
+          </div>
+
+          <div class="posts-grid">
+            <article class="post-card-1">
+              <div class="post-image">
+                <a href="images/tech/techtech.PNG" target="_blank">
+                  <img
+                    src="images/tech/techtech.PNG"
+                    class="img"
+                    title="cable and wires"
+                  />
+                </a>
+              </div>
+            </article>
+
+            <article class="post-card-1">
+              <div class="post-image">
+                <a href="images/tech/tech123.PNG" target="_blank">
+                  <img
+                    src="images/tech/tech123.PNG"
+                    class="img"
+                    title="codes and stuff"
+                  />
+                </a>
+              </div>
+            </article>
           </div>
         </div>
 
