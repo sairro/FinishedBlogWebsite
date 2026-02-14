@@ -168,6 +168,7 @@
         height: auto;
         display: block;
         aspect-ratio: 9 / 16;
+        object-fit: cover;
       }
 
       .achievements-list {
@@ -306,6 +307,10 @@
           padding: 48px 24px;
         }
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
   <body>
@@ -320,6 +325,8 @@
             <li><a href="#who-i-am">About</a></li>
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="beats.html">Beats</a></li>
           </ul>
           <a href="index.html#contact" class="contact-btn">Reach</a>
         </div>
@@ -357,7 +364,12 @@
         </div>
         <div class="section-images">
           <div class="video-container">
-            <video controls preload="auto" playsinline>
+            <video
+              controls
+              preload="auto"
+              playsinline
+              poster="images/selfies/thumbnail.jpeg"
+            >
               <source
                 src="video/aboutmevid.mp4"
                 type="video/mp4; codecs=avc1.42E01E,mp4a.40.2"
@@ -372,7 +384,7 @@
         <h2 class="section-title">My Partner</h2>
         <div class="section-content">
           <p>
-            <strong>Angelie zahara Ramos Nate</strong>
+            <strong>Angelie Zahara Ramos Nate</strong>
           </p>
           <p>
             We met in such an unexpected way and she has been my only love since

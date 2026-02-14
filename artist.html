@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head target="saiphoto">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Dump - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .contact-btn {
+        background: #0a1929;
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+
+      .photo-dump {
+        margin-top: 80px;
+        padding: 64px 48px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-header {
+        margin-bottom: 48px;
+      }
+
+      .section-title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1a1a1a;
+      }
+
+      .section-subtitle {
+        color: #6b7280;
+        font-size: 16px;
+        margin-top: 8px;
+      }
+
+      .photos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        gap: 150px 100px;
+        justify-content: center;
+      }
+
+      .photo-card {
+        background: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .photo-image {
+        width: 100%;
+        height: 280px;
+        background: #f3f4f6;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .photo-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .photo-badge {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .photo-content {
+        padding: 24px;
+      }
+
+      .photo-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+
+      .photo-description {
+        color: #6b7280;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .photo-date {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #0a1929;
+        font-size: 14px;
+      }
+
+      .back-button {
+        background: #0a1929;
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 32px;
+      }
+
+      @media (max-width: 768px) {
+        .nav-container {
+          padding: 16px 24px;
+        }
+
+        .nav-links {
+          gap: 20px;
+          font-size: 14px;
+        }
+
+        .photo-dump {
+          padding: 32px 24px;
+        }
+
+        .photos-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 32px;
+        }
+      }
+
+      .go-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top"></div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo-name">
+          <span>Gentle Progress</span>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="beats.html">Beats</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contact-btn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="photo-dump">
+      <div class="photos-grid">
+        <article class="photo-card">
+          <a href="images/listofartist/artist1.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist1.JPG"
+                alt="Photo 1"
+                title="Football Photo 1"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Kendrick Lamar</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist2.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist2.JPG"
+                alt="Photo 2"
+                title="Football Photo 2"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Drake</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist3.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist3.JPG"
+                alt="Photo 3"
+                title="Football Photo 3"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Gunna</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist4.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist4.JPG"
+                alt="Photo 4"
+                title="Football Photo 4"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">plaqueboymax</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist5.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist5.JPG"
+                alt="Photo 5"
+                title="Football Photo 5"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Chief Keef</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist6.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist6.JPG"
+                alt="Photo 6"
+                title="Football Photo 6"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Brent Faiyaz</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist7.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist7.JPG"
+                alt="Photo 6"
+                title="Football Photo 7"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Bryson Tiller</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist8.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist8.JPG"
+                alt="Photo 6"
+                title="Football Photo 8"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Schoolboy Q</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/astist9.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/astist9.JPG"
+                alt="Photo 6"
+                title="Football Photo 9"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Tory Lanez</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist10.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist10.JPG"
+                alt="Photo 6"
+                title="Football Photo 10"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Future</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist11.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist11.JPG"
+                alt="Photo 6"
+                title="Football Photo 10"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Summer Walker</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+        <article class="photo-card">
+          <a href="images/listofartist/artist12.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist12.JPG"
+                alt="Photo 6"
+                title="Football Photo 10"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Jhene Aiko</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist17.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist17.JPG"
+                alt="Photo 6"
+                title="Football Photo 10"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Ama Louise</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist16.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist16.JPG"
+                alt="Photo 6"
+                title="Football Photo 10"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Chase Shakur</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+
+        <article class="photo-card">
+          <a href="images/listofartist/artist15.JPG" target="saiWin"
+            ><div class="photo-image">
+              <img
+                src="images/listofartist/artist15.JPG"
+                alt="Photo 6"
+                title="Football Photo 10"
+              /></div
+          ></a>
+
+          <div class="photo-content">
+            <h3 class="photo-title">Mariah The Scientist</h3>
+            <div class="photo-date"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <a href="#top" class="go-to-top">↑</a>
+  </body>
+</html>

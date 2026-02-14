@@ -96,7 +96,6 @@
         grid-template-columns: 50% 50%;
         gap: 64px;
         align-items: center;
-        min-height: 70vh;
       }
 
       .hero-text {
@@ -173,8 +172,10 @@
         border-radius: 16px;
         overflow: hidden;
         height: 500px;
-        background: #f3f4f6;
+        background: #000000;
         display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .hero-image img {
@@ -182,6 +183,14 @@
         height: 100%;
         object-fit: cover;
         display: block;
+      }
+
+      .hero-image video[poster] {
+        object-fit: cover;
+      }
+
+      .hero-image video:not([poster]) {
+        object-fit: contain;
       }
 
       .featured {
@@ -520,6 +529,10 @@
           padding: 48px 24px;
         }
       }
+
+      .hero-image video::before {
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
@@ -534,6 +547,7 @@
             <li class="blogs-button"><a href="#post-1">Blogs</a></li>
             <li><a href="#expertise">Expertise</a></li>
             <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="beats.html">Beats</a></li>
           </ul>
           <a href="#contact"><button class="contact-btn">Reach</button></a>
         </div>
@@ -565,10 +579,14 @@
             <a href="aboutme.html" class="btn-secondary">Learn More About Me</a>
           </div>
         </div>
-        <a href="images/stolen.png" target="_blank"
-          ><div class="hero-image">
-            <img src="images/stolen.png" alt="heroimg" width="300" /></div
-        ></a>
+
+        <div class="hero-image">
+          <img
+            src="images/stolen.png"
+            alt="stolen photo of me"
+            title="Stolen Photo of me"
+          />
+        </div>
       </div>
     </section>
 
