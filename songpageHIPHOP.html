@@ -114,19 +114,25 @@
 
       .album-section {
         display: grid;
-        grid-template-columns: 180px 1fr;
-        gap: 32px;
+        grid-template-columns: 400px 1fr;
+        gap: 150px;
         background: white;
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         padding: 24px;
-        align-items: center;
+        align-items: start;
+      }
+
+      .artist-column {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
 
       .album-cover {
-        width: 180px;
-        height: 180px;
+        width: 400px;
+        height: 400px;
         background: #f5f5f5;
         border-radius: 12px;
         display: flex;
@@ -136,7 +142,7 @@
         font-size: 14px;
         font-weight: 500;
         flex-shrink: 0;
-        border: 1px solid #e5e5e5;
+        overflow: hidden;
       }
 
       .album-cover img {
@@ -144,6 +150,23 @@
         height: 100%;
         object-fit: cover;
         border-radius: 12px;
+      }
+
+      .artist-info {
+        padding: 0;
+      }
+
+      .artist-name {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 8px;
+      }
+
+      .artist-description {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.6;
       }
 
       .songs-list {
@@ -158,6 +181,10 @@
         border-radius: 12px;
         border-left: 4px solid #1a1a1a;
         transition: all 0.3s ease;
+      }
+
+      .song-item:last-child {
+        margin-bottom: 0;
       }
 
       .song-header {
@@ -205,16 +232,25 @@
         height: 32px;
       }
 
+      @media (max-width: 1024px) {
+        .album-section {
+          grid-template-columns: 300px 1fr;
+        }
+
+        .album-cover {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
       @media (max-width: 768px) {
         .album-section {
           grid-template-columns: 1fr;
-          gap: 24px;
         }
 
         .album-cover {
           width: 100%;
-          height: 200px;
-          margin: 0 auto;
+          height: 300px;
         }
 
         .header h1 {
@@ -246,6 +282,10 @@
         .song-artist,
         .song-description {
           margin-left: 28px;
+        }
+
+        .album-cover {
+          height: 250px;
         }
       }
 
@@ -301,8 +341,17 @@
 
         <div class="songs-grid">
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist3.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img src="images/listofartist/artist3.JPG" alt="Gunna" />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Gunna</h2>
+                <p class="artist-description">
+                  Atlanta's melodic trap virtuoso, known for his smooth flows
+                  and luxurious lifestyle anthems.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -359,8 +408,20 @@
           </div>
 
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist1.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img
+                  src="images/listofartist/artist1.JPG"
+                  alt="Kendrick Lamar"
+                />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Kendrick Lamar</h2>
+                <p class="artist-description">
+                  Pulitzer Prize-winning lyricist from Compton, widely regarded
+                  as one of the greatest rappers of all time.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -385,7 +446,7 @@
                   <span class="song-number">02</span>
                   <h3 class="song-title">Reincarnated</h3>
                 </div>
-                <p class="song-artist">kendrick Lamar</p>
+                <p class="song-artist">Kendrick Lamar</p>
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -402,7 +463,7 @@
                   <span class="song-number">03</span>
                   <h3 class="song-title">Man At The Garden</h3>
                 </div>
-                <p class="song-artist">Keandrick Lamar</p>
+                <p class="song-artist">Kendrick Lamar</p>
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -415,9 +476,19 @@
               </div>
             </div>
           </div>
+
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist2.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img src="images/listofartist/artist2.JPG" alt="Drake" />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Drake</h2>
+                <p class="artist-description">
+                  Toronto's global superstar who seamlessly blends rap and R&B
+                  with introspective lyrics and catchy hooks.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -426,7 +497,6 @@
                   <h3 class="song-title">Polar Opposites</h3>
                 </div>
                 <p class="song-artist">Drake</p>
-
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -444,7 +514,6 @@
                   <h3 class="song-title">Papi's Home</h3>
                 </div>
                 <p class="song-artist">Drake</p>
-
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -474,9 +543,19 @@
               </div>
             </div>
           </div>
+
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist4.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img src="images/listofartist/artist4.JPG" alt="plaqueboymax" />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">plaqueboymax</h2>
+                <p class="artist-description">
+                  Rising underground sensation from Detroit, bringing fresh raw
+                  energy and distinctive voice to hip-hop.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -485,7 +564,6 @@
                   <h3 class="song-title">Glacier</h3>
                 </div>
                 <p class="song-artist">plaqueboymax</p>
-
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -534,8 +612,17 @@
           </div>
 
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist20.png" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img src="images/listofartist/artist5.JPG" alt="Chief Keef" />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Chief Keef</h2>
+                <p class="artist-description">
+                  Chicago drill pioneer who revolutionized trap music and
+                  influenced an entire generation of rappers.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">

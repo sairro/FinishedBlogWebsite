@@ -114,19 +114,25 @@
 
       .album-section {
         display: grid;
-        grid-template-columns: 180px 1fr;
-        gap: 32px;
+        grid-template-columns: 400px 1fr;
+        gap: 150px;
         background: white;
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         padding: 24px;
-        align-items: center;
+        align-items: start;
+      }
+
+      .artist-column {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
 
       .album-cover {
-        width: 180px;
-        height: 180px;
+        width: 400px;
+        height: 400px;
         background: #f5f5f5;
         border-radius: 12px;
         display: flex;
@@ -136,7 +142,7 @@
         font-size: 14px;
         font-weight: 500;
         flex-shrink: 0;
-        border: 1px solid #e5e5e5;
+        overflow: hidden;
       }
 
       .album-cover img {
@@ -144,6 +150,23 @@
         height: 100%;
         object-fit: cover;
         border-radius: 12px;
+      }
+
+      .artist-info {
+        padding: 0;
+      }
+
+      .artist-name {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 8px;
+      }
+
+      .artist-description {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.6;
       }
 
       .songs-list {
@@ -158,6 +181,10 @@
         border-radius: 12px;
         border-left: 4px solid #1a1a1a;
         transition: all 0.3s ease;
+      }
+
+      .song-item:last-child {
+        margin-bottom: 0;
       }
 
       .song-header {
@@ -205,16 +232,25 @@
         height: 32px;
       }
 
+      @media (max-width: 1024px) {
+        .album-section {
+          grid-template-columns: 300px 1fr;
+        }
+
+        .album-cover {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
       @media (max-width: 768px) {
         .album-section {
           grid-template-columns: 1fr;
-          gap: 24px;
         }
 
         .album-cover {
           width: 100%;
-          height: 200px;
-          margin: 0 auto;
+          height: 300px;
         }
 
         .header h1 {
@@ -246,6 +282,10 @@
         .song-artist,
         .song-description {
           margin-left: 28px;
+        }
+
+        .album-cover {
+          height: 250px;
         }
       }
 
@@ -301,8 +341,17 @@
 
         <div class="songs-grid">
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist10.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img src="images/listofartist/artist10.JPG" alt="Future" />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Future</h2>
+                <p class="artist-description">
+                  Atlanta trap icon blending melodic hooks with hard-hitting
+                  production, pioneering the modern sound of hip-hop.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -359,8 +408,17 @@
           </div>
 
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist6.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img src="images/listofartist/artist6.JPG" alt="Brent Faiyaz" />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Brent Faiyaz</h2>
+                <p class="artist-description">
+                  Maryland's sultry R&B crooner with a distinctive voice,
+                  crafting intimate tracks about love and heartbreak.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -415,9 +473,22 @@
               </div>
             </div>
           </div>
+
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist7.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img
+                  src="images/listofartist/artist7.JPG"
+                  alt="Bryson Tiller"
+                />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Bryson Tiller</h2>
+                <p class="artist-description">
+                  Louisville's trapsoul pioneer who redefined R&B by fusing
+                  emotional vulnerability with hip-hop influenced beats.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -426,7 +497,6 @@
                   <h3 class="song-title">Outta Time</h3>
                 </div>
                 <p class="song-artist">Bryson Tiller</p>
-
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -444,7 +514,6 @@
                   <h3 class="song-title">Attention</h3>
                 </div>
                 <p class="song-artist">Bryson Tiller</p>
-
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -474,9 +543,19 @@
               </div>
             </div>
           </div>
+
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist8.JPG" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img src="images/listofartist/artist8.JPG" alt="Schoolboy Q" />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">Schoolboy Q</h2>
+                <p class="artist-description">
+                  West Coast rapper from TDE bringing gritty street narratives
+                  with infectious energy and dynamic production.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
@@ -485,7 +564,6 @@
                   <h3 class="song-title">Man Of THe Year</h3>
                 </div>
                 <p class="song-artist">Schoolboy Q</p>
-
                 <div class="song-audio">
                   <audio controls>
                     <source
@@ -534,8 +612,20 @@
           </div>
 
           <div class="album-section">
-            <div class="album-cover">
-              <img src="images/listofartist/artist20.png" alt="" />
+            <div class="artist-column">
+              <div class="album-cover">
+                <img
+                  src="images/listofartist/artist20.png"
+                  alt="PartyNextDoor"
+                />
+              </div>
+              <div class="artist-info">
+                <h2 class="artist-name">PartyNextDoor</h2>
+                <p class="artist-description">
+                  OVO's atmospheric R&B producer and singer creating moody,
+                  late-night vibes with sultry vocals and minimal beats.
+                </p>
+              </div>
             </div>
             <div class="songs-list">
               <div class="song-item">
