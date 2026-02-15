@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Film Movies - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .header h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .header p {
+        font-size: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlist-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .playlist-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .playlist-card:nth-child(even) {
+        direction: rtl;
+      }
+
+      .playlist-card:nth-child(even) > * {
+        direction: ltr;
+      }
+
+      .playlist-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .playlist-content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .playlist-title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlist-description {
+        font-size: 15px;
+        color: rgba(10, 25, 41, 1);
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .movie-meta {
+        font-size: 14px;
+        color: rgba(10, 25, 41, 0.8);
+        margin-bottom: 8px;
+      }
+
+      .movie-meta strong {
+        font-weight: 600;
+      }
+
+      .playlist-footer {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .view-button {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 12px 28px;
+        border-radius: 25px;
+        border: none;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .view-button:hover {
+        background: #333;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .contact-btn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 36px;
+        }
+
+        .playlist-card {
+          grid-template-columns: 1fr;
+        }
+
+        .playlist-card:nth-child(even) {
+          direction: ltr;
+        }
+
+        .playlist-content {
+          padding: 24px;
+        }
+
+        .playlist-title {
+          font-size: 24px;
+        }
+
+        .playlist-image {
+          height: 250px;
+        }
+      }
+
+      .viewplaylist {
+        color: white;
+        text-decoration: none;
+      }
+
+      .go-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <nav>
+      <div class="nav-container">
+        <div class="logo-name">
+          <span>Gentle Progress</span>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="beats.html">Beats</a></li>
+            <li><a href="choosecategory.html">Films</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contact-btn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="my-beats">
+      <div class="container">
+        <div class="header">
+          <h1>Horror</h1>
+          <p>None but heart attacks</p>
+        </div>
+
+        <div class="playlist-grid">
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img
+                src="images/moviesposter/bringherback.JPG"
+                alt="Bring Her Back"
+              />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">Bring Her Back</h2>
+              <p class="playlist-description">
+                After the tragic death of her young daughter, a grief-stricken
+                woman discovers an ancient ritual that promises to bring the
+                dead back to life. But when she successfully resurrects her
+                child, she realizes too late that what returned is not entirely
+                her daughter. As dark forces begin to manifest, she must
+                confront the horrifying truth that death should never be
+                disturbed.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Michael Chaves
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Sarah Paulson, Finn Wolfhard, Vera
+                Farmiga
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/kBskrYZfhw8"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img
+                src="images/moviesposter/project.JPG"
+                alt="The Blair Witch Project"
+              />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">The Blair Witch Project</h2>
+              <p class="playlist-description">
+                Three film students venture into the Black Hills Forest in
+                Maryland to document the legendary Blair Witch. Armed with
+                cameras and camping gear, they interview locals who share
+                chilling tales of the witch's curse. As they trek deeper into
+                the woods, strange occurrences escalate from mysterious sounds
+                to terrifying discoveries. Their footage, recovered a year
+                later, chronicles a descent into madness and terror that
+                revolutionized found footage horror.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Daniel Myrick, Eduardo Sánchez
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Heather Donahue, Michael C. Williams,
+                Joshua Leonard
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/MBZ-POVsrlI"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img src="images/moviesposter/tall.JPG" alt="In the Tall Grass" />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">In the Tall Grass</h2>
+              <p class="playlist-description">
+                Siblings Becky and Cal hear the desperate cries of a young boy
+                calling for help from within a massive field of tall grass
+                beside a desolate Kansas road. They venture in to rescue him,
+                but the grass has other plans. As they become hopelessly lost
+                and separated, they encounter others who have been trapped for
+                much longer. Time loops, reality fractures, and a sinister force
+                centered around an ancient rock pulls them deeper into madness.
+                Based on the novella by Stephen King and Joe Hill.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Vincenzo Natali
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Patrick Wilson, Harrison Gilbertson,
+                Laysla De Oliveira
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/bBcvcSCZAW4"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img
+                src="images/moviesposter/paranormal.JPG"
+                alt="Paranormal Activity 2"
+              />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">Paranormal Activity 2</h2>
+              <p class="playlist-description">
+                Just days after bringing their newborn son home, the Rey family
+                experiences what they believe is a break-in. To ensure their
+                safety, they install security cameras throughout the house. But
+                the cameras capture something far more terrifying than
+                burglars—a malevolent presence that has been haunting the family
+                for generations. As supernatural activity escalates, objects
+                move on their own, doors slam, and the baby becomes a target.
+                This prequel reveals the dark origins of the demon that
+                terrorized Katie in the first film.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Tod Williams
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Katie Featherston, Micah Sloat, Molly
+                Ephraim
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/ftD6rIAR-Hw"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#top" class="go-to-top">↑</a>
+  </body>
+</html>

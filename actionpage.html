@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Film Movies - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .header h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .header p {
+        font-size: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlist-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .playlist-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .playlist-card:nth-child(even) {
+        direction: rtl;
+      }
+
+      .playlist-card:nth-child(even) > * {
+        direction: ltr;
+      }
+
+      .playlist-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .playlist-content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .playlist-title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlist-description {
+        font-size: 15px;
+        color: rgba(10, 25, 41, 1);
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .movie-meta {
+        font-size: 14px;
+        color: rgba(10, 25, 41, 0.8);
+        margin-bottom: 8px;
+      }
+
+      .movie-meta strong {
+        font-weight: 600;
+      }
+
+      .playlist-footer {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .view-button {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 12px 28px;
+        border-radius: 25px;
+        border: none;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .view-button:hover {
+        background: #333;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-name {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .contact-btn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 36px;
+        }
+
+        .playlist-card {
+          grid-template-columns: 1fr;
+        }
+
+        .playlist-card:nth-child(even) {
+          direction: ltr;
+        }
+
+        .playlist-content {
+          padding: 24px;
+        }
+
+        .playlist-title {
+          font-size: 24px;
+        }
+
+        .playlist-image {
+          height: 250px;
+        }
+      }
+
+      .viewplaylist {
+        color: white;
+        text-decoration: none;
+      }
+
+      .go-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <nav>
+      <div class="nav-container">
+        <div class="logo-name">
+          <span>Gentle Progress</span>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="beats.html">Beats</a></li>
+            <li><a href="choosecategory.html">Films</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contact-btn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="my-beats">
+      <div class="container">
+        <div class="header">
+          <h1>Action</h1>
+          <p>Adrenaline and explosions</p>
+        </div>
+
+        <div class="playlist-grid">
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img src="images/moviesposter/13.JPG" alt="13 Hours" />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">
+                13 Hours: The Secret Soldiers of Benghazi
+              </h2>
+              <p class="playlist-description">
+                During the attack on the U.S. Consulate in Benghazi, Libya, a
+                security team struggles to make sense of the chaos as they fight
+                to save American lives. Six members of the Annex Security Team
+                defend the diplomatic compound against overwhelming militant
+                forces during the deadly 2012 terrorist attack. Based on true
+                events, this intense thriller captures their heroic efforts to
+                protect their fellow Americans during one of the longest
+                firefights in recent military history.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Michael Bay
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> John Krasinski, Pablo Schreiber, James
+                Badge Dale
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/5MBjAN7jqsQ"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img
+                src="images/moviesposter/equalizer.png"
+                alt="The Equalizer 3"
+              />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">The Equalizer 3</h2>
+              <p class="playlist-description">
+                Robert McCall finds himself at home in Southern Italy, but
+                discovers his new friends are under the control of local crime
+                bosses. When events turn deadly, McCall knows what he has to
+                do—become his friends' protector by taking on the mafia. The
+                retired CIA black ops operative uses his lethal skills to wage a
+                one-man war against the criminal organization threatening the
+                peaceful coastal town he's come to love.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Antoine Fuqua
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Denzel Washington, Dakota Fanning, David
+                Denman
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/19ikl8vy4zs"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img src="images/moviesposter/6.JPG" alt="6 Underground" />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">6 Underground</h2>
+              <p class="playlist-description">
+                Six individuals from all around the globe, each the very best at
+                what they do, have been chosen not only for their skill, but for
+                a unique desire to delete their pasts to change the future. Led
+                by a tech billionaire who faked his own death, the team becomes
+                a vigilante squad of ghosts who operate outside the law to take
+                down notorious criminals and terrorists that governments can't
+                touch. Their missions are brutal, explosive, and utterly
+                relentless.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Michael Bay
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Ryan Reynolds, Mélanie Laurent, Manuel
+                Garcia-Rulfo
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/YLE85olJjp8"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img src="images/moviesposter/extraction.JPG" alt="Extraction" />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">Extraction</h2>
+              <p class="playlist-description">
+                Tyler Rake, a fearless black market mercenary, embarks on the
+                deadliest extraction of his career when he's enlisted to rescue
+                the kidnapped son of an imprisoned international crime lord. Set
+                in the murky underworld of weapons dealers and drug traffickers
+                in Dhaka, Bangladesh, Rake must navigate through the city's most
+                ruthless criminals and corrupt officials. What starts as a
+                simple extraction mission quickly spirals into a desperate fight
+                for survival against overwhelming odds.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Sam Hargrave
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Chris Hemsworth, Golshifteh Farahani,
+                Rudhraksh Jaiswal
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/L6P3nI6VnlY"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img src="images/moviesposter/vol1.JPG" alt="Kill Bill Vol. 1" />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">Kill Bill: Vol. 1</h2>
+              <p class="playlist-description">
+                The Bride wakes from a four-year coma to discover she's been
+                betrayed by her former assassin colleagues and left for dead on
+                her wedding day. Now she has one thing on her mind—revenge.
+                Armed with a samurai sword and an unquenchable thirst for
+                vengeance, she embarks on a bloody quest to hunt down the Deadly
+                Viper Assassination Squad one by one. Her first targets: O-Ren
+                Ishii in Tokyo and Vernita Green in California. Stylized
+                violence meets Tarantino's signature storytelling in this
+                martial arts revenge epic.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Quentin Tarantino
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Uma Thurman, Lucy Liu, Vivica A. Fox
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/7kSuas6mRpk"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlist-card">
+            <div class="playlist-image">
+              <img src="images/moviesposter/vol2.JPG" alt="Kill Bill Vol. 2" />
+            </div>
+            <div class="playlist-content">
+              <h2 class="playlist-title">Kill Bill: Vol. 2</h2>
+              <p class="playlist-description">
+                The Bride continues her quest for vengeance against her former
+                boss and lover Bill, the reclusive bouncer Budd, and the
+                treacherous, one-eyed Elle. Having eliminated two members of the
+                Deadly Viper Assassination Squad, she now faces her most
+                dangerous adversaries yet. As she closes in on Bill, long-buried
+                secrets about their past relationship surface, revealing the
+                true reason behind her assassination attempt. The final
+                confrontation will test everything she's learned on her journey
+                of revenge.
+              </p>
+              <div class="movie-meta">
+                <strong>Director:</strong> Quentin Tarantino
+              </div>
+              <div class="movie-meta">
+                <strong>Stars:</strong> Uma Thurman, David Carradine, Michael
+                Madsen
+              </div>
+              <div class="playlist-footer">
+                <a
+                  href="https://youtu.be/WTt8cCIvGYI"
+                  target="movieplayer"
+                  class="viewplaylist"
+                  ><button class="view-button">Watch Clip</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#top" class="go-to-top">↑</a>
+  </body>
+</html>
