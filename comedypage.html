@@ -42,13 +42,13 @@
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-grid {
+      .playlistgrid {
         display: flex;
         flex-direction: column;
         gap: 40px;
       }
 
-      .playlist-card {
+      .playlistcard {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -58,60 +58,60 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
-      .playlist-card:nth-child(even) {
+      .playlistcard:nth-child(even) {
         direction: rtl;
       }
 
-      .playlist-card:nth-child(even) > * {
+      .playlistcard:nth-child(even) > * {
         direction: ltr;
       }
 
-      .playlist-image img {
+      .playlistimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .playlist-content {
+      .playlistcontent {
         padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
-      .playlist-title {
+      .playlisttitle {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 16px;
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-description {
+      .playlistdescription {
         font-size: 15px;
         color: rgba(10, 25, 41, 1);
         line-height: 1.6;
         margin-bottom: 24px;
       }
 
-      .movie-meta {
+      .moviemeta {
         font-size: 14px;
         color: rgba(10, 25, 41, 0.8);
         margin-bottom: 8px;
       }
 
-      .movie-meta strong {
+      .moviemeta strong {
         font-weight: 600;
       }
 
-      .playlist-footer {
+      .playlistfooter {
         display: flex;
         align-items: center;
         gap: 16px;
         margin-top: 16px;
       }
 
-      .view-button {
+      .viewbutton {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 12px 28px;
@@ -122,7 +122,7 @@
         cursor: pointer;
       }
 
-      .view-button:hover {
+      .viewbutton:hover {
         background: #333;
       }
 
@@ -140,7 +140,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -149,37 +149,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -191,38 +191,12 @@
         cursor: pointer;
       }
 
-      @media (max-width: 768px) {
-        .header h1 {
-          font-size: 36px;
-        }
-
-        .playlist-card {
-          grid-template-columns: 1fr;
-        }
-
-        .playlist-card:nth-child(even) {
-          direction: ltr;
-        }
-
-        .playlist-content {
-          padding: 24px;
-        }
-
-        .playlist-title {
-          font-size: 24px;
-        }
-
-        .playlist-image {
-          height: 250px;
-        }
-      }
-
       .viewplaylist {
         color: white;
         text-decoration: none;
       }
 
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -241,17 +215,43 @@
         transition: all 0.3s ease;
         z-index: 999;
       }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 36px;
+        }
+
+        .playlistcard {
+          grid-template-columns: 1fr;
+        }
+
+        .playlistcard:nth-child(even) {
+          direction: ltr;
+        }
+
+        .playlistcontent {
+          padding: 24px;
+        }
+
+        .playlisttitle {
+          font-size: 24px;
+        }
+
+        .playlistimage {
+          height: 250px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="top"></div>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -261,172 +261,172 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="my-beats">
+    <section class="mybeats">
       <div class="container">
         <div class="header">
           <h1>Comedy</h1>
           <p>None but laughs</p>
         </div>
 
-        <div class="playlist-grid">
-          <div class="playlist-card">
-            <div class="playlist-image">
+        <div class="playlistgrid">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img
                 src="images/moviesposter/central.JPG"
                 alt="Central Intelligence"
               />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Central Intelligence</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Central Intelligence</h2>
+              <p class="playlistdescription">
                 A mild-mannered accountant is lured by a former high school
                 buddy into the world of international espionage. What starts as
                 a simple reunion becomes a deadly adventure involving CIA
                 secrets and dangerous criminals.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Rawson Marshall Thurber
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Dwayne Johnson, Kevin Hart, Amy Ryan
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/MxEw3elSJ8M"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img
                 src="images/moviesposter/forlife.JPG"
                 alt="Bad Boys for Life"
               />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Bad Boys for Life</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Bad Boys for Life</h2>
+              <p class="playlistdescription">
                 Miami detectives Mike Lowrey and Marcus Burnett reunite one last
                 time to take down the vicious leader of a Miami drug cartel
                 who's seeking revenge. High-octane action mixed with the duo's
                 signature chemistry.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Adil El Arbi, Bilall Fallah
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Will Smith, Martin Lawrence, Vanessa
                 Hudgens
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/jKCj3XuPG8M"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/moviesposter/grown.JPG" alt="Grown Ups 2" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Grown Ups 2</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Grown Ups 2</h2>
+              <p class="playlistdescription">
                 Lenny moves his family back to his hometown to be with his
                 friends, but he finds that old bullies, new bullies, and crazy
                 bus drivers are making his seemingly easy transition a little
                 more complicated than expected.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Dennis Dugan
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Adam Sandler, Kevin James, Chris Rock
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/Sq5CIH0duMk"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/moviesposter/badboys2.JPG" alt="Bad Boys 2" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Bad Boys 2</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Bad Boys 2</h2>
+              <p class="playlistdescription">
                 Two loose-cannon narcotics cops investigate the flow of Ecstasy
                 into Florida from a Cuban drug cartel. Explosive action
                 sequences and witty banter make this a high-energy thrill ride
                 from start to finish.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Michael Bay
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Will Smith, Martin Lawrence, Gabrielle
                 Union
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/UTNcOwQ2lRw"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img
                 src="images/moviesposter/red.JPG"
                 target="movieplayer"
                 alt="Red Notice"
               />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Red Notice</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Red Notice</h2>
+              <p class="playlistdescription">
                 An Interpol agent tracks the world's most wanted art thief, but
                 when a daring heist brings together the FBI's top profiler and
                 two rival criminals, they're forced into an uneasy partnership
                 to catch an even bigger crook.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Rawson Marshall Thurber
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Dwayne Johnson, Ryan Reynolds, Gal Gadot
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/Pj0wz7zu3Ms"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
@@ -435,6 +435,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

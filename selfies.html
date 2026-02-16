@@ -32,7 +32,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -41,37 +41,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: #0a1929;
         color: #ffffff;
         padding: 10px 24px;
@@ -83,7 +83,7 @@
         cursor: pointer;
       }
 
-      .photo-dump {
+      .photodump {
         margin-top: 80px;
         padding: 64px 48px;
         max-width: 1400px;
@@ -91,30 +91,14 @@
         margin-right: auto;
       }
 
-      .section-header {
-        margin-bottom: 48px;
-      }
-
-      .section-title {
-        font-size: 40px;
-        font-weight: 500;
-        color: #1a1a1a;
-      }
-
-      .section-subtitle {
-        color: #6b7280;
-        font-size: 16px;
-        margin-top: 8px;
-      }
-
-      .photos-grid {
+      .photosgrid {
         display: grid;
         grid-template-columns: repeat(2, 400px);
         gap: 150px 100px;
         justify-content: center;
       }
 
-      .photo-card {
+      .photocard {
         background: #ffffff;
         border-radius: 15px;
         overflow: hidden;
@@ -122,7 +106,7 @@
         transition: transform 0.3s ease;
       }
 
-      .photo-image {
+      .photoimage {
         width: 100%;
         height: 280px;
         background: #f3f4f6;
@@ -133,30 +117,18 @@
         justify-content: center;
       }
 
-      .photo-image img {
+      .photoimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .photo-badge {
-        position: absolute;
-        bottom: 16px;
-        left: 16px;
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-      .photo-content {
+      .photocontent {
         padding: 24px;
       }
 
-      .photo-title {
+      .phototitle {
         font-size: 20px;
         font-weight: 500;
         color: #1a1a1a;
@@ -164,14 +136,7 @@
         line-height: 1.4;
       }
 
-      .photo-description {
-        color: #6b7280;
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 16px;
-      }
-
-      .photo-date {
+      .photodate {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -179,46 +144,26 @@
         font-size: 14px;
       }
 
-      .back-button {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 24px;
-        border-radius: 25px;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 32px;
-      }
-
       @media (max-width: 768px) {
-        .nav-container {
+        .navcontainer {
           padding: 16px 24px;
         }
 
-        .nav-links {
+        .navlinks {
           gap: 20px;
           font-size: 14px;
         }
 
-        .photo-dump {
+        .photodump {
           padding: 32px 24px;
         }
 
-        .photos-grid {
+        .photosgrid {
           grid-template-columns: 1fr;
-        }
-
-        .section-title {
-          font-size: 32px;
         }
       }
 
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -242,12 +187,12 @@
   <body>
     <div class="top"></div>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -257,17 +202,17 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="photo-dump">
-      <div class="photos-grid">
-        <article class="photo-card">
+    <section class="photodump">
+      <div class="photosgrid">
+        <article class="photocard">
           <a href="images/selfies/photo14.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo14.jpg"
                 alt="Photo 1"
@@ -275,17 +220,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 001</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 001</h3>
+            <div class="photodate">
               <span>Taken March of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo12.jpeg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/mememe.jpg"
                 alt="Photo 2"
@@ -293,17 +238,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 002</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 002</h3>
+            <div class="photodate">
               <span>Taken August of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo15.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo15.JPG"
                 alt="Photo 3"
@@ -311,17 +256,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 003</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 003</h3>
+            <div class="photodate">
               <span>Taken November of 2022</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo16.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo16.jpg"
                 alt="Photo 4"
@@ -329,17 +274,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 004</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 004</h3>
+            <div class="photodate">
               <span>Taken February of 2025</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo17.png" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo17.png"
                 alt="Photo 5"
@@ -347,17 +292,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 005</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 005</h3>
+            <div class="photodate">
               <span>Taken May of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo18.png" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo18.png"
                 alt="Photo 6"
@@ -365,17 +310,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 006</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 006</h3>
+            <div class="photodate">
               <span>Taken September of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo 13.jpeg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo 13.jpeg"
                 alt="Photo 6"
@@ -383,17 +328,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 007</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 007</h3>
+            <div class="photodate">
               <span>Taken December of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo19.png" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo19.png"
                 alt="Photo 6"
@@ -401,17 +346,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 008</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 008</h3>
+            <div class="photodate">
               <span>Taken July of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/photo20.png" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/photo20.png"
                 alt="Photo 6"
@@ -419,17 +364,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 009</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 009</h3>
+            <div class="photodate">
               <span>Taken January of 2025</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/1.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/1.jpg"
                 alt="Photo 6"
@@ -437,17 +382,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 010</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 010</h3>
+            <div class="photodate">
               <span>Taken April of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/2.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/2.jpg"
                 alt="Photo 6"
@@ -455,17 +400,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 011</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 011</h3>
+            <div class="photodate">
               <span>Taken October of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/3.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/3.jpg"
                 alt="Photo 6"
@@ -473,17 +418,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 012</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 012</h3>
+            <div class="photodate">
               <span>Taken June of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/4.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/4.jpg"
                 alt="Photo 6"
@@ -491,17 +436,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 013</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 013</h3>
+            <div class="photodate">
               <span>Taken March of 2025</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/5.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/5.jpg"
                 alt="Photo 6"
@@ -509,17 +454,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 014</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 014</h3>
+            <div class="photodate">
               <span>Taken November of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/6.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/6.jpg"
                 alt="Photo 6"
@@ -527,17 +472,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 015</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 015</h3>
+            <div class="photodate">
               <span>Taken August of 2022</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/7.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/7.jpg"
                 alt="Photo 6"
@@ -545,17 +490,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 016</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 016</h3>
+            <div class="photodate">
               <span>Taken February of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/8.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/8.jpg"
                 alt="Photo 6"
@@ -563,17 +508,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 017</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 017</h3>
+            <div class="photodate">
               <span>Taken December of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/9.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/9.jpg"
                 alt="Photo 6"
@@ -581,17 +526,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 018</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 018</h3>
+            <div class="photodate">
               <span>Taken May of 2025</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/10.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/10.jpg"
                 alt="Photo 6"
@@ -599,17 +544,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 019</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 019</h3>
+            <div class="photodate">
               <span>Taken September of 2022</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/11.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/11.jpg"
                 alt="Photo 6"
@@ -617,17 +562,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 020</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 020</h3>
+            <div class="photodate">
               <span>Taken July of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/12.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/12.jpg"
                 alt="Photo 6"
@@ -635,17 +580,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 021</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 021</h3>
+            <div class="photodate">
               <span>Taken January of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/13.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/13.jpg"
                 alt="Photo 6"
@@ -653,17 +598,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 022</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 022</h3>
+            <div class="photodate">
               <span>Taken October of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/14.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/14.jpg"
                 alt="Photo 6"
@@ -671,17 +616,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 023</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 023</h3>
+            <div class="photodate">
               <span>Taken April of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/15.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/15.jpg"
                 alt="Photo 6"
@@ -689,17 +634,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 024</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 024</h3>
+            <div class="photodate">
               <span>Taken November of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/16.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/16.jpg"
                 alt="Photo 6"
@@ -707,17 +652,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 025</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 025</h3>
+            <div class="photodate">
               <span>Taken June of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/17.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/17.jpg"
                 alt="Photo 6"
@@ -725,17 +670,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 026</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 026</h3>
+            <div class="photodate">
               <span>Taken March of 2024</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/18.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/18.jpg"
                 alt="Photo 6"
@@ -743,17 +688,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 027</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 027</h3>
+            <div class="photodate">
               <span>Taken December of 2022</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/19.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/19.jpg"
                 alt="Photo 6"
@@ -761,17 +706,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 028</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 028</h3>
+            <div class="photodate">
               <span>Taken August of 2025</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/20.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/20.jpg"
                 alt="Photo 6"
@@ -779,17 +724,17 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 029</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 029</h3>
+            <div class="photodate">
               <span>Taken February of 2023</span>
             </div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/selfies/12.jpg" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/selfies/12.jpg"
                 alt="Photo 6"
@@ -797,9 +742,9 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Selfie 030</h3>
-            <div class="photo-date">
+          <div class="photocontent">
+            <h3 class="phototitle">Selfie 030</h3>
+            <div class="photodate">
               <span>Taken September of 2024</span>
             </div>
           </div>
@@ -807,6 +752,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

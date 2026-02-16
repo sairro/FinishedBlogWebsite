@@ -32,7 +32,7 @@
         z-index: 1000;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -41,7 +41,7 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -51,31 +51,31 @@
         text-decoration: none;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         align-items: center;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: #0a1929;
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -87,11 +87,11 @@
         cursor: pointer;
       }
 
-      .contact-btn:hover {
+      .contactbtn:hover {
         background: #162a3d;
       }
 
-      .article-section {
+      .articlesection {
         margin-top: 80px;
         padding: 64px 48px;
         max-width: 80%;
@@ -99,12 +99,12 @@
         margin-right: auto;
       }
 
-      .article-header {
+      .articleheader {
         text-align: center;
         margin-bottom: 64px;
       }
 
-      .article-badge {
+      .articlebadge {
         display: inline-block;
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
@@ -115,7 +115,7 @@
         margin-bottom: 24px;
       }
 
-      .article-title {
+      .articletitle {
         font-size: 48px;
         font-weight: 700;
         line-height: 1.2;
@@ -123,7 +123,7 @@
         color: #0a1929;
       }
 
-      .article-meta {
+      .articlemeta {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -132,20 +132,20 @@
         font-size: 14px;
       }
 
-      .article-container {
+      .articlecontainer {
         max-width: 80%;
         margin: 0 auto;
       }
 
-      .article-content {
+      .articlecontent {
         margin-bottom: 64px;
       }
 
-      .content-section {
+      .contentsection {
         margin-bottom: 48px;
       }
 
-      .content-section h2 {
+      .contentsection h2 {
         font-size: 32px;
         font-weight: 700;
         color: rgba(10, 25, 41, 1);
@@ -154,7 +154,7 @@
         border-bottom: 2px solid #e5e7eb;
       }
 
-      .content-section p {
+      .contentsection p {
         line-height: 1.9;
         color: #1a1a1a;
         font-size: 17px;
@@ -163,36 +163,36 @@
         font-weight: 500;
       }
 
-      .content-section strong {
+      .contentsection strong {
         color: rgba(10, 25, 41, 1);
         font-weight: 700;
       }
 
-      .section-divider {
+      .sectiondivider {
         margin: 48px 0;
         border: none;
         height: 1px;
         background-color: #e5e7eb;
       }
 
-      .article-footer {
+      .articlefooter {
         margin-top: 64px;
         padding-top: 40px;
         border-top: 2px solid #e5e7eb;
       }
 
-      .author-box {
+      .authorbox {
         text-align: center;
         margin-bottom: 32px;
       }
 
-      .author-box h3 {
+      .authorbox h3 {
         color: rgba(10, 25, 41, 1);
         font-size: 20px;
         margin-bottom: 12px;
       }
 
-      .author-box p {
+      .authorbox p {
         color: #6b7280;
         font-size: 16px;
         margin: 4px 0;
@@ -207,53 +207,7 @@
         font-weight: 600;
       }
 
-      @media (max-width: 768px) {
-        .nav-container {
-          padding: 16px 24px;
-        }
-
-        .nav-links {
-          gap: 20px;
-          font-size: 14px;
-        }
-
-        .hero {
-          padding: 32px 24px;
-        }
-
-        .hero-content {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-
-        .hero-title {
-          font-size: 36px;
-        }
-
-        .hero-image {
-          height: 300px;
-        }
-
-        .posts-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .expertisegrid {
-          grid-template-columns: 1fr;
-        }
-
-        .contact-content {
-          grid-template-columns: 1fr;
-        }
-
-        .featured,
-        .expertise,
-        .contact {
-          padding: 48px 24px;
-        }
-      }
-
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -273,11 +227,7 @@
         z-index: 999;
       }
 
-      .next-page {
-        text-decoration: none; 
-      }
-
-      .posts-grid {
+      .postsgrid {
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 32px;
@@ -293,22 +243,49 @@
         object-fit: cover;
       }
 
-      .post-image {
+      .postimage {
         width: 100%;
         height: 400px;
         overflow: hidden;
+      }
+
+      @media (max-width: 768px) {
+        .navcontainer {
+          padding: 16px 24px;
+        }
+
+        .navlinks {
+          gap: 20px;
+          font-size: 14px;
+        }
+
+        .articlesection {
+          padding: 48px 24px;
+        }
+
+        .articletitle {
+          font-size: 32px;
+        }
+
+        .postsgrid {
+          grid-template-columns: 1fr;
+        }
+
+        .postimage {
+          height: 250px;
+        }
       }
     </style>
   </head>
   <body>
     <div id="top"></div>
     <nav>
-      <div class="nav-container">
-        <a href="index.html" class="logo-name">
+      <div class="navcontainer">
+        <a href="index.html" class="logoname">
           <span>Gentle Progress</span>
         </a>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -317,17 +294,17 @@
             <li><a href="choosecategory.html">Film Movies</a></li>
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
-          <a href="index.html#contact" class="contact-btn">Reach</a>
+          <a href="index.html#contact" class="contactbtn">Reach</a>
         </div>
       </div>
     </nav>
 
-    <section class="article-section">
-      <div class="article-container">
-        <div class="article-header">
-          <span class="article-badge">Blog Story Part 1</span>
-          <h1 class="article-title">Navigate My Everyday</h1>
-          <div class="article-meta">
+    <section class="articlesection">
+      <div class="articlecontainer">
+        <div class="articleheader">
+          <span class="articlebadge">Blog Story Part 1</span>
+          <h1 class="articletitle">Navigate My Everyday</h1>
+          <div class="articlemeta">
             <span>January 9, 2026</span>
             <span>•</span>
             <span>4 min read</span>
@@ -336,8 +313,8 @@
           </div>
         </div>
 
-        <div class="article-content">
-          <div class="content-section">
+        <div class="articlecontent">
+          <div class="contentsection">
             <h2>Overview</h2>
             <p>
               As an IT student, technology is an essential part of my everyday
@@ -347,9 +324,9 @@
             </p>
           </div>
 
-          <hr class="section-divider" />
+          <hr class="sectiondivider" />
 
-          <div class="content-section">
+          <div class="contentsection">
             <h2>Dive Deep</h2>
             <p>
               One IT tool I cannot live without is
@@ -375,9 +352,9 @@
             </p>
           </div>
 
-          <hr class="section-divider" />
+          <hr class="sectiondivider" />
 
-          <div class="content-section">
+          <div class="contentsection">
             <h2>Final Act</h2>
             <p>
               Google Maps is more than just a navigation tool for me. It helps
@@ -386,17 +363,17 @@
             </p>
           </div>
 
-          <div class="posts-grid">
-        <article class="post-card-1">
-          <div class="post-image">
+          <div class="postsgrid">
+        <article class="postcard1">
+          <div class="postimage">
             <a href="images/googlemaps/gogol.png" target="_blank">
               <img src="images/googlemaps/gogol.png" class="img" title="google maps"/>
             </a>
           </div>
         </article>
 
-        <article class="post-card-1">
-          <div class="post-image">
+        <article class="postcard1">
+          <div class="postimage">
             <a href="images/googlemaps/lbj.png" target="_blank">
               <img src="images/googlemaps/lbj.png" class="img" title="grabmaps"/>
             </a>
@@ -404,8 +381,8 @@
         </article>
         </div>
 
-        <div class="article-footer">
-          <div class="author-box">
+        <div class="articlefooter">
+          <div class="authorbox">
             <h3>About the Author</h3>
             <p><strong>Ailexander Kylle Maulion Cusi</strong></p>
             <p>IT Student, Aspiring Full-Stack Developer</p>
@@ -417,6 +394,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

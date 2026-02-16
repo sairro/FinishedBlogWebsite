@@ -42,13 +42,13 @@
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-grid {
+      .playlistgrid {
         display: flex;
         flex-direction: column;
         gap: 40px;
       }
 
-      .playlist-card {
+      .playlistcard {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -58,49 +58,49 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
-      .playlist-card:nth-child(even) {
+      .playlistcard:nth-child(even) {
         direction: rtl;
       }
 
-      .playlist-card:nth-child(even) > * {
+      .playlistcard:nth-child(even) > * {
         direction: ltr;
       }
 
-      .playlist-image img {
+      .playlistimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .playlist-content {
+      .playlistcontent {
         padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
-      .playlist-title {
+      .playlisttitle {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 16px;
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-description {
+      .playlistdescription {
         font-size: 15px;
         color: rgba(10, 25, 41, 1);
         line-height: 1.6;
         margin-bottom: 24px;
       }
 
-      .playlist-footer {
+      .playlistfooter {
         display: flex;
         align-items: center;
         gap: 16px;
       }
 
-      .view-button {
+      .viewbutton {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 12px 28px;
@@ -112,7 +112,7 @@
         transition: background 0.3s ease;
       }
 
-      .view-button:hover {
+      .viewbutton:hover {
         background: #333;
       }
 
@@ -130,7 +130,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -139,37 +139,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -181,38 +181,12 @@
         cursor: pointer;
       }
 
-      @media (max-width: 768px) {
-        .header h1 {
-          font-size: 36px;
-        }
-
-        .playlist-card {
-          grid-template-columns: 1fr;
-        }
-
-        .playlist-card:nth-child(even) {
-          direction: ltr;
-        }
-
-        .playlist-content {
-          padding: 24px;
-        }
-
-        .playlist-title {
-          font-size: 24px;
-        }
-
-        .playlist-image {
-          height: 250px;
-        }
-      }
-
       .viewplaylist {
         color: white;
         text-decoration: none;
       }
 
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -231,17 +205,43 @@
         transition: all 0.3s ease;
         z-index: 999;
       }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 36px;
+        }
+
+        .playlistcard {
+          grid-template-columns: 1fr;
+        }
+
+        .playlistcard:nth-child(even) {
+          direction: ltr;
+        }
+
+        .playlistcontent {
+          padding: 24px;
+        }
+
+        .playlisttitle {
+          font-size: 24px;
+        }
+
+        .playlistimage {
+          height: 250px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="top"></div>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -251,75 +251,75 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="my-beats">
+    <section class="mybeats">
       <div class="container">
         <div class="header">
           <h1>My Beats</h1>
           <p>What i listen to on a daily</p>
         </div>
 
-        <div class="playlist-grid">
-          <div class="playlist-card">
-            <div class="playlist-image">
+        <div class="playlistgrid">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/beats/HIPHOP.PNG" alt="" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">HIP-HOP / RAP</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">HIP-HOP / RAP</h2>
+              <p class="playlistdescription">
                 A playlist for when everything feels wrong and you catch
                 yourself staring at the ceiling at 3 AM. This blasting in your
                 ears
               </p>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a href="songpageHIPHOP.html" class="viewplaylist"
-                  ><button class="view-button">View Playlist</button></a
+                  ><button class="viewbutton">View Playlist</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/beats/RNB.PNG" alt="" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Rhythm and Blues</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Rhythm and Blues</h2>
+              <p class="playlistdescription">
                 Pure R&B vibes. Smooth, soulful, and perfect for late-night
                 drives or cozy evenings. This playlist is a blend of classic and
                 contemporary R&B, featuring artists who know how to set the mood
                 right.
               </p>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a href="songpageRNB.html" class="viewplaylist"
-                  ><button class="view-button">View Playlist</button></a
+                  ><button class="viewbutton">View Playlist</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/beats/JAZZ.PNG" alt="" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Just POPPPPPPP</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Just POPPPPPPP</h2>
+              <p class="playlistdescription">
                 Vibrant pop anthems and infectious melodies that capture the
                 essence of contemporary music. From chart-topping hits to
                 indie-pop gems, this collection features artists pushing the
                 boundaries of the genre with catchy hooks, emotional depth, and
                 innovative production that defines modern pop culture.
               </p>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a href="songpagePOP.html" class="viewplaylist"
-                  ><button class="view-button">View Playlist</button></a
+                  ><button class="viewbutton">View Playlist</button></a
                 >
               </div>
             </div>
@@ -328,6 +328,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

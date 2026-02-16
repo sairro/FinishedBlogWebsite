@@ -42,13 +42,13 @@
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-grid {
+      .playlistgrid {
         display: flex;
         flex-direction: column;
         gap: 40px;
       }
 
-      .playlist-card {
+      .playlistcard {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -58,60 +58,60 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
-      .playlist-card:nth-child(even) {
+      .playlistcard:nth-child(even) {
         direction: rtl;
       }
 
-      .playlist-card:nth-child(even) > * {
+      .playlistcard:nth-child(even) > * {
         direction: ltr;
       }
 
-      .playlist-image img {
+      .playlistimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .playlist-content {
+      .playlistcontent {
         padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
-      .playlist-title {
+      .playlisttitle {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 16px;
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-description {
+      .playlistdescription {
         font-size: 15px;
         color: rgba(10, 25, 41, 1);
         line-height: 1.6;
         margin-bottom: 24px;
       }
 
-      .movie-meta {
+      .moviemeta {
         font-size: 14px;
         color: rgba(10, 25, 41, 0.8);
         margin-bottom: 8px;
       }
 
-      .movie-meta strong {
+      .moviemeta strong {
         font-weight: 600;
       }
 
-      .playlist-footer {
+      .playlistfooter {
         display: flex;
         align-items: center;
         gap: 16px;
         margin-top: 16px;
       }
 
-      .view-button {
+      .viewbutton {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 12px 28px;
@@ -122,7 +122,7 @@
         cursor: pointer;
       }
 
-      .view-button:hover {
+      .viewbutton:hover {
         background: #333;
       }
 
@@ -140,7 +140,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -149,37 +149,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -196,23 +196,23 @@
           font-size: 36px;
         }
 
-        .playlist-card {
+        .playlistcard {
           grid-template-columns: 1fr;
         }
 
-        .playlist-card:nth-child(even) {
+        .playlistcard:nth-child(even) {
           direction: ltr;
         }
 
-        .playlist-content {
+        .playlistcontent {
           padding: 24px;
         }
 
-        .playlist-title {
+        .playlisttitle {
           font-size: 24px;
         }
 
-        .playlist-image {
+        .playlistimage {
           height: 250px;
         }
       }
@@ -222,7 +222,7 @@
         text-decoration: none;
       }
 
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -246,12 +246,12 @@
   <body>
     <div class="top"></div>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -261,183 +261,183 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="my-beats">
+    <section class="mybeats">
       <div class="container">
         <div class="header">
           <h1>Comedy TV Shows</h1>
           <p>Binge-worthy laughs</p>
         </div>
 
-        <div class="playlist-grid">
-          <div class="playlist-card">
-            <div class="playlist-image">
+        <div class="playlistgrid">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/tvshowposters/99.JPG" alt="Brooklyn Nine-Nine" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Brooklyn Nine-Nine</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Brooklyn Nine-Nine</h2>
+              <p class="playlistdescription">
                 Follow the hilarious misadventures of Detective Jake Peralta and
                 his diverse, lovable colleagues as they police Brooklyn's 99th
                 precinct. From solving crimes to navigating workplace romances,
                 this ensemble comedy delivers endless laughs with heart.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Creators:</strong> Dan Goor, Michael Schur
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Andy Samberg, Stephanie Beatriz, Terry
                 Crews
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Seasons:</strong> 8 (2013-2021)
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/sEOuJ4z5aTc"
                   target="_blank"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/tvshowposters/young.png" alt="Young Sheldon" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Young Sheldon</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Young Sheldon</h2>
+              <p class="playlistdescription">
                 Set in the late 1980s, this prequel to The Big Bang Theory
                 follows 9-year-old genius Sheldon Cooper as he navigates high
                 school in East Texas while living with his family. His
                 extraordinary intelligence clashes hilariously with small-town
                 life.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Creators:</strong> Chuck Lorre, Steven Molaro
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Iain Armitage, Zoe Perry, Lance Barber
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Seasons:</strong> 7 (2017-2024)
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/FStMMcj-RiA"
                   target="_blank"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/tvshowposters/modern.JPG" alt="Modern Family" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Modern Family</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Modern Family</h2>
+              <p class="playlistdescription">
                 Three diverse family units navigate the trials and tribulations
                 of modern life in this mockumentary-style sitcom. From blended
                 families to same-sex couples with adopted children, the
                 Pritchett clan proves that family comes in all forms.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Creators:</strong> Christopher Lloyd, Steven Levitan
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Ed O'Neill, Sofía Vergara, Julie Bowen
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Seasons:</strong> 11 (2009-2020)
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/rbpTUPisA78"
                   target="_blank"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/tvshowposters/place.JPG" alt="The Good Place" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">The Good Place</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">The Good Place</h2>
+              <p class="playlistdescription">
                 Eleanor Shellstrop finds herself in the Good Place after death,
                 but quickly realizes she doesn't belong there. With the help of
                 her soulmate and a wise afterlife architect, she attempts to
                 become a better person to earn her spot in paradise.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Creator:</strong> Michael Schur
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Kristen Bell, William Jackson Harper,
                 Ted Danson
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Seasons:</strong> 4 (2016-2020)
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/29iKAAeRvI4"
                   target="_blank"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img
                 src="images/tvshowposters/donkey.JPG"
                 alt="Son of a Donkey"
               />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">Son of a Donkey</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Son of a Donkey</h2>
+              <p class="playlistdescription">
                 Theo comes up with chaotic schemes to save his impounded car
                 while his dying dad will stop at nothing to find himself a new
                 kidney. This wild comedy from the creators of Superwog blends
                 absurd satire, family drama, and culture-clash humor in a
                 uniquely Australian style.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Creators:</strong> Theodore Saidden, Nathan Saidden
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Theodore Saidden, Nathan Saidden,
                 Loraine Fabb
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Season:</strong> 1 (6 Episodes, 2025)
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/vu_Nmf8Teto"
                   target="_blank"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
@@ -446,6 +446,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

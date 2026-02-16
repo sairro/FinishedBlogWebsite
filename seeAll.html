@@ -24,26 +24,26 @@
         margin: 0 auto;
       }
 
-      .section-header {
+      .sectionheader {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 48px;
       }
 
-      .section-title {
+      .sectiontitle {
         font-size: 40px;
         font-weight: 700;
         color: #1a1a1a;
       }
 
-      .section-subtitle {
+      .sectionsubtitle {
         color: #6b7280;
         font-size: 16px;
         margin-top: 8px;
       }
 
-      .see-all {
+      .seeall {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -53,27 +53,27 @@
         font-size: 15px;
       }
 
-      .see-all:hover {
+      .seeall:hover {
         color: #162a3d;
       }
 
-      .posts-grid {
+      .postsgrid {
         display: grid;
         grid-template-columns: repeat(3, 33.333%);
         gap: 32px;
         color: inherit;
       }
 
-      .post-card-1,
-      .post-card-2,
-      .post-card-3 {
+      .postcard1,
+      .postcard2,
+      .postcard3 {
         background: #ffffff;
         border-radius: 12px;
         overflow: hidden;
         cursor: pointer;
       }
 
-      .post-image {
+      .postimage {
         width: 100%;
         height: 280px;
         background: #f3f4f6;
@@ -84,14 +84,14 @@
         justify-content: center;
       }
 
-      .post-image img {
+      .postimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .post-badge {
+      .postbadge {
         position: absolute;
         bottom: 16px;
         left: 16px;
@@ -103,11 +103,11 @@
         font-weight: 600;
       }
 
-      .post-content {
+      .postcontent {
         padding: 24px;
       }
 
-      .post-title {
+      .posttitle {
         font-size: 20px;
         font-weight: 700;
         color: #1a1a1a;
@@ -115,14 +115,14 @@
         line-height: 1.4;
       }
 
-      .post-excerpt {
+      .postexcerpt {
         color: #6b7280;
         font-size: 15px;
         line-height: 1.6;
         margin-bottom: 16px;
       }
 
-      .post-meta {
+      .postmeta {
         display: flex;
         align-items: center;
         gap: 16px;
@@ -130,10 +130,10 @@
         font-size: 14px;
       }
 
-      .bio-title,
-      .blog1-title,
-      .blog2-title,
-      .blog3-title {
+      .biotitle,
+      .blog1title,
+      .blog2title,
+      .blog3title {
         text-decoration: none;
         color: #1a1a1a;
       }
@@ -148,7 +148,7 @@
         z-index: 1000;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -157,7 +157,7 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -166,31 +166,31 @@
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         align-items: center;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: #0a1929;
         color: #ffffff;
         padding: 10px 24px;
@@ -202,52 +202,25 @@
         cursor: pointer;
       }
 
-      .contact-btn:hover {
+      .contactbtn:hover {
         background: #162a3d;
       }
 
       @media (max-width: 768px) {
-        .nav-container {
+        .navcontainer {
           padding: 16px 24px;
         }
 
-        .nav-links {
+        .navlinks {
           gap: 20px;
           font-size: 14px;
         }
 
-        .hero {
-          padding: 32px 24px;
-        }
-
-        .hero-content {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-
-        .hero-title {
-          font-size: 36px;
-        }
-
-        .hero-image {
-          height: 300px;
-        }
-
-        .posts-grid {
+        .postsgrid {
           grid-template-columns: 1fr;
         }
 
-        .expertisegrid {
-          grid-template-columns: 1fr;
-        }
-
-        .contact-content {
-          grid-template-columns: 1fr;
-        }
-
-        .featured,
-        .expertise,
-        .contact {
+        .featured {
           padding: 48px 24px;
         }
       }
@@ -255,12 +228,12 @@
   </head>
   <body>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -270,44 +243,42 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
     <!-- blogs to pre -->
     <section class="featured">
-      <div class="section-header">
+      <div class="sectionheader">
         <div>
-          <h2 class="section-title">Blogs</h2>
-          <p class="section-subtitle">
+          <h2 class="sectiontitle">Blogs</h2>
+          <p class="sectionsubtitle">
             Handpicked blog stories worth your time.
           </p>
         </div>
-        <a href="#" class="see-all"> See all posts </a>
+        <a href="#" class="seeall"> See all posts </a>
       </div>
 
-      <div class="posts-grid" id="post-1">
-        <article class="post-card-1">
-          <div class="post-image">
+      <div class="postsgrid" id="post-1">
+        <article class="postcard1">
+          <div class="postimage">
             <a href="https://sairro.github.io/BIO/" target="_blank">
               <img src="images/little kid.JPG" alt="" />
-              <span class="post-badge">Who am i?</span>
+              <span class="postbadge">Who am i?</span>
             </a>
           </div>
-          <div class="post-content">
-            <h3 class="post-title">
+          <div class="postcontent">
+            <h3 class="posttitle">
               <a
                 href="https://sairro.github.io/BIO/"
-                class="bio-title"
+                class="biotitle"
                 target="_blank"
                 >Check My Biography</a
               >
             </h3>
-            <p class="post-excerpt">
-              A deep dive into my life. Me becoming, Me
-            </p>
-            <div class="post-meta">
+            <p class="postexcerpt">A deep dive into my life. Me becoming, Me</p>
+            <div class="postmeta">
               <span>3 min read</span>
               <span>•</span>
               <span>Jan 9, 2026</span>
@@ -315,23 +286,23 @@
           </div>
         </article>
 
-        <article class="post-card-2">
-          <div class="post-image">
+        <article class="postcard2">
+          <div class="postimage">
             <a href="blog1.html"
               ><img src="images/tech2.jpeg" alt="" />
-              <span class="post-badge">Technology</span></a
+              <span class="postbadge">Technology</span></a
             >
           </div>
-          <div class="post-content">
-            <a href="blog1.html" class="blog1-title"
-              ><h3 class="post-title">Navigate My Everyday</h3></a
+          <div class="postcontent">
+            <a href="blog1.html" class="blog1title"
+              ><h3 class="posttitle">Navigate My Everyday</h3></a
             >
-            <p class="post-excerpt">
+            <p class="postexcerpt">
               A tech blog that talks about how i navigate each and every step of
               my way
             </p>
 
-            <div class="post-meta">
+            <div class="postmeta">
               <span>3 min read</span>
               <span>•</span>
               <span>Jan 9, 2026</span>
@@ -339,24 +310,24 @@
           </div>
         </article>
 
-        <article class="post-card-3">
-          <div class="post-image">
+        <article class="postcard3">
+          <div class="postimage">
             <a href="blog2.html"
               ><img src="images/japan.jpg" alt="Description of image" />
-              <span class="post-badge">Personal</span>
+              <span class="postbadge">Personal</span>
             </a>
           </div>
-          <div class="post-content">
-            <h3 class="post-title">
-              <a href="blog2.html" class="blog2-title"
+          <div class="postcontent">
+            <h3 class="posttitle">
+              <a href="blog2.html" class="blog2title"
                 >In Praise Of The Generalist</a
               >
             </h3>
-            <p class="post-excerpt">
+            <p class="postexcerpt">
               A Blog that talks about how the author manages to be a Jack Of All
               Trades.
             </p>
-            <div class="post-meta">
+            <div class="postmeta">
               <span>3 min read</span>
               <span>•</span>
               <span>Jan 9, 2026</span>
@@ -364,28 +335,28 @@
           </div>
         </article>
 
-        <article class="post-card-3">
-          <div class="post-image">
+        <article class="postcard3">
+          <div class="postimage">
             <a href="blog3.html"
               ><img
                 src="images/little kid with spoon.JPG"
                 alt="Description of image"
               />
-              <span class="post-badge">Becoming</span></a
+              <span class="postbadge">Becoming</span></a
             >
           </div>
-          <div class="post-content">
-            <a href="blog3.html" class="blog3-title">
-              <h3 class="post-title" class="blog3-title">
+          <div class="postcontent">
+            <a href="blog3.html" class="blog3title">
+              <h3 class="posttitle" class="blog3title">
                 Where am i headed?
               </h3></a
             >
 
-            <p class="post-excerpt">
+            <p class="postexcerpt">
               A blog story that talks about my personal life and where im headed
               here in this field
             </p>
-            <div class="post-meta">
+            <div class="postmeta">
               <span>4 min read</span>
               <span>•</span>
               <span>Jan 9, 2026</span>

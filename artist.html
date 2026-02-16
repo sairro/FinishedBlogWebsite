@@ -32,7 +32,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -41,37 +41,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: #0a1929;
         color: #ffffff;
         padding: 10px 24px;
@@ -83,7 +83,7 @@
         cursor: pointer;
       }
 
-      .photo-dump {
+      .photodump {
         margin-top: 80px;
         padding: 64px 48px;
         max-width: 1400px;
@@ -91,30 +91,14 @@
         margin-right: auto;
       }
 
-      .section-header {
-        margin-bottom: 48px;
-      }
-
-      .section-title {
-        font-size: 40px;
-        font-weight: 500;
-        color: #1a1a1a;
-      }
-
-      .section-subtitle {
-        color: #6b7280;
-        font-size: 16px;
-        margin-top: 8px;
-      }
-
-      .photos-grid {
+      .photosgrid {
         display: grid;
         grid-template-columns: repeat(2, 400px);
         gap: 150px 100px;
         justify-content: center;
       }
 
-      .photo-card {
+      .photocard {
         background: #ffffff;
         border-radius: 15px;
         overflow: hidden;
@@ -122,7 +106,7 @@
         transition: transform 0.3s ease;
       }
 
-      .photo-image {
+      .photoimage {
         width: 100%;
         height: 280px;
         background: #f3f4f6;
@@ -133,30 +117,18 @@
         justify-content: center;
       }
 
-      .photo-image img {
+      .photoimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .photo-badge {
-        position: absolute;
-        bottom: 16px;
-        left: 16px;
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 6px 16px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-      .photo-content {
+      .photocontent {
         padding: 24px;
       }
 
-      .photo-title {
+      .phototitle {
         font-size: 20px;
         font-weight: 500;
         color: #1a1a1a;
@@ -164,14 +136,7 @@
         line-height: 1.4;
       }
 
-      .photo-description {
-        color: #6b7280;
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 16px;
-      }
-
-      .photo-date {
+      .photodate {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -179,46 +144,7 @@
         font-size: 14px;
       }
 
-      .back-button {
-        background: #0a1929;
-        color: #ffffff;
-        padding: 12px 24px;
-        border-radius: 25px;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 32px;
-      }
-
-      @media (max-width: 768px) {
-        .nav-container {
-          padding: 16px 24px;
-        }
-
-        .nav-links {
-          gap: 20px;
-          font-size: 14px;
-        }
-
-        .photo-dump {
-          padding: 32px 24px;
-        }
-
-        .photos-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .section-title {
-          font-size: 32px;
-        }
-      }
-
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -237,18 +163,37 @@
         transition: all 0.3s ease;
         z-index: 999;
       }
+
+      @media (max-width: 768px) {
+        .navcontainer {
+          padding: 16px 24px;
+        }
+
+        .navlinks {
+          gap: 20px;
+          font-size: 14px;
+        }
+
+        .photodump {
+          padding: 32px 24px;
+        }
+
+        .photosgrid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="top"></div>
 
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -258,17 +203,17 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="photo-dump">
-      <div class="photos-grid">
-        <article class="photo-card">
+    <section class="photodump">
+      <div class="photosgrid">
+        <article class="photocard">
           <a href="images/listofartist/artist1.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist1.JPG"
                 alt="Photo 1"
@@ -276,15 +221,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Kendrick Lamar</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Kendrick Lamar</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist2.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist2.JPG"
                 alt="Photo 2"
@@ -292,15 +237,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Drake</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Drake</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist3.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist3.JPG"
                 alt="Photo 3"
@@ -308,15 +253,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Gunna</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Gunna</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist4.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist4.JPG"
                 alt="Photo 4"
@@ -324,15 +269,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">plaqueboymax</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">plaqueboymax</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist5.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist5.JPG"
                 alt="Photo 5"
@@ -340,15 +285,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Chief Keef</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Chief Keef</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist6.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist6.JPG"
                 alt="Photo 6"
@@ -356,15 +301,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Brent Faiyaz</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Brent Faiyaz</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist7.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist7.JPG"
                 alt="Photo 6"
@@ -372,15 +317,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Bryson Tiller</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Bryson Tiller</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist8.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist8.JPG"
                 alt="Photo 6"
@@ -388,15 +333,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Schoolboy Q</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Schoolboy Q</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/astist9.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/astist9.JPG"
                 alt="Photo 6"
@@ -404,15 +349,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Tory Lanez</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Tory Lanez</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist10.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist10.JPG"
                 alt="Photo 6"
@@ -420,15 +365,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Future</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Future</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist11.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist11.JPG"
                 alt="Photo 6"
@@ -436,14 +381,14 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Summer Walker</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Summer Walker</h3>
+            <div class="photodate"></div>
           </div>
         </article>
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist12.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist12.JPG"
                 alt="Photo 6"
@@ -451,15 +396,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Jhene Aiko</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Jhene Aiko</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist17.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist17.JPG"
                 alt="Photo 6"
@@ -467,15 +412,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Ama Louise</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Ama Louise</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist16.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist16.JPG"
                 alt="Photo 6"
@@ -483,15 +428,15 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Chase Shakur</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Chase Shakur</h3>
+            <div class="photodate"></div>
           </div>
         </article>
 
-        <article class="photo-card">
+        <article class="photocard">
           <a href="images/listofartist/artist15.JPG" target="saiWin"
-            ><div class="photo-image">
+            ><div class="photoimage">
               <img
                 src="images/listofartist/artist15.JPG"
                 alt="Photo 6"
@@ -499,14 +444,14 @@
               /></div
           ></a>
 
-          <div class="photo-content">
-            <h3 class="photo-title">Mariah The Scientist</h3>
-            <div class="photo-date"></div>
+          <div class="photocontent">
+            <h3 class="phototitle">Mariah The Scientist</h3>
+            <div class="photodate"></div>
           </div>
         </article>
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

@@ -28,7 +28,7 @@
         z-index: 1000;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -37,7 +37,7 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -47,31 +47,31 @@
         text-decoration: none;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         align-items: center;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: #0a1929;
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -83,17 +83,17 @@
         cursor: pointer;
       }
 
-      .contact-btn:hover {
+      .contactbtn:hover {
         background: #162a3d;
       }
 
-      .story-container {
+      .storycontainer {
         max-width: 1200px;
         margin: 0 auto;
         padding: 100px 48px 40px;
       }
 
-      .page-title {
+      .pagetitle {
         font-size: 48px;
         font-weight: 700;
         color: #1a1a1a;
@@ -101,11 +101,11 @@
         text-align: center;
       }
 
-      .story-section {
+      .storysection {
         margin-bottom: 60px;
       }
 
-      .section-title {
+      .sectiontitle {
         font-size: 32px;
         font-weight: 700;
         color: #1a1a1a;
@@ -114,7 +114,7 @@
         border-bottom: 2px solid #e5e7eb;
       }
 
-      .section-content p {
+      .sectioncontent p {
         font-size: 17px;
         line-height: 1.9;
         margin-bottom: 20px;
@@ -122,22 +122,22 @@
         text-align: justify;
       }
 
-      .section-images {
+      .sectionimages {
         margin: 24px 0;
       }
 
-      .image-row {
+      .imagerow {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
         margin-bottom: 24px;
       }
 
-      .image-single {
+      .imagesingle {
         margin-bottom: 24px;
       }
 
-      .story-image {
+      .storyimage {
         background: #f3f4f6;
         border-radius: 8px;
         height: 300px;
@@ -147,13 +147,13 @@
         overflow: hidden;
       }
 
-      .story-image img {
+      .storyimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .video-container {
+      .videocontainer {
         background: #000000;
         border-radius: 8px;
         overflow: hidden;
@@ -163,7 +163,7 @@
         width: 100%;
       }
 
-      .video-container video {
+      .videocontainer video {
         width: 100%;
         height: auto;
         display: block;
@@ -171,12 +171,12 @@
         object-fit: cover;
       }
 
-      .achievements-list {
+      .achievementslist {
         list-style: none;
         padding-left: 0;
       }
 
-      .achievements-list li {
+      .achievementslist li {
         font-size: 17px;
         line-height: 1.9;
         margin-bottom: 12px;
@@ -184,7 +184,7 @@
         position: relative;
       }
 
-      .achievements-list li:before {
+      .achievementslist li:before {
         content: "•";
         position: absolute;
         left: 0;
@@ -193,14 +193,14 @@
         font-weight: bold;
       }
 
-      .shoes-simple-grid {
+      .shoessimplegrid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
         margin-top: 24px;
       }
 
-      .shoe-simple {
+      .shoesimple {
         background: #f3f4f6;
         border-radius: 8px;
         height: 200px;
@@ -210,18 +210,18 @@
         overflow: hidden;
       }
 
-      .shoe-simple img {
+      .shoesimple img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .hobbies-list {
+      .hobbieslist {
         list-style: none;
         padding-left: 0;
       }
 
-      .hobbies-list li {
+      .hobbieslist li {
         font-size: 17px;
         line-height: 1.9;
         margin-bottom: 12px;
@@ -229,7 +229,7 @@
         position: relative;
       }
 
-      .hobbies-list li:before {
+      .hobbieslist li:before {
         content: "•";
         position: absolute;
         left: 0;
@@ -238,20 +238,20 @@
         font-weight: bold;
       }
 
-      .story-footer {
+      .storyfooter {
         text-align: center;
         margin-top: 60px;
         padding-top: 30px;
         border-top: 2px solid #e5e7eb;
       }
 
-      .story-footer p {
+      .storyfooter p {
         font-size: 16px;
         color: #6b7280;
         margin-bottom: 24px;
       }
 
-      .back-btn {
+      .backbtn {
         display: inline-block;
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
@@ -263,48 +263,33 @@
       }
 
       @media (max-width: 768px) {
-        .nav-container {
+        .navcontainer {
           padding: 16px 24px;
         }
 
-        .nav-links {
+        .navlinks {
           gap: 20px;
           font-size: 14px;
         }
 
-        .hero {
-          padding: 32px 24px;
+        .storycontainer {
+          padding: 80px 24px 40px;
         }
 
-        .hero-content {
-          grid-template-columns: 1fr;
-          gap: 32px;
-        }
-
-        .hero-title {
+        .pagetitle {
           font-size: 36px;
         }
 
-        .hero-image {
-          height: 300px;
+        .sectiontitle {
+          font-size: 24px;
         }
 
-        .posts-grid {
+        .imagerow {
           grid-template-columns: 1fr;
         }
 
-        .expertisegrid {
-          grid-template-columns: 1fr;
-        }
-
-        .contact-content {
-          grid-template-columns: 1fr;
-        }
-
-        .featured,
-        .expertise,
-        .contact {
-          padding: 48px 24px;
+        .shoessimplegrid {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
@@ -315,12 +300,12 @@
   </head>
   <body>
     <nav>
-      <div class="nav-container">
-        <a href="index.html" class="logo-name">
+      <div class="navcontainer">
+        <a href="index.html" class="logoname">
           <span>Gentle Progress</span>
         </a>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="#who-i-am">About</a></li>
             <li><a href="#achievements">Achievements</a></li>
@@ -330,15 +315,15 @@
             <li><a href="choosecategory.html">Film Movies</a></li>
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
-          <a href="index.html#contact" class="contact-btn">Reach</a>
+          <a href="index.html#contact" class="contactbtn">Reach</a>
         </div>
       </div>
     </nav>
-    <div class="story-container">
-      <h1 class="page-title">Welcome</h1>
-      <section class="story-section" id="who-i-am">
-        <h2 class="section-title">Who I Am</h2>
-        <div class="section-content">
+    <div class="storycontainer">
+      <h1 class="pagetitle">Welcome</h1>
+      <section class="storysection" id="who-i-am">
+        <h2 class="sectiontitle">Who I Am</h2>
+        <div class="sectioncontent">
           <p>
             Hey guys, welcome to my blog website. This section answers the only
             question why you're here in the first place, Who am i? i hope you
@@ -364,8 +349,8 @@
             promised will be.
           </p>
         </div>
-        <div class="section-images">
-          <div class="video-container">
+        <div class="sectionimages">
+          <div class="videocontainer">
             <video
               controls
               preload="auto"
@@ -382,9 +367,9 @@
         </div>
       </section>
 
-      <section class="story-section" id="partner">
-        <h2 class="section-title">My Partner</h2>
-        <div class="section-content">
+      <section class="storysection" id="partner">
+        <h2 class="sectiontitle">My Partner</h2>
+        <div class="sectioncontent">
           <p>
             <strong>Angelie Zahara Ramos Nate</strong>
           </p>
@@ -394,27 +379,27 @@
             right now
           </p>
         </div>
-        <div class="section-images">
-          <div class="image-single">
-            <div class="story-image">
+        <div class="sectionimages">
+          <div class="imagesingle">
+            <div class="storyimage">
               <img src="images/partner1.jpeg" alt="Partner" />
             </div>
           </div>
-          <div class="image-row">
-            <div class="story-image">
+          <div class="imagerow">
+            <div class="storyimage">
               <img src="images/partner2.jpg" alt="Together 1" />
             </div>
-            <div class="story-image">
+            <div class="storyimage">
               <img src="images/partner3.jpg" alt="Together 2" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="story-section" id="achievements">
-        <h2 class="section-title">My Achievements</h2>
-        <div class="section-content">
-          <ul class="achievements-list">
+      <section class="storysection" id="achievements">
+        <h2 class="sectiontitle">My Achievements</h2>
+        <div class="sectioncontent">
+          <ul class="achievementslist">
             <li>PMCL North America - Champion</li>
             <li>PPGL SEASON 2 - Champion (NA)</li>
             <li>PMNC NA - Champion</li>
@@ -423,32 +408,32 @@
         </div>
       </section>
 
-      <section class="story-section" id="shoes">
-        <h2 class="section-title">My Shoe Collection</h2>
-        <div class="section-content">
+      <section class="storysection" id="shoes">
+        <h2 class="sectiontitle">My Shoe Collection</h2>
+        <div class="sectioncontent">
           <p>
             Feet down to earth, Eyes towards the sun. My passion in collecting
             shoes has a meaning it means that i need my support as i progress
             each day
           </p>
         </div>
-        <div class="shoes-simple-grid">
-          <div class="shoe-simple">
+        <div class="shoessimplegrid">
+          <div class="shoesimple">
             <img src="images/shoes1.png" alt="Shoe 1" />
           </div>
-          <div class="shoe-simple">
+          <div class="shoesimple">
             <img src="images/shoes2.png" alt="Shoe 2" />
           </div>
-          <div class="shoe-simple">
+          <div class="shoesimple">
             <img src="images/shoes3.png" alt="Shoe 3" />
           </div>
         </div>
       </section>
 
-      <section class="story-section" id="hobbies">
-        <h2 class="section-title">My Hobbies</h2>
-        <div class="section-content">
-          <ul class="hobbies-list">
+      <section class="storysection" id="hobbies">
+        <h2 class="sectiontitle">My Hobbies</h2>
+        <div class="sectioncontent">
+          <ul class="hobbieslist">
             <li>Gaming - Competitive esports and strategic gameplay</li>
             <li>Traveling - Exploring new places and embracing solitude</li>
             <li>
@@ -463,9 +448,9 @@
         </div>
       </section>
 
-      <div class="story-footer">
+      <div class="storyfooter">
         <p>Thanks for reading my story.</p>
-        <a href="index.html" class="back-btn">Back to Home</a>
+        <a href="index.html" class="backbtn">Back to Home</a>
       </div>
     </div>
   </body>

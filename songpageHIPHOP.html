@@ -32,7 +32,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -41,37 +41,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -106,13 +106,13 @@
         color: #666;
       }
 
-      .songs-grid {
+      .songsgrid {
         display: flex;
         flex-direction: column;
         gap: 48px;
       }
 
-      .album-section {
+      .albumsection {
         display: grid;
         grid-template-columns: 400px 1fr;
         gap: 150px;
@@ -124,13 +124,13 @@
         align-items: start;
       }
 
-      .artist-column {
+      .artistcolumn {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
 
-      .album-cover {
+      .albumcover {
         width: 400px;
         height: 400px;
         background: #f5f5f5;
@@ -145,37 +145,37 @@
         overflow: hidden;
       }
 
-      .album-cover img {
+      .albumcover img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 12px;
       }
 
-      .artist-info {
+      .artistinfo {
         padding: 0;
       }
 
-      .artist-name {
+      .artistname {
         font-size: 24px;
         font-weight: 700;
         color: #1a1a1a;
         margin-bottom: 8px;
       }
 
-      .artist-description {
+      .artistdescription {
         font-size: 13px;
         color: #666;
         line-height: 1.6;
       }
 
-      .songs-list {
+      .songslist {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
 
-      .song-item {
+      .songitem {
         padding: 16px;
         background: #f9fafb;
         border-radius: 12px;
@@ -183,72 +183,65 @@
         transition: all 0.3s ease;
       }
 
-      .song-item:last-child {
+      .songitem:last-child {
         margin-bottom: 0;
       }
 
-      .song-header {
+      .songheader {
         display: flex;
         align-items: center;
         gap: 12px;
         margin-bottom: 8px;
       }
 
-      .song-number {
+      .songnumber {
         font-size: 16px;
         font-weight: 700;
         color: #1a1a1a;
         min-width: 24px;
       }
 
-      .song-title {
+      .songtitle {
         font-size: 16px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .song-artist {
+      .songartist {
         font-size: 13px;
         color: #666;
         margin-left: 36px;
         margin-bottom: 4px;
       }
 
-      .song-description {
-        font-size: 12px;
-        color: #999;
-        line-height: 1.5;
-        margin-left: 36px;
-      }
-
-      .song-audio {
+      .songaudio {
         margin-top: 12px;
         margin-left: 36px;
       }
 
-      .song-audio audio {
+      .songaudio audio {
         width: 100%;
         max-width: 300px;
         height: 32px;
       }
 
       @media (max-width: 1024px) {
-        .album-section {
+        .albumsection {
           grid-template-columns: 300px 1fr;
         }
 
-        .album-cover {
+        .albumcover {
           width: 300px;
           height: 300px;
         }
       }
 
       @media (max-width: 768px) {
-        .album-section {
+        .albumsection {
           grid-template-columns: 1fr;
         }
 
-        .album-cover {
+        .albumcover {
           width: 100%;
           height: 300px;
         }
@@ -257,39 +250,38 @@
           font-size: 36px;
         }
 
-        .song-item {
+        .songitem {
           padding: 14px;
         }
       }
 
       @media (max-width: 480px) {
-        .nav-container {
+        .navcontainer {
           padding: 16px 24px;
         }
 
-        .nav-menu {
+        .navmenu {
           gap: 20px;
         }
 
-        .nav-links {
+        .navlinks {
           gap: 20px;
         }
 
-        .song-title {
+        .songtitle {
           font-size: 15px;
         }
 
-        .song-artist,
-        .song-description {
+        .songartist {
           margin-left: 28px;
         }
 
-        .album-cover {
+        .albumcover {
           height: 250px;
         }
       }
 
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -313,12 +305,12 @@
   <body>
     <div class="top"></div>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -328,40 +320,40 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="songs-section">
+    <section class="songssection">
       <div class="container">
         <div class="header">
           <h1>HIP-HOP Collection</h1>
         </div>
 
-        <div class="songs-grid">
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+        <div class="songsgrid">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img src="images/listofartist/artist3.JPG" alt="Gunna" />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Gunna</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Gunna</h2>
+                <p class="artistdescription">
                   Atlanta's melodic trap virtuoso, known for his smooth flows
                   and luxurious lifestyle anthems.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">F Witcha Boy</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">F Witcha Boy</h3>
                 </div>
-                <p class="song-artist">Gunna</p>
-                <div class="song-audio">
+                <p class="songartist">Gunna</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/f witcha boy - gunna.mp4"
@@ -372,13 +364,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">At My Purest</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">At My Purest</h3>
                 </div>
-                <p class="song-artist">Gunna</p>
-                <div class="song-audio">
+                <p class="songartist">Gunna</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/at my purest - gunna.mp4"
@@ -389,13 +381,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Made For This S</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Made For This S</h3>
                 </div>
-                <p class="song-artist">Gunna</p>
-                <div class="song-audio">
+                <p class="songartist">Gunna</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/mfts - gunna.mp4"
@@ -408,30 +400,30 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img
                   src="images/listofartist/artist1.JPG"
                   alt="Kendrick Lamar"
                 />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Kendrick Lamar</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Kendrick Lamar</h2>
+                <p class="artistdescription">
                   Pulitzer Prize-winning lyricist from Compton, widely regarded
                   as one of the greatest rappers of all time.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Element</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Element</h3>
                 </div>
-                <p class="song-artist">Kendrick Lamar</p>
-                <div class="song-audio">
+                <p class="songartist">Kendrick Lamar</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/element - kendrick.mp4"
@@ -442,13 +434,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">Reincarnated</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">Reincarnated</h3>
                 </div>
-                <p class="song-artist">Kendrick Lamar</p>
-                <div class="song-audio">
+                <p class="songartist">Kendrick Lamar</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/reincarnated - kendrick.mp4"
@@ -459,13 +451,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Man At The Garden</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Man At The Garden</h3>
                 </div>
-                <p class="song-artist">Kendrick Lamar</p>
-                <div class="song-audio">
+                <p class="songartist">Kendrick Lamar</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/matg - kendrick.mp4"
@@ -478,27 +470,27 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img src="images/listofartist/artist2.JPG" alt="Drake" />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Drake</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Drake</h2>
+                <p class="artistdescription">
                   Toronto's global superstar who seamlessly blends rap and R&B
                   with introspective lyrics and catchy hooks.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Polar Opposites</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Polar Opposites</h3>
                 </div>
-                <p class="song-artist">Drake</p>
-                <div class="song-audio">
+                <p class="songartist">Drake</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/polar opposites - drake.mp4"
@@ -509,13 +501,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">Papi's Home</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">Papi's Home</h3>
                 </div>
-                <p class="song-artist">Drake</p>
-                <div class="song-audio">
+                <p class="songartist">Drake</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/papi's home - drake.mp4"
@@ -526,13 +518,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Drew A Picasso</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Drew A Picasso</h3>
                 </div>
-                <p class="song-artist">Drake</p>
-                <div class="song-audio">
+                <p class="songartist">Drake</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/drew a picasso - drake.mp4"
@@ -545,27 +537,27 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img src="images/listofartist/artist4.JPG" alt="plaqueboymax" />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">plaqueboymax</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">plaqueboymax</h2>
+                <p class="artistdescription">
                   Rising underground sensation from Detroit, bringing fresh raw
                   energy and distinctive voice to hip-hop.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Glacier</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Glacier</h3>
                 </div>
-                <p class="song-artist">plaqueboymax</p>
-                <div class="song-audio">
+                <p class="songartist">plaqueboymax</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/glacier - plaque.mp4"
@@ -576,13 +568,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">wyd</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">wyd</h3>
                 </div>
-                <p class="song-artist">plaqueboymax</p>
-                <div class="song-audio">
+                <p class="songartist">plaqueboymax</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/wyd - plaque.mp4"
@@ -593,13 +585,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">GO</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">GO</h3>
                 </div>
-                <p class="song-artist">plaqueboymax</p>
-                <div class="song-audio">
+                <p class="songartist">plaqueboymax</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/go - plaque.mp4"
@@ -612,27 +604,27 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img src="images/listofartist/artist5.JPG" alt="Chief Keef" />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Chief Keef</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Chief Keef</h2>
+                <p class="artistdescription">
                   Chicago drill pioneer who revolutionized trap music and
                   influenced an entire generation of rappers.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Love no T</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Love no T</h3>
                 </div>
-                <p class="song-artist">Chief Keef</p>
-                <div class="song-audio">
+                <p class="songartist">Chief Keef</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/love no t - chief.mp4"
@@ -643,13 +635,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">Love Sosa</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">Love Sosa</h3>
                 </div>
-                <p class="song-artist">Chief Keef</p>
-                <div class="song-audio">
+                <p class="songartist">Chief Keef</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/love sosa - chief.mp4"
@@ -660,13 +652,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Faneto</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Faneto</h3>
                 </div>
-                <p class="song-artist">Chief Keef</p>
-                <div class="song-audio">
+                <p class="songartist">Chief Keef</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/faneto - chief.mp4"
@@ -682,6 +674,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

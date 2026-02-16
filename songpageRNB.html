@@ -32,7 +32,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -41,37 +41,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -106,13 +106,13 @@
         color: #666;
       }
 
-      .songs-grid {
+      .songsgrid {
         display: flex;
         flex-direction: column;
         gap: 48px;
       }
 
-      .album-section {
+      .albumsection {
         display: grid;
         grid-template-columns: 400px 1fr;
         gap: 150px;
@@ -124,13 +124,13 @@
         align-items: start;
       }
 
-      .artist-column {
+      .artistcolumn {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
 
-      .album-cover {
+      .albumcover {
         width: 400px;
         height: 400px;
         background: #f5f5f5;
@@ -145,37 +145,37 @@
         overflow: hidden;
       }
 
-      .album-cover img {
+      .albumcover img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 12px;
       }
 
-      .artist-info {
+      .artistinfo {
         padding: 0;
       }
 
-      .artist-name {
+      .artistname {
         font-size: 24px;
         font-weight: 700;
         color: #1a1a1a;
         margin-bottom: 8px;
       }
 
-      .artist-description {
+      .artistdescription {
         font-size: 13px;
         color: #666;
         line-height: 1.6;
       }
 
-      .songs-list {
+      .songslist {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
 
-      .song-item {
+      .songitem {
         padding: 16px;
         background: #f9fafb;
         border-radius: 12px;
@@ -183,72 +183,65 @@
         transition: all 0.3s ease;
       }
 
-      .song-item:last-child {
+      .songitem:last-child {
         margin-bottom: 0;
       }
 
-      .song-header {
+      .songheader {
         display: flex;
         align-items: center;
         gap: 12px;
         margin-bottom: 8px;
       }
 
-      .song-number {
+      .songnumber {
         font-size: 16px;
         font-weight: 700;
         color: #1a1a1a;
         min-width: 24px;
       }
 
-      .song-title {
+      .songtitle {
         font-size: 16px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .song-artist {
+      .songartist {
         font-size: 13px;
         color: #666;
         margin-left: 36px;
         margin-bottom: 4px;
       }
 
-      .song-description {
-        font-size: 12px;
-        color: #999;
-        line-height: 1.5;
-        margin-left: 36px;
-      }
-
-      .song-audio {
+      .songaudio {
         margin-top: 12px;
         margin-left: 36px;
       }
 
-      .song-audio audio {
+      .songaudio audio {
         width: 100%;
         max-width: 300px;
         height: 32px;
       }
 
       @media (max-width: 1024px) {
-        .album-section {
+        .albumsection {
           grid-template-columns: 300px 1fr;
         }
 
-        .album-cover {
+        .albumcover {
           width: 300px;
           height: 300px;
         }
       }
 
       @media (max-width: 768px) {
-        .album-section {
+        .albumsection {
           grid-template-columns: 1fr;
         }
 
-        .album-cover {
+        .albumcover {
           width: 100%;
           height: 300px;
         }
@@ -257,39 +250,38 @@
           font-size: 36px;
         }
 
-        .song-item {
+        .songitem {
           padding: 14px;
         }
       }
 
       @media (max-width: 480px) {
-        .nav-container {
+        .navcontainer {
           padding: 16px 24px;
         }
 
-        .nav-menu {
+        .navmenu {
           gap: 20px;
         }
 
-        .nav-links {
+        .navlinks {
           gap: 20px;
         }
 
-        .song-title {
+        .songtitle {
           font-size: 15px;
         }
 
-        .song-artist,
-        .song-description {
+        .songartist {
           margin-left: 28px;
         }
 
-        .album-cover {
+        .albumcover {
           height: 250px;
         }
       }
 
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -313,12 +305,12 @@
   <body>
     <div class="top"></div>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -328,40 +320,40 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="songs-section">
+    <section class="songssection">
       <div class="container">
         <div class="header">
           <h1>RNB Collection</h1>
         </div>
 
-        <div class="songs-grid">
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+        <div class="songsgrid">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img src="images/listofartist/artist10.JPG" alt="Future" />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Future</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Future</h2>
+                <p class="artistdescription">
                   Atlanta trap icon blending melodic hooks with hard-hitting
                   production, pioneering the modern sound of hip-hop.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">WAIT FOR YOU</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">WAIT FOR YOU</h3>
                 </div>
-                <p class="song-artist">Future</p>
-                <div class="song-audio">
+                <p class="songartist">Future</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/wait for u - future.mp4"
@@ -372,13 +364,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">LOVE YOU BETTER</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">LOVE YOU BETTER</h3>
                 </div>
-                <p class="song-artist">Future</p>
-                <div class="song-audio">
+                <p class="songartist">Future</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/love u better - future.mp4"
@@ -389,13 +381,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">PUFFIN ON ZOOTIES</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">PUFFIN ON ZOOTIES</h3>
                 </div>
-                <p class="song-artist">Future</p>
-                <div class="song-audio">
+                <p class="songartist">Future</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/puffin - future.mp4"
@@ -408,27 +400,27 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img src="images/listofartist/artist6.JPG" alt="Brent Faiyaz" />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Brent Faiyaz</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Brent Faiyaz</h2>
+                <p class="artistdescription">
                   Maryland's sultry R&B crooner with a distinctive voice,
                   crafting intimate tracks about love and heartbreak.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Talk 2 You</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Talk 2 You</h3>
                 </div>
-                <p class="song-artist">Brent Faiyaz</p>
-                <div class="song-audio">
+                <p class="songartist">Brent Faiyaz</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/talk 2 you.mp4"
@@ -439,13 +431,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">First World Problemz</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">First World Problemz</h3>
                 </div>
-                <p class="song-artist">Brent Faiyaz</p>
-                <div class="song-audio">
+                <p class="songartist">Brent Faiyaz</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/first world problems - brent.mp4"
@@ -456,13 +448,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Wrong Places</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Wrong Places</h3>
                 </div>
-                <p class="song-artist">Brent Faiyaz</p>
-                <div class="song-audio">
+                <p class="songartist">Brent Faiyaz</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/wrong places - brent.mp4"
@@ -475,30 +467,30 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img
                   src="images/listofartist/artist7.JPG"
                   alt="Bryson Tiller"
                 />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Bryson Tiller</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Bryson Tiller</h2>
+                <p class="artistdescription">
                   Louisville's trapsoul pioneer who redefined R&B by fusing
                   emotional vulnerability with hip-hop influenced beats.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Outta Time</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Outta Time</h3>
                 </div>
-                <p class="song-artist">Bryson Tiller</p>
-                <div class="song-audio">
+                <p class="songartist">Bryson Tiller</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/outta time - bryson.mp4"
@@ -509,13 +501,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">Attention</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">Attention</h3>
                 </div>
-                <p class="song-artist">Bryson Tiller</p>
-                <div class="song-audio">
+                <p class="songartist">Bryson Tiller</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/attention - bryson.mp4"
@@ -526,13 +518,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Next 2 You</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Next 2 You</h3>
                 </div>
-                <p class="song-artist">Bryson Tiller</p>
-                <div class="song-audio">
+                <p class="songartist">Bryson Tiller</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/next 2 you - bryson.mp4"
@@ -545,27 +537,27 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img src="images/listofartist/artist8.JPG" alt="Schoolboy Q" />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">Schoolboy Q</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">Schoolboy Q</h2>
+                <p class="artistdescription">
                   West Coast rapper from TDE bringing gritty street narratives
                   with infectious energy and dynamic production.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Man Of THe Year</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Man Of THe Year</h3>
                 </div>
-                <p class="song-artist">Schoolboy Q</p>
-                <div class="song-audio">
+                <p class="songartist">Schoolboy Q</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/moty - schoolboy.mp4"
@@ -576,13 +568,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">THank God For Me</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">THank God For Me</h3>
                 </div>
-                <p class="song-artist">Schoolboy Q</p>
-                <div class="song-audio">
+                <p class="songartist">Schoolboy Q</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/tgfm - schoolboy.mp4"
@@ -593,13 +585,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Studio</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Studio</h3>
                 </div>
-                <p class="song-artist">Schoolboy Q</p>
-                <div class="song-audio">
+                <p class="songartist">Schoolboy Q</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/studio - schoolboy.mp4"
@@ -612,30 +604,30 @@
             </div>
           </div>
 
-          <div class="album-section">
-            <div class="artist-column">
-              <div class="album-cover">
+          <div class="albumsection">
+            <div class="artistcolumn">
+              <div class="albumcover">
                 <img
                   src="images/listofartist/artist20.png"
                   alt="PartyNextDoor"
                 />
               </div>
-              <div class="artist-info">
-                <h2 class="artist-name">PartyNextDoor</h2>
-                <p class="artist-description">
+              <div class="artistinfo">
+                <h2 class="artistname">PartyNextDoor</h2>
+                <p class="artistdescription">
                   OVO's atmospheric R&B producer and singer creating moody,
                   late-night vibes with sultry vocals and minimal beats.
                 </p>
               </div>
             </div>
-            <div class="songs-list">
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">01</span>
-                  <h3 class="song-title">Things N Such</h3>
+            <div class="songslist">
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">01</span>
+                  <h3 class="songtitle">Things N Such</h3>
                 </div>
-                <p class="song-artist">PartyNextDoor</p>
-                <div class="song-audio">
+                <p class="songartist">PartyNextDoor</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/things n such - pnd.mp4"
@@ -646,13 +638,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">02</span>
-                  <h3 class="song-title">West District</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">02</span>
+                  <h3 class="songtitle">West District</h3>
                 </div>
-                <p class="song-artist">PartyNextDoor</p>
-                <div class="song-audio">
+                <p class="songartist">PartyNextDoor</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/west district - pnd.mp4"
@@ -663,13 +655,13 @@
                 </div>
               </div>
 
-              <div class="song-item">
-                <div class="song-header">
-                  <span class="song-number">03</span>
-                  <h3 class="song-title">Resentment</h3>
+              <div class="songitem">
+                <div class="songheader">
+                  <span class="songnumber">03</span>
+                  <h3 class="songtitle">Resentment</h3>
                 </div>
-                <p class="song-artist">PartyNextDoor</p>
-                <div class="song-audio">
+                <p class="songartist">PartyNextDoor</p>
+                <div class="songaudio">
                   <audio controls>
                     <source
                       src="songforpage/resentment - pnd.mp4"
@@ -685,6 +677,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

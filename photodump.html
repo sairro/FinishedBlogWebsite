@@ -32,7 +32,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -41,37 +41,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -83,7 +83,7 @@
         cursor: pointer;
       }
 
-      .photo-dump {
+      .photodump {
         margin-top: 80px;
         padding: 64px 48px;
         max-width: 1400px;
@@ -91,29 +91,29 @@
         margin-right: auto;
       }
 
-      .section-header {
+      .sectionheader {
         margin-bottom: 48px;
       }
 
-      .section-title {
+      .sectiontitle {
         font-size: 40px;
         font-weight: 500;
         color: #1a1a1a;
       }
 
-      .section-subtitle {
+      .sectionsubtitle {
         color: #6b7280;
         font-size: 16px;
         margin-top: 8px;
       }
 
-      .photos-grid {
+      .photosgrid {
         display: grid;
         grid-template-columns: repeat(3, 33.333%);
         gap: 32px;
       }
 
-      .photo-card {
+      .photocard {
         background: #ffffff;
         border-radius: 15px;
         overflow: hidden;
@@ -121,11 +121,11 @@
         transition: transform 0.3s ease;
       }
 
-      .photo-card:hover {
+      .photocard:hover {
         transform: translateY(-4px);
       }
 
-      .photo-image {
+      .photoimage {
         width: 100%;
         height: 280px;
         background: #f3f4f6;
@@ -136,14 +136,14 @@
         justify-content: center;
       }
 
-      .photo-image img {
+      .photoimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .photo-badge {
+      .photobadge {
         position: absolute;
         bottom: 16px;
         left: 16px;
@@ -155,12 +155,12 @@
         font-weight: 600;
       }
 
-      .photo-content {
+      .photocontent {
         padding: 24px;
         text-decoration: none;
       }
 
-      .photo-title {
+      .phototitle {
         font-size: 20px;
         font-weight: 500;
         color: #1a1a1a;
@@ -169,61 +169,37 @@
         text-decoration: none;
       }
 
-      .photo-description {
+      .photodescription {
         color: #6b7280;
         font-size: 15px;
         line-height: 1.6;
         margin-bottom: 16px;
       }
 
-      .photo-date {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #0a1929;
-        font-size: 14px;
-      }
-
-      .back-button {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 24px;
-        border-radius: 25px;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 32px;
-      }
-
-      .anchor-text {
+      .anchortext {
         text-decoration: none;
         color: inherit;
       }
 
       @media (max-width: 768px) {
-        .nav-container {
+        .navcontainer {
           padding: 16px 24px;
         }
 
-        .nav-links {
+        .navlinks {
           gap: 20px;
           font-size: 14px;
         }
 
-        .photo-dump {
+        .photodump {
           padding: 32px 24px;
         }
 
-        .photos-grid {
+        .photosgrid {
           grid-template-columns: 1fr;
         }
 
-        .section-title {
+        .sectiontitle {
           font-size: 32px;
         }
       }
@@ -231,12 +207,12 @@
   </head>
   <body>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -246,71 +222,71 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="photo-dump">
-      <div class="section-header">
-        <h2 class="section-title">Photo Dump</h2>
-        <p class="section-subtitle">Moments captured along the way.</p>
+    <section class="photodump">
+      <div class="sectionheader">
+        <h2 class="sectiontitle">Photo Dump</h2>
+        <p class="sectionsubtitle">Moments captured along the way.</p>
       </div>
 
-      <div class="photos-grid">
-        <article class="photo-card">
-          <a href="selfies.html" class="anchor-text"
-            ><div class="photo-image">
+      <div class="photosgrid">
+        <article class="photocard">
+          <a href="selfies.html" class="anchortext"
+            ><div class="photoimage">
               <img src="images/selfies/photo14.jpg" alt="Photo 1" />
-              <span class="photo-badge">Me</span>
+              <span class="photobadge">Me</span>
             </div>
-            <div class="photo-content">
-              <h3 class="photo-title">Selfies</h3>
-              <p class="photo-description">This is just me, nothing special.</p>
+            <div class="photocontent">
+              <h3 class="phototitle">Selfies</h3>
+              <p class="photodescription">This is just me, nothing special.</p>
             </div></a
           >
         </article>
 
-        <article class="photo-card">
-          <a href="footballsection.html" class="anchor-text"
-            ><div class="photo-image">
+        <article class="photocard">
+          <a href="footballsection.html" class="anchortext"
+            ><div class="photoimage">
               <img src="images/football/f2.jpeg" alt="Photo 2" />
-              <span class="photo-badge">Hobby</span>
+              <span class="photobadge">Hobby</span>
             </div>
-            <div class="photo-content">
-              <h3 class="photo-title">Footy</h3>
-              <p class="photo-description">
+            <div class="photocontent">
+              <h3 class="phototitle">Footy</h3>
+              <p class="photodescription">
                 This is just the sport i love playing.
               </p>
             </div></a
           >
         </article>
 
-        <article class="photo-card">
-          <a href="randomdump.html" class="anchor-text"
-            ><div class="photo-image">
+        <article class="photocard">
+          <a href="randomdump.html" class="anchortext"
+            ><div class="photoimage">
               <img src="images/randomphotodump/photo3.jpeg" alt="Photo 4" />
-              <span class="photo-badge">Randoms</span>
+              <span class="photobadge">Randoms</span>
             </div>
-            <div class="photo-content">
-              <h3 class="photo-title">Random Flicks Yehurd</h3>
-              <p class="photo-description">
+            <div class="photocontent">
+              <h3 class="phototitle">Random Flicks Yehurd</h3>
+              <p class="photodescription">
                 Basically nonsense photos i take on a daily.
               </p>
             </div></a
           >
         </article>
 
-        <article class="photo-card">
-          <a href="artist.html" class="anchor-text"
-            ><div class="photo-image">
+        <article class="photocard">
+          <a href="artist.html" class="anchortext"
+            ><div class="photoimage">
               <img src="images/beats/HIPHOP.PNG" alt="Photo 4" />
-              <span class="photo-badge">Randoms</span>
+              <span class="photobadge">Randoms</span>
             </div>
-            <div class="photo-content">
-              <h3 class="photo-title">Artist</h3>
-              <p class="photo-description">
+            <div class="photocontent">
+              <h3 class="phototitle">Artist</h3>
+              <p class="photodescription">
                 List of artist i listen to on a daily
               </p>
             </div></a

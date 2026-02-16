@@ -42,13 +42,13 @@
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-grid {
+      .playlistgrid {
         display: flex;
         flex-direction: column;
         gap: 40px;
       }
 
-      .playlist-card {
+      .playlistcard {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -58,60 +58,60 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
-      .playlist-card:nth-child(even) {
+      .playlistcard:nth-child(even) {
         direction: rtl;
       }
 
-      .playlist-card:nth-child(even) > * {
+      .playlistcard:nth-child(even) > * {
         direction: ltr;
       }
 
-      .playlist-image img {
+      .playlistimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
 
-      .playlist-content {
+      .playlistcontent {
         padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
-      .playlist-title {
+      .playlisttitle {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 16px;
         color: rgba(10, 25, 41, 1);
       }
 
-      .playlist-description {
+      .playlistdescription {
         font-size: 15px;
         color: rgba(10, 25, 41, 1);
         line-height: 1.6;
         margin-bottom: 24px;
       }
 
-      .movie-meta {
+      .moviemeta {
         font-size: 14px;
         color: rgba(10, 25, 41, 0.8);
         margin-bottom: 8px;
       }
 
-      .movie-meta strong {
+      .moviemeta strong {
         font-weight: 600;
       }
 
-      .playlist-footer {
+      .playlistfooter {
         display: flex;
         align-items: center;
         gap: 16px;
         margin-top: 16px;
       }
 
-      .view-button {
+      .viewbutton {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 12px 28px;
@@ -123,7 +123,7 @@
         transition: background 0.3s ease;
       }
 
-      .view-button:hover {
+      .viewbutton:hover {
         background: #333;
       }
 
@@ -141,7 +141,7 @@
         scroll-behavior: smooth;
       }
 
-      .nav-container {
+      .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px 48px;
@@ -150,37 +150,37 @@
         align-items: center;
       }
 
-      .logo-name {
+      .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
 
-      .nav-menu {
+      .navmenu {
         display: flex;
         gap: 40px;
       }
 
-      .nav-links {
+      .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
 
-      .nav-links a {
+      .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
 
-      .nav-links a:hover {
+      .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
 
-      .contact-btn {
+      .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
@@ -197,23 +197,23 @@
           font-size: 36px;
         }
 
-        .playlist-card {
+        .playlistcard {
           grid-template-columns: 1fr;
         }
 
-        .playlist-card:nth-child(even) {
+        .playlistcard:nth-child(even) {
           direction: ltr;
         }
 
-        .playlist-content {
+        .playlistcontent {
           padding: 24px;
         }
 
-        .playlist-title {
+        .playlisttitle {
           font-size: 24px;
         }
 
-        .playlist-image {
+        .playlistimage {
           height: 250px;
         }
       }
@@ -223,7 +223,7 @@
         text-decoration: none;
       }
 
-      .go-to-top {
+      .gototop {
         position: fixed;
         bottom: 40px;
         right: 40px;
@@ -247,12 +247,12 @@
   <body>
     <div class="top"></div>
     <nav>
-      <div class="nav-container">
-        <div class="logo-name">
+      <div class="navcontainer">
+        <div class="logoname">
           <span>Gentle Progress</span>
         </div>
-        <div class="nav-menu">
-          <ul class="nav-links">
+        <div class="navmenu">
+          <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -262,110 +262,110 @@
             <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="index.html#contact"
-            ><button class="contact-btn">Reach</button></a
+            ><button class="contactbtn">Reach</button></a
           >
         </div>
       </div>
     </nav>
 
-    <section class="my-beats">
+    <section class="mybeats">
       <div class="container">
         <div class="header">
           <h1>Romance</h1>
           <p>None but love</p>
         </div>
 
-        <div class="playlist-grid">
-          <div class="playlist-card">
-            <div class="playlist-image">
+        <div class="playlistgrid">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/moviesposter/50.JPG" alt="50 First Dates" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">50 First Dates</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">50 First Dates</h2>
+              <p class="playlistdescription">
                 Henry Roth is a man afraid of commitment until he meets the
                 beautiful Lucy. They hit it off and Henry thinks he's finally
                 found the girl of his dreams until discovering she has
                 short-term memory loss and forgets him the next day. Determined
                 to win her over, Henry must woo her anew every single day.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Peter Segal
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Adam Sandler, Drew Barrymore, Rob
                 Schneider
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/17KJk3ErIx0"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img src="images/moviesposter/notebook.JPG" alt="The Notebook" />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">The Notebook</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">The Notebook</h2>
+              <p class="playlistdescription">
                 A poor yet passionate young man falls in love with a rich young
                 woman, giving her a sense of freedom, but they are soon
                 separated because of their social differences. Years later,
                 their paths cross again, forcing them to confront their past and
                 the enduring power of true love.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Nick Cassavetes
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Ryan Gosling, Rachel McAdams, James
                 Garner
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/BjJcYdEOI0k"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
           </div>
 
-          <div class="playlist-card">
-            <div class="playlist-image">
+          <div class="playlistcard">
+            <div class="playlistimage">
               <img
                 src="images/moviesposter/people.JPG"
                 alt="People We Meet on Vacation"
               />
             </div>
-            <div class="playlist-content">
-              <h2 class="playlist-title">People We Meet on Vacation</h2>
-              <p class="playlist-description">
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">People We Meet on Vacation</h2>
+              <p class="playlistdescription">
                 Two best friends who couldn't be more different take a vacation
                 together every summer. Over the years, their friendship is
                 tested as they navigate life's ups and downs, all while
                 harboring unspoken feelings for each other. A heartwarming tale
                 of friendship, love, and second chances.
               </p>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Director:</strong> Brett Haley
               </div>
-              <div class="movie-meta">
+              <div class="moviemeta">
                 <strong>Stars:</strong> Emily Henry, Tom Blyth, Emily Bader
               </div>
-              <div class="playlist-footer">
+              <div class="playlistfooter">
                 <a
                   href="https://youtu.be/m1C9DTOUH5s"
                   target="movieplayer"
                   class="viewplaylist"
-                  ><button class="view-button">Watch Trailer</button></a
+                  ><button class="viewbutton">Watch Trailer</button></a
                 >
               </div>
             </div>
@@ -374,6 +374,6 @@
       </div>
     </section>
 
-    <a href="#top" class="go-to-top">↑</a>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>
