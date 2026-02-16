@@ -525,9 +525,30 @@
       .hero-image video::before {
         object-fit: cover;
       }
+
+      .go-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
     </style>
   </head>
   <body>
+    <div class="top"></div>
     <nav>
       <div class="nav-container">
         <div class="logo-name">
@@ -541,6 +562,7 @@
             <li><a href="photodump.html">Photo Gallery</a></li>
             <li><a href="beats.html">Beats</a></li>
             <li><a href="choosecategory.html">Film Movies</a></li>
+            <li><a href="choosecategory.html">TV Shows</a></li>
           </ul>
           <a href="#contact"><button class="contact-btn">Reach</button></a>
         </div>
@@ -583,6 +605,7 @@
       </div>
     </section>
 
+    <br /><br /><br /><br /><br />
     <!-- blogs to pre -->
     <section class="featured">
       <div class="section-header">
@@ -828,5 +851,7 @@
         </div>
       </div>
     </section>
+
+    <a href="#top" class="go-to-top">↑</a>
   </body>
 </html>
