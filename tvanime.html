@@ -200,6 +200,71 @@
         z-index: 999;
       }
 
+      .sitefooter {
+        border-top: 1px solid #e5e7eb;
+        padding: 32px 20px;
+        margin-top: 80px;
+      }
+
+      .footerinner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .footerheading {
+        text-align: center;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .footerheading h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .footerheading p {
+        font-size: 13px;
+        color: rgba(10, 25, 41, 0.8);
+      }
+
+      .footercategories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .footercategorybutton {
+        background: white;
+        border: 2px solid rgba(10, 25, 41, 1);
+        color: rgba(10, 25, 41, 1);
+        padding: 8px 22px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+      }
+
+      .footercategorybutton:hover {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(10, 25, 41, 0.2);
+      }
+
+      .footercategorybutton.active {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+      }
+
       @media (max-width: 768px) {
         .header h1 {
           font-size: 36px;
@@ -223,6 +288,11 @@
 
         .playlistimage {
           padding-top: 56.25%;
+        }
+
+        .footercategorybutton {
+          font-size: 13px;
+          padding: 7px 16px;
         }
       }
     </style>
@@ -444,5 +514,19 @@
     </section>
 
     <a href="#top" class="gototop">↑</a>
+
+    <footer class="sitefooter">
+      <div class="footerinner">
+        <div class="footerheading">
+          <h2>TV SHOWS</h2>
+          <p>Explore other categories</p>
+        </div>
+        <div class="footercategories">
+          <a href="tvcomedy.html" class="footercategorybutton">Comedy</a>
+          <a href="tvaction.html" class="footercategorybutton">Action</a>
+          <a href="tvanime.html" class="footercategorybutton active">Anime</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
