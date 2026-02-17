@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Action TV Shows - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .header h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .header p {
+        font-size: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlistgrid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .playlistcard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .playlistcard:nth-child(even) {
+        direction: rtl;
+      }
+
+      .playlistcard:nth-child(even) > * {
+        direction: ltr;
+      }
+
+      .playlistimage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .playlistcontent {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .playlisttitle {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlistdescription {
+        font-size: 15px;
+        color: rgba(10, 25, 41, 1);
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .moviemeta {
+        font-size: 14px;
+        color: rgba(10, 25, 41, 0.8);
+        margin-bottom: 8px;
+      }
+
+      .moviemeta strong {
+        font-weight: 600;
+      }
+
+      .playlistfooter {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .viewbutton {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 12px 28px;
+        border-radius: 25px;
+        border: none;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .viewbutton:hover {
+        background: #333;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .navcontainer {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logoname {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .navmenu {
+        display: flex;
+        gap: 40px;
+      }
+
+      .navlinks {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .navlinks a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .navlinks a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .contactbtn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 36px;
+        }
+
+        .playlistcard {
+          grid-template-columns: 1fr;
+        }
+
+        .playlistcard:nth-child(even) {
+          direction: ltr;
+        }
+
+        .playlistcontent {
+          padding: 24px;
+        }
+
+        .playlisttitle {
+          font-size: 24px;
+        }
+
+        .playlistimage {
+          height: 250px;
+        }
+      }
+
+      .viewplaylist {
+        color: white;
+        text-decoration: none;
+      }
+
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <nav>
+      <div class="navcontainer">
+        <div class="logoname">
+          <span>Gentle Progress</span>
+        </div>
+        <div class="navmenu">
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="beats.html">Beats</a></li>
+            <li><a href="choosecategory.html">Film Movies</a></li>
+            <li><a href="tvshowscategory.html">TV Shows</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contactbtn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="mybeats">
+      <div class="container">
+        <div class="header">
+          <h1>Action TV Shows</h1>
+          <p>Edge-of-your-seat thrills</p>
+        </div>
+
+        <div class="playlistgrid">
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img src="images/tvshowposters/lupin.JPG" alt="Lupin" />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Lupin</h2>
+              <p class="playlistdescription">
+                Inspired by the adventures of Arsène Lupin, gentleman thief
+                Assane Diop sets out to avenge his father for an injustice
+                inflicted by a wealthy family. Using his charisma and mastery of
+                disguise, he pulls off a series of daring heists while staying
+                one step ahead of the police in modern-day Paris.
+              </p>
+              <div class="moviemeta"><strong>Creator:</strong> George Kay</div>
+              <div class="moviemeta">
+                <strong>Stars:</strong> Omar Sy, Ludivine Sagnier, Soufiane
+                Guerrab
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 3 (2021-2023)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/ga0iTWXCGa0"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img src="images/tvshowposters/agent.JPG" alt="The Night Agent" />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">The Night Agent</h2>
+              <p class="playlistdescription">
+                Low-level FBI agent Peter Sutherland works in the basement of
+                the White House manning a phone that never rings—until the night
+                it does. Thrust into a fast-paced conspiracy that leads to the
+                Oval Office, Peter races against time to protect the President
+                while fighting shadowy forces within the government.
+              </p>
+              <div class="moviemeta"><strong>Creator:</strong> Shawn Ryan</div>
+              <div class="moviemeta">
+                <strong>Stars:</strong> Gabriel Basso, Luciane Buchanan, Hong
+                Chau
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 2 (2023-present)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/YDbnY9Obsfs"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img src="images/tvshowposters/recruit.JPG" alt="The Recruit" />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">The Recruit</h2>
+              <p class="playlistdescription">
+                Fresh CIA lawyer Owen Hendricks finds his first week on the job
+                upended when he discovers a threatening letter from a former
+                asset claiming to expose agency secrets. What begins as a simple
+                legal matter spirals into a dangerous game of international
+                intrigue, forcing the rookie to navigate deadly threats both
+                foreign and domestic.
+              </p>
+              <div class="moviemeta">
+                <strong>Creator:</strong> Alexi Hawley
+              </div>
+              <div class="moviemeta">
+                <strong>Stars:</strong> Noah Centineo, Fivel Stewart, Laura
+                Haddock
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 2 (2022-present)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/Hywe0zDSSSE"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img
+                src="images/tvshowposters/walking.JPG"
+                alt="The Walking Dead"
+              />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">The Walking Dead</h2>
+              <p class="playlistdescription">
+                Sheriff's deputy Rick Grimes awakens from a coma to discover a
+                post-apocalyptic world dominated by flesh-eating zombies. As he
+                searches for his family, Rick leads a group of survivors through
+                a brutal landscape where the living can be just as dangerous as
+                the undead. Survival demands difficult choices and moral
+                compromises.
+              </p>
+              <div class="moviemeta">
+                <strong>Creator:</strong> Frank Darabont
+              </div>
+              <div class="moviemeta">
+                <strong>Stars:</strong> Andrew Lincoln, Norman Reedus, Melissa
+                McBride
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 11 (2010-2022)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/cu2ApTImBKc"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#top" class="gototop">↑</a>
+  </body>
+</html>

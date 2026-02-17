@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime TV Shows - Gentle Progress</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .header h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .header p {
+        font-size: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlistgrid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .playlistcard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .playlistcard:nth-child(even) {
+        direction: rtl;
+      }
+
+      .playlistcard:nth-child(even) > * {
+        direction: ltr;
+      }
+
+      .playlistimage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .playlistcontent {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .playlisttitle {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .playlistdescription {
+        font-size: 15px;
+        color: rgba(10, 25, 41, 1);
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .moviemeta {
+        font-size: 14px;
+        color: rgba(10, 25, 41, 0.8);
+        margin-bottom: 8px;
+      }
+
+      .moviemeta strong {
+        font-weight: 600;
+      }
+
+      .playlistfooter {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .viewbutton {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 12px 28px;
+        border-radius: 25px;
+        border: none;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .viewbutton:hover {
+        background: #333;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .navcontainer {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logoname {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .navmenu {
+        display: flex;
+        gap: 40px;
+      }
+
+      .navlinks {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .navlinks a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .navlinks a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .contactbtn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 36px;
+        }
+
+        .playlistcard {
+          grid-template-columns: 1fr;
+        }
+
+        .playlistcard:nth-child(even) {
+          direction: ltr;
+        }
+
+        .playlistcontent {
+          padding: 24px;
+        }
+
+        .playlisttitle {
+          font-size: 24px;
+        }
+
+        .playlistimage {
+          height: 250px;
+        }
+      }
+
+      .viewplaylist {
+        color: white;
+        text-decoration: none;
+      }
+
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <nav>
+      <div class="navcontainer">
+        <div class="logoname">
+          <span>Gentle Progress</span>
+        </div>
+        <div class="navmenu">
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="beats.html">Beats</a></li>
+            <li><a href="choosecategory.html">Film Movies</a></li>
+            <li><a href="tvshowscategory.html">TV Shows</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contactbtn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="mybeats">
+      <div class="container">
+        <div class="header">
+          <h1>Anime TV Shows</h1>
+          <p>Childhood will always be on top!</p>
+        </div>
+
+        <div class="playlistgrid">
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img src="images/tvshowposters/solo.JPG" alt="Solo Leveling" />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Solo Leveling</h2>
+              <p class="playlistdescription">
+                In a world where hunters — humans who possess magical abilities
+                — battle dangerous monsters, Sung Jinwoo is considered the
+                weakest of them all. After barely surviving a deadly double
+                dungeon, he awakens to a mysterious power that only he can see:
+                a System that allows him to level up endlessly and grow stronger
+                beyond imagination.
+              </p>
+              <div class="moviemeta"><strong>Studio:</strong> A-1 Pictures</div>
+              <div class="moviemeta">
+                <strong>Based on:</strong> Web novel by Chugong
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 2 (2024-present)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/bssSj4cKsrI"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img src="images/tvshowposters/aot.png" alt="Attack on Titan" />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Attack on Titan</h2>
+              <p class="playlistdescription">
+                Humanity lives within enormous walled cities to protect
+                themselves from the Titans — gigantic humanoid creatures that
+                devour humans seemingly without reason. When the walls are
+                breached for the first time in a century, young Eren Yeager vows
+                to exterminate every Titan and uncover the dark truths hidden
+                beyond the walls.
+              </p>
+              <div class="moviemeta">
+                <strong>Studio:</strong> MAPPA / Wit Studio
+              </div>
+              <div class="moviemeta">
+                <strong>Based on:</strong> Manga by Hajime Isayama
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 4 (2013-2023)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/LV-nazLVmgo"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img
+                src="images/tvshowposters/record.JPG"
+                alt="Record of Ragnarok"
+              />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Record of Ragnarok</h2>
+              <p class="playlistdescription">
+                The gods of all mythologies convene and decide to end humanity.
+                However, a lone Valkyrie proposes one final chance — Ragnarok, a
+                series of thirteen epic battles between the mightiest gods and
+                the greatest human warriors in history. If humanity wins six
+                fights, they earn the right to survive.
+              </p>
+              <div class="moviemeta"><strong>Studio:</strong> Graphinica</div>
+              <div class="moviemeta">
+                <strong>Based on:</strong> Manga by Shinya Umemura
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 2 (2021-2023)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/_9HxsIYORyE"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img src="images/tvshowposters/chainsaw.png" alt="Chainsaw Man" />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Chainsaw Man</h2>
+              <p class="playlistdescription">
+                Denji is a poverty-stricken young man who makes ends meet as a
+                Devil Hunter alongside his pet devil Pochita. After being
+                betrayed and killed, Pochita merges with him, resurrecting Denji
+                as the Chainsaw Man — a human-devil hybrid with the power to
+                summon chainsaws from his body. He joins a government agency
+                hunting Devils in exchange for a normal life.
+              </p>
+              <div class="moviemeta"><strong>Studio:</strong> MAPPA</div>
+              <div class="moviemeta">
+                <strong>Based on:</strong> Manga by Tatsuki Fujimoto
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 1 (2022-present)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/GJ1jrCnm-t8"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="playlistcard">
+            <div class="playlistimage">
+              <img src="images/tvshowposters/blue.JPG" alt="Blue Lock" />
+            </div>
+            <div class="playlistcontent">
+              <h2 class="playlisttitle">Blue Lock</h2>
+              <p class="playlistdescription">
+                After Japan's humiliating defeat at the World Cup, the Japan
+                Football Union hires eccentric coach Jinpachi Ego to transform
+                the national team. His radical solution: lock 300 of Japan's
+                best high school strikers in an isolated facility and pit them
+                against each other in a brutal survival program designed to
+                forge the world's greatest egoist striker.
+              </p>
+              <div class="moviemeta"><strong>Studio:</strong> Eight Bit</div>
+              <div class="moviemeta">
+                <strong>Based on:</strong> Manga by Muneyuki Kaneshiro
+              </div>
+              <div class="moviemeta">
+                <strong>Seasons:</strong> 2 (2022-present)
+              </div>
+              <div class="playlistfooter">
+                <a
+                  href="https://youtu.be/hTfnf4y-sgQ"
+                  target="_blank"
+                  class="viewplaylist"
+                  ><button class="viewbutton">Watch Trailer</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#top" class="gototop">↑</a>
+  </body>
+</html>
