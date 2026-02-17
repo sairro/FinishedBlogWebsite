@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Film Movies - Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
     <style>
       * {
         margin: 0;
@@ -66,10 +67,20 @@
         direction: ltr;
       }
 
-      .playlistimage img {
+      .playlistimage {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: #000;
+      }
+
+      .playlistimage iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        border: none;
         display: block;
       }
 
@@ -102,29 +113,6 @@
 
       .moviemeta strong {
         font-weight: 600;
-      }
-
-      .playlistfooter {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 16px;
-      }
-
-      .viewbutton {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 28px;
-        border-radius: 25px;
-        border: none;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-
-      .viewbutton:hover {
-        background: #333;
       }
 
       nav {
@@ -192,6 +180,26 @@
         cursor: pointer;
       }
 
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+
       @media (max-width: 768px) {
         .header h1 {
           font-size: 36px;
@@ -214,33 +222,8 @@
         }
 
         .playlistimage {
-          height: 250px;
+          padding-top: 56.25%;
         }
-      }
-
-      .viewplaylist {
-        color: white;
-        text-decoration: none;
-      }
-
-      .gototop {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        background: rgba(10, 25, 41, 0.9);
-        color: #ffffff;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 600;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-        z-index: 999;
       }
     </style>
   </head>
@@ -278,7 +261,19 @@
         <div class="playlistgrid">
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/50.JPG" alt="50 First Dates" />
+              <iframe
+                src="https://www.youtube.com/embed/17KJk3ErIx0"
+                title="50 First Dates Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">50 First Dates</h2>
@@ -296,20 +291,24 @@
                 <strong>Stars:</strong> Adam Sandler, Drew Barrymore, Rob
                 Schneider
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/17KJk3ErIx0"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/notebook.JPG" alt="The Notebook" />
+              <iframe
+                src="https://www.youtube.com/embed/BjJcYdEOI0k"
+                title="The Notebook Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">The Notebook</h2>
@@ -327,23 +326,24 @@
                 <strong>Stars:</strong> Ryan Gosling, Rachel McAdams, James
                 Garner
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/BjJcYdEOI0k"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/moviesposter/people.JPG"
-                alt="People We Meet on Vacation"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/m1C9DTOUH5s"
+                title="People We Meet on Vacation Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">People We Meet on Vacation</h2>
@@ -359,14 +359,6 @@
               </div>
               <div class="moviemeta">
                 <strong>Stars:</strong> Emily Henry, Tom Blyth, Emily Bader
-              </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/m1C9DTOUH5s"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
               </div>
             </div>
           </div>

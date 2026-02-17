@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anime TV Shows - Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
     <style>
       * {
         margin: 0;
@@ -66,10 +67,20 @@
         direction: ltr;
       }
 
-      .playlistimage img {
+      .playlistimage {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: #000;
+      }
+
+      .playlistimage iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        border: none;
         display: block;
       }
 
@@ -102,28 +113,6 @@
 
       .moviemeta strong {
         font-weight: 600;
-      }
-
-      .playlistfooter {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 16px;
-      }
-
-      .viewbutton {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 28px;
-        border-radius: 25px;
-        border: none;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .viewbutton:hover {
-        background: #333;
       }
 
       nav {
@@ -191,6 +180,26 @@
         cursor: pointer;
       }
 
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+
       @media (max-width: 768px) {
         .header h1 {
           font-size: 36px;
@@ -213,33 +222,8 @@
         }
 
         .playlistimage {
-          height: 250px;
+          padding-top: 56.25%;
         }
-      }
-
-      .viewplaylist {
-        color: white;
-        text-decoration: none;
-      }
-
-      .gototop {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        background: rgba(10, 25, 41, 0.9);
-        color: #ffffff;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 600;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-        z-index: 999;
       }
     </style>
   </head>
@@ -277,7 +261,19 @@
         <div class="playlistgrid">
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/solo.JPG" alt="Solo Leveling" />
+              <iframe
+                src="https://www.youtube.com/embed/bssSj4cKsrI"
+                title="Solo Leveling Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Solo Leveling</h2>
@@ -296,20 +292,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 2 (2024-present)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/bssSj4cKsrI"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/aot.png" alt="Attack on Titan" />
+              <iframe
+                src="https://www.youtube.com/embed/LV-nazLVmgo"
+                title="Attack on Titan Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Attack on Titan</h2>
@@ -330,23 +330,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 4 (2013-2023)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/LV-nazLVmgo"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/tvshowposters/record.JPG"
-                alt="Record of Ragnarok"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/_9HxsIYORyE"
+                title="Record of Ragnarok Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Record of Ragnarok</h2>
@@ -364,20 +365,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 2 (2021-2023)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/_9HxsIYORyE"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/chainsaw.png" alt="Chainsaw Man" />
+              <iframe
+                src="https://www.youtube.com/embed/GJ1jrCnm-t8"
+                title="Chainsaw Man Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Chainsaw Man</h2>
@@ -396,20 +401,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 1 (2022-present)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/GJ1jrCnm-t8"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/blue.JPG" alt="Blue Lock" />
+              <iframe
+                src="https://www.youtube.com/embed/hTfnf4y-sgQ"
+                title="Blue Lock Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Blue Lock</h2>
@@ -427,14 +436,6 @@
               </div>
               <div class="moviemeta">
                 <strong>Seasons:</strong> 2 (2022-present)
-              </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/hTfnf4y-sgQ"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
               </div>
             </div>
           </div>

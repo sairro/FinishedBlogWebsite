@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comedy TV Shows - Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
     <style>
       * {
         margin: 0;
@@ -66,10 +67,20 @@
         direction: ltr;
       }
 
-      .playlistimage img {
+      .playlistimage {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: #000;
+      }
+
+      .playlistimage iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        border: none;
         display: block;
       }
 
@@ -102,28 +113,6 @@
 
       .moviemeta strong {
         font-weight: 600;
-      }
-
-      .playlistfooter {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 16px;
-      }
-
-      .viewbutton {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 28px;
-        border-radius: 25px;
-        border: none;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .viewbutton:hover {
-        background: #333;
       }
 
       nav {
@@ -191,6 +180,26 @@
         cursor: pointer;
       }
 
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+
       @media (max-width: 768px) {
         .header h1 {
           font-size: 36px;
@@ -213,33 +222,8 @@
         }
 
         .playlistimage {
-          height: 250px;
+          padding-top: 56.25%;
         }
-      }
-
-      .viewplaylist {
-        color: white;
-        text-decoration: none;
-      }
-
-      .gototop {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        background: rgba(10, 25, 41, 0.9);
-        color: #ffffff;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 600;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-        z-index: 999;
       }
     </style>
   </head>
@@ -277,7 +261,19 @@
         <div class="playlistgrid">
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/99.JPG" alt="Brooklyn Nine-Nine" />
+              <iframe
+                src="https://www.youtube.com/embed/sEOuJ4z5aTc"
+                title="Brooklyn Nine-Nine Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Brooklyn Nine-Nine</h2>
@@ -297,20 +293,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 8 (2013-2021)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/sEOuJ4z5aTc"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/young.png" alt="Young Sheldon" />
+              <iframe
+                src="https://www.youtube.com/embed/FStMMcj-RiA"
+                title="Young Sheldon Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Young Sheldon</h2>
@@ -330,20 +330,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 7 (2017-2024)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/FStMMcj-RiA"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/modern.JPG" alt="Modern Family" />
+              <iframe
+                src="https://www.youtube.com/embed/rbpTUPisA78"
+                title="Modern Family Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Modern Family</h2>
@@ -362,20 +366,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 11 (2009-2020)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/rbpTUPisA78"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/place.JPG" alt="The Good Place" />
+              <iframe
+                src="https://www.youtube.com/embed/29iKAAeRvI4"
+                title="The Good Place Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">The Good Place</h2>
@@ -395,23 +403,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 4 (2016-2020)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/29iKAAeRvI4"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/tvshowposters/donkey.JPG"
-                alt="Son of a Donkey"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/vu_Nmf8Teto"
+                title="Son of a Donkey Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Son of a Donkey</h2>
@@ -431,14 +440,6 @@
               </div>
               <div class="moviemeta">
                 <strong>Season:</strong> 1 (6 Episodes, 2025)
-              </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/vu_Nmf8Teto"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Action TV Shows - Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
     <style>
       * {
         margin: 0;
@@ -66,10 +67,20 @@
         direction: ltr;
       }
 
-      .playlistimage img {
+      .playlistimage {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: #000;
+      }
+
+      .playlistimage iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        border: none;
         display: block;
       }
 
@@ -102,28 +113,6 @@
 
       .moviemeta strong {
         font-weight: 600;
-      }
-
-      .playlistfooter {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 16px;
-      }
-
-      .viewbutton {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 28px;
-        border-radius: 25px;
-        border: none;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .viewbutton:hover {
-        background: #333;
       }
 
       nav {
@@ -191,6 +180,26 @@
         cursor: pointer;
       }
 
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+
       @media (max-width: 768px) {
         .header h1 {
           font-size: 36px;
@@ -213,33 +222,8 @@
         }
 
         .playlistimage {
-          height: 250px;
+          padding-top: 56.25%;
         }
-      }
-
-      .viewplaylist {
-        color: white;
-        text-decoration: none;
-      }
-
-      .gototop {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        background: rgba(10, 25, 41, 0.9);
-        color: #ffffff;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 600;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-        z-index: 999;
       }
     </style>
   </head>
@@ -277,7 +261,19 @@
         <div class="playlistgrid">
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/lupin.JPG" alt="Lupin" />
+              <iframe
+                src="https://www.youtube.com/embed/ga0iTWXCGa0"
+                title="Lupin Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Lupin</h2>
@@ -296,20 +292,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 3 (2021-2023)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/ga0iTWXCGa0"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/agent.JPG" alt="The Night Agent" />
+              <iframe
+                src="https://www.youtube.com/embed/YDbnY9Obsfs"
+                title="The Night Agent Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">The Night Agent</h2>
@@ -328,20 +328,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 2 (2023-present)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/YDbnY9Obsfs"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/tvshowposters/recruit.JPG" alt="The Recruit" />
+              <iframe
+                src="https://www.youtube.com/embed/Hywe0zDSSSE"
+                title="The Recruit Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">The Recruit</h2>
@@ -363,23 +367,24 @@
               <div class="moviemeta">
                 <strong>Seasons:</strong> 2 (2022-present)
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/Hywe0zDSSSE"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/tvshowposters/walking.JPG"
-                alt="The Walking Dead"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/cu2ApTImBKc"
+                title="The Walking Dead Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">The Walking Dead</h2>
@@ -400,14 +405,6 @@
               </div>
               <div class="moviemeta">
                 <strong>Seasons:</strong> 11 (2010-2022)
-              </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/cu2ApTImBKc"
-                  target="_blank"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
               </div>
             </div>
           </div>

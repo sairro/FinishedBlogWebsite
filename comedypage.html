@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Film Movies - Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
     <style>
       * {
         margin: 0;
@@ -66,10 +67,20 @@
         direction: ltr;
       }
 
-      .playlistimage img {
+      .playlistimage {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: #000;
+      }
+
+      .playlistimage iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        border: none;
         display: block;
       }
 
@@ -102,28 +113,6 @@
 
       .moviemeta strong {
         font-weight: 600;
-      }
-
-      .playlistfooter {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 16px;
-      }
-
-      .viewbutton {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 28px;
-        border-radius: 25px;
-        border: none;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .viewbutton:hover {
-        background: #333;
       }
 
       nav {
@@ -191,11 +180,6 @@
         cursor: pointer;
       }
 
-      .viewplaylist {
-        color: white;
-        text-decoration: none;
-      }
-
       .gototop {
         position: fixed;
         bottom: 40px;
@@ -238,7 +222,7 @@
         }
 
         .playlistimage {
-          height: 250px;
+          padding-top: 56.25%;
         }
       }
     </style>
@@ -277,10 +261,19 @@
         <div class="playlistgrid">
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/moviesposter/central.JPG"
-                alt="Central Intelligence"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/MxEw3elSJ8M"
+                title="Central Intelligence Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Central Intelligence</h2>
@@ -296,23 +289,24 @@
               <div class="moviemeta">
                 <strong>Stars:</strong> Dwayne Johnson, Kevin Hart, Amy Ryan
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/MxEw3elSJ8M"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/moviesposter/forlife.JPG"
-                alt="Bad Boys for Life"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/jKCj3XuPG8M"
+                title="Bad Boys for Life Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Bad Boys for Life</h2>
@@ -329,20 +323,24 @@
                 <strong>Stars:</strong> Will Smith, Martin Lawrence, Vanessa
                 Hudgens
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/jKCj3XuPG8M"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/grown.JPG" alt="Grown Ups 2" />
+              <iframe
+                src="https://www.youtube.com/embed/Sq5CIH0duMk"
+                title="Grown Ups 2 Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Grown Ups 2</h2>
@@ -358,20 +356,24 @@
               <div class="moviemeta">
                 <strong>Stars:</strong> Adam Sandler, Kevin James, Chris Rock
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/Sq5CIH0duMk"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/badboys2.JPG" alt="Bad Boys 2" />
+              <iframe
+                src="https://www.youtube.com/embed/UTNcOwQ2lRw"
+                title="Bad Boys 2 Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Bad Boys 2</h2>
@@ -388,24 +390,24 @@
                 <strong>Stars:</strong> Will Smith, Martin Lawrence, Gabrielle
                 Union
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/UTNcOwQ2lRw"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/moviesposter/red.JPG"
-                target="movieplayer"
-                alt="Red Notice"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/Pj0wz7zu3Ms"
+                title="Red Notice Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Red Notice</h2>
@@ -420,14 +422,6 @@
               </div>
               <div class="moviemeta">
                 <strong>Stars:</strong> Dwayne Johnson, Ryan Reynolds, Gal Gadot
-              </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/Pj0wz7zu3Ms"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
               </div>
             </div>
           </div>

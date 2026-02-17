@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Film Movies - Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
     <style>
       * {
         margin: 0;
@@ -66,10 +67,20 @@
         direction: ltr;
       }
 
-      .playlistimage img {
+      .playlistimage {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        background: #000;
+      }
+
+      .playlistimage iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        border: none;
         display: block;
       }
 
@@ -102,28 +113,6 @@
 
       .moviemeta strong {
         font-weight: 600;
-      }
-
-      .playlistfooter {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-top: 16px;
-      }
-
-      .viewbutton {
-        background: rgba(10, 25, 41, 1);
-        color: #ffffff;
-        padding: 12px 28px;
-        border-radius: 25px;
-        border: none;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      .viewbutton:hover {
-        background: #333;
       }
 
       nav {
@@ -191,11 +180,6 @@
         cursor: pointer;
       }
 
-      .viewplaylist {
-        color: white;
-        text-decoration: none;
-      }
-
       .gototop {
         position: fixed;
         bottom: 40px;
@@ -238,7 +222,7 @@
         }
 
         .playlistimage {
-          height: 250px;
+          padding-top: 56.25%;
         }
       }
     </style>
@@ -277,7 +261,19 @@
         <div class="playlistgrid">
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/13.JPG" alt="13 Hours" />
+              <iframe
+                src="https://www.youtube.com/embed/5MBjAN7jqsQ"
+                title="13 Hours Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">
@@ -300,23 +296,24 @@
                 <strong>Stars:</strong> John Krasinski, Pablo Schreiber, James
                 Badge Dale
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/5MBjAN7jqsQ"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img
-                src="images/moviesposter/equalizer.png"
-                alt="The Equalizer 3"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/19ikl8vy4zs"
+                title="The Equalizer 3 Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">The Equalizer 3</h2>
@@ -336,20 +333,24 @@
                 <strong>Stars:</strong> Denzel Washington, Dakota Fanning, David
                 Denman
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/19ikl8vy4zs"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/6.JPG" alt="6 Underground" />
+              <iframe
+                src="https://www.youtube.com/embed/YLE85olJjp8"
+                title="6 Underground Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">6 Underground</h2>
@@ -370,20 +371,24 @@
                 <strong>Stars:</strong> Ryan Reynolds, Mélanie Laurent, Manuel
                 Garcia-Rulfo
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/YLE85olJjp8"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/extraction.JPG" alt="Extraction" />
+              <iframe
+                src="https://www.youtube.com/embed/L6P3nI6VnlY"
+                title="Extraction Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Extraction</h2>
@@ -404,20 +409,24 @@
                 <strong>Stars:</strong> Chris Hemsworth, Golshifteh Farahani,
                 Rudhraksh Jaiswal
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/L6P3nI6VnlY"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/vol1.JPG" alt="Kill Bill Vol. 1" />
+              <iframe
+                src="https://www.youtube.com/embed/7kSuas6mRpk"
+                title="Kill Bill Vol. 1 Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Kill Bill: Vol. 1</h2>
@@ -438,20 +447,24 @@
               <div class="moviemeta">
                 <strong>Stars:</strong> Uma Thurman, Lucy Liu, Vivica A. Fox
               </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/7kSuas6mRpk"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
-              </div>
             </div>
           </div>
 
           <div class="playlistcard">
             <div class="playlistimage">
-              <img src="images/moviesposter/vol2.JPG" alt="Kill Bill Vol. 2" />
+              <iframe
+                src="https://www.youtube.com/embed/WTt8cCIvGYI"
+                title="Kill Bill Vol. 2 Trailer"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="playlistcontent">
               <h2 class="playlisttitle">Kill Bill: Vol. 2</h2>
@@ -472,14 +485,6 @@
               <div class="moviemeta">
                 <strong>Stars:</strong> Uma Thurman, David Carradine, Michael
                 Madsen
-              </div>
-              <div class="playlistfooter">
-                <a
-                  href="https://youtu.be/WTt8cCIvGYI"
-                  target="movieplayer"
-                  class="viewplaylist"
-                  ><button class="viewbutton">Watch Trailer</button></a
-                >
               </div>
             </div>
           </div>
