@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Section – Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      .navcontainer {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logoname {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+
+      .navmenu {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .navlinks {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .navlinks a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .contactbtn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .page-hero {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 120px 48px 48px;
+      }
+
+      .page-hero h1 {
+        font-size: 64px;
+        font-weight: 700;
+        color: #0a1929;
+        margin-bottom: 12px;
+        line-height: 1.1;
+      }
+
+      .page-hero h1 span {
+        font-family: serif;
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      .page-hero p {
+        font-size: 18px;
+        color: #6b7280;
+        max-width: 520px;
+        line-height: 1.7;
+      }
+
+      .media-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 48px 48px 120px;
+      }
+
+      .media-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+
+      .media-card {
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid #e5e7eb;
+        text-decoration: none;
+        color: #1a1a1a;
+        display: block;
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .media-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(10, 25, 41, 0.1);
+      }
+
+      .card-top {
+        background: #0a1929;
+        height: 220px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .card-top span {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        background: rgba(10, 25, 41, 0.75);
+        color: #ffffff;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .card-body {
+        padding: 24px;
+      }
+
+      .card-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin-bottom: 8px;
+      }
+
+      .card-desc {
+        font-size: 15px;
+        color: #6b7280;
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+
+      .card-link {
+        font-size: 14px;
+        color: rgba(10, 25, 41, 1);
+        font-weight: 500;
+      }
+
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+      }
+
+      @media (max-width: 768px) {
+        .navcontainer {
+          padding: 16px 24px;
+        }
+        .navlinks {
+          gap: 20px;
+        }
+        .page-hero {
+          padding: 100px 24px 32px;
+        }
+        .page-hero h1 {
+          font-size: 36px;
+        }
+        .media-section {
+          padding: 32px 24px 80px;
+        }
+        .media-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navcontainer">
+        <a href="index.html" class="logoname">Gentle Progress</a>
+        <div class="navmenu">
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="mediasection.html">Media Section</a></li>
+            <li><a href="imagemap.html">Dream Places</a></li>
+            <li><a href="bucketlist.html">Bucket List</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contactbtn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-hero">
+      <h1>Media Section<br /><span>Things I vibe with.</span></h1>
+    </section>
+
+    <section class="media-section">
+      <div class="media-grid">
+        <a href="beats.html" class="media-card">
+          <div class="card-top">
+            <img
+              src="images/thumbnails/beatsthumbnail.png"
+              alt="Beats thumbnail"
+            />
+            <span>Audio</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Beats</h2>
+            <p class="card-desc">Music that keeps me afloat.</p>
+            <span class="card-link">Explore</span>
+          </div>
+        </a>
+
+        <a href="choosecategory.html" class="media-card">
+          <div class="card-top">
+            <img
+              src="images/thumbnails/moviesthumbnail.png"
+              alt="Movies thumbnail"
+            />
+            <span>Cinema</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Movies</h2>
+            <p class="card-desc">
+              Films that stuck with me long after the credits rolled.
+            </p>
+            <span class="card-link">Explore</span>
+          </div>
+        </a>
+
+        <a href="tvshowscategory.html" class="media-card">
+          <div class="card-top">
+            <img
+              src="images/thumbnails/tvshowsthumbnail.png"
+              alt="TV Shows thumbnail"
+            />
+            <span>Series</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">TV Shows</h2>
+            <p class="card-desc">
+              Shows I stayed up way too late watching — worth every episode.
+            </p>
+            <span class="card-link">Explore</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <a href="#" class="gototop">↑</a>
+  </body>
+</html>

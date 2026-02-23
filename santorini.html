@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santorini – Dream Places | Gentle Progress</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Gill Sans", Optima, Candara, sans-serif;
+        background: #0a1929;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .navcontainer {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logoname {
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .navlinks {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .navlinks a {
+        font-family: sans-serif;
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .navlinks a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+
+      .contactbtn {
+        font-family: sans-serif;
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+      .herosplit {
+        margin-top: 65px;
+        position: relative;
+        min-height: calc(100vh - 65px);
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      .herobg {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.4);
+      }
+      .herorightoverlay {
+        position: absolute;
+
+        pointer-events: none;
+      }
+      .heroleft {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 60px 80px 80px;
+      }
+      .backlink {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+        transition: color 0.3s;
+      }
+      .backlink:hover {
+        color: #ffffff46;
+      }
+      .herolabel {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+      .herotitle {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 108px;
+        font-weight: 300;
+        line-height: 0.9;
+        color: #ffffff;
+        letter-spacing: -0.01em;
+        margin-bottom: 28px;
+      }
+      .herosub {
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        margin-bottom: 48px;
+      }
+      .herostats {
+        display: flex;
+        gap: 48px;
+        margin-bottom: 56px;
+      }
+      .hstatval {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 40px;
+        font-weight: 300;
+        color: #ffffff;
+        display: block;
+        line-height: 1;
+      }
+      .hstatkey {
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 6px;
+        display: block;
+      }
+      .heroactions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+      .btnoutline {
+        padding: 17px 42px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        color: #ffffff;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+      .btnfilled {
+        padding: 17px 42px;
+        background: #0f264170;
+        color: #ffffff;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 80px 120px;
+      }
+      .sectionsep {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 80px 0 56px;
+      }
+      .sectionsep .line {
+        flex: 1;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .sectiontag {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      .ticket {
+        background: #0f2641;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        margin-bottom: 100px;
+      }
+      .ticketcol {
+        padding: 48px 56px;
+      }
+      .ticketcol.mid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 40px;
+        border-left: 1px dashed rgba(255, 255, 255, 0.1);
+        border-right: 1px dashed rgba(255, 255, 255, 0.1);
+        gap: 16px;
+      }
+      .tlabel {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 8px;
+        display: block;
+      }
+      .tcode {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 80px;
+        font-weight: 300;
+        line-height: 0.9;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+      }
+      .tcity {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        color: rgba(255, 255, 255, 0.45);
+        text-transform: uppercase;
+        margin-top: 8px;
+      }
+      .trouteline {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.2);
+        width: 100%;
+      }
+      .trouteline .dash {
+        flex: 1;
+        border-top: 1px dashed rgba(255, 255, 255, 0.15);
+      }
+      .tplane {
+        font-size: 18px;
+      }
+      .tduration {
+        font-family: Georgia, "Times New Roman", serif;
+        font-style: italic;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .ticketfields {
+        display: flex;
+        gap: 48px;
+        margin-top: 40px;
+        padding-top: 32px;
+        border-top: 1px dashed rgba(255, 255, 255, 0.1);
+      }
+      .tfield label {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 6px;
+      }
+      .tfield span {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 300;
+        color: #ffffff;
+      }
+      .ttag {
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.6);
+        padding: 5px 14px;
+        margin-bottom: 48px;
+        display: inline-block;
+      }
+      .ticketlogo {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 4px;
+      }
+      .aboutgrid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 80px;
+        align-items: start;
+        margin-bottom: 100px;
+      }
+      .abouttxt h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 52px;
+        font-weight: 300;
+        line-height: 1.1;
+        color: #ffffff;
+        margin-bottom: 28px;
+      }
+      .abouttxt p {
+        font-size: 15px;
+        line-height: 1.9;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 20px;
+      }
+      .statlist {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .statitem {
+        padding: 28px 32px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .statval {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 44px;
+        font-weight: 300;
+        color: #ffffff;
+      }
+      .statkey {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        color: rgba(255, 255, 255, 0.45);
+        text-transform: uppercase;
+        text-align: right;
+        max-width: 160px;
+        line-height: 1.5;
+      }
+      .photoheader {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 24px;
+      }
+      .photoheader h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 44px;
+        font-weight: 300;
+      }
+      .photoheader span {
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .photogrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        margin-bottom: 100px;
+      }
+      .photocard {
+        position: relative;
+        overflow: hidden;
+      }
+      .photocard img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.7) saturate(0.85);
+        transition: all 0.6s ease;
+      }
+      .photocard:hover img {
+        transform: scale(1.06);
+        filter: brightness(0.85) saturate(1);
+      }
+
+      .essentialsgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        margin-bottom: 100px;
+      }
+      .esscard {
+        background: #0f2641;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 40px 36px;
+      }
+      .esscard h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 24px;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+      .esscard p {
+        font-size: 14px;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .dreamsection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+        margin-bottom: 40px;
+      }
+      .dreamsection h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 52px;
+        font-weight: 300;
+        line-height: 1.1;
+        color: #ffffff;
+        margin-bottom: 48px;
+      }
+      .dreamitems {
+        display: flex;
+        flex-direction: column;
+      }
+      .dreamitem {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding: 28px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .dreamitem:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .dreamnum {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.45);
+        letter-spacing: 0.1em;
+        min-width: 28px;
+      }
+      .dreamitem h4 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 400;
+        color: #ffffff;
+      }
+      .dreamaside {
+        padding-top: 16px;
+      }
+      .dreamasidecard {
+        background: #0f2641;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 40px;
+        margin-bottom: 2px;
+      }
+      .dreamasidecard .q {
+        font-family: Georgia, "Times New Roman", serif;
+        font-style: italic;
+        font-size: 26px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+      .dreamasidecard .src {
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .footerline {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 32px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footerline span {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .photocardoverlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 25, 41, 0.85) 0%,
+          transparent 50%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 28px;
+        pointer-events: none;
+      }
+      .photonum {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.1em;
+        margin-bottom: 6px;
+      }
+      .photoname {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 300;
+        color: #ffffff;
+      }
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(26, 58, 92, 1);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+      }
+      .gototop:hover {
+        background: #1a3a5c42;
+      }
+      @media (max-width: 1024px) {
+        .heroleft {
+          padding: 40px 32px;
+        }
+        .content {
+          padding: 0 32px 80px;
+        }
+        .heroleft {
+          padding: 60px 32px;
+        }
+        .herotitle {
+          font-size: 72px;
+        }
+        .ticket {
+          grid-template-columns: 1fr;
+        }
+        .ticketcol.mid {
+          border: none;
+          border-top: 1px dashed rgba(255, 255, 255, 0.1);
+          border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        .aboutgrid,
+        .dreamsection {
+          grid-template-columns: 1fr;
+        }
+        .photogrid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .essentialsgrid {
+          grid-template-columns: 1fr;
+        }
+        .navcontainer {
+          padding: 18px 24px;
+        }
+        .navlinks {
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top"></div>
+    <nav>
+      <div class="navcontainer">
+        <div class="logoname">Gentle Progress</div>
+        <div style="display: flex; gap: 40px; align-items: center">
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="mediasection.html">Media Section</a></li>
+            <li><a href="imagemap.html">Dream Places</a></li>
+            <li><a href="bucketlist.html">Bucket List</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contactbtn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="herosplit">
+      <img
+        class="herobg"
+        src="images/imgheader/santoriniheader.JPG"
+        alt="Santorini"
+      />
+      <div class="herorightoverlay"></div>
+      <div class="heroleft">
+        <a href="imagemap.html" class="backlink">
+          <span>←</span>
+          <span>Choose Destination</span>
+        </a>
+        <div class="herolabel">Featured Destination</div>
+        <h1 class="herotitle">SANTORINI</h1>
+        <div class="herosub">Jewel of the Aegean · Greece</div>
+        <div class="herostats">
+          <div>
+            <span class="hstatval">76</span>
+            <span class="hstatkey">km² volcanic island</span>
+          </div>
+          <div>
+            <span class="hstatval">3,600</span>
+            <span class="hstatkey">Years Since Eruption</span>
+          </div>
+          <div>
+            <span class="hstatval">300m</span>
+            <span class="hstatkey">Caldera Cliffs</span>
+          </div>
+        </div>
+        <div class="heroactions">
+          <span class="btnoutline">Dream Destination</span>
+          <a href="#boarding" class="btnfilled">View Ticket</a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="sectionsep">
+        <div class="line"></div>
+        <span class="sectiontag" id="boarding">Boarding Pass</span>
+        <div class="line"></div>
+      </div>
+      <div class="ticket">
+        <div class="ticketcol">
+          <div class="ticketlogo">Alex Airways</div>
+          <span class="ttag">Dream Ticket</span>
+          <div>
+            <span class="tlabel">Departure</span>
+            <div class="tcode">MNL</div>
+            <div class="tcity">Manila, Philippines</div>
+          </div>
+          <div class="ticketfields">
+            <div class="tfield">
+              <label>Passenger</label><span>Alexander</span>
+            </div>
+            <div class="tfield"><label>Date</label><span>Someday</span></div>
+          </div>
+        </div>
+        <div class="ticketcol mid">
+          <div class="trouteline">
+            <div class="dash"></div>
+            <span class="tplane">✈</span>
+            <div class="dash"></div>
+          </div>
+          <div class="tduration">~14h 00m</div>
+          <div class="trouteline"><div class="dash"></div></div>
+        </div>
+        <div class="ticketcol" style="text-align: right">
+          <div class="ticketlogo" style="text-align: right">Direct Flight</div>
+          <div style="margin-bottom: 48px; visibility: hidden" class="ttag">
+            ·
+          </div>
+          <div>
+            <span class="tlabel">Arrival</span>
+            <div class="tcode">JTR</div>
+            <div class="tcity">Santorini</div>
+          </div>
+          <div class="ticketfields" style="justify-content: flex-end">
+            <div class="tfield" style="text-align: right">
+              <label>Class</label><span>Business</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sectionsep">
+        <div class="line"></div>
+        <span class="sectiontag">About the Destination</span>
+        <div class="line"></div>
+      </div>
+      <div class="aboutgrid">
+        <div class="abouttxt">
+          <h2>Why Santorini Calls to Me</h2>
+          <p>
+            Santorini is what happens when a volcano creates something so
+            dramatic that people have been building on its edges ever since. The
+            caldera views are genuinely unreal. White walls, blue domes, and a
+            sea that changes color throughout the day.
+          </p>
+          <p>
+            It's one of those places that somehow still manages to exceed
+            expectations even after you've seen a thousand photos of it. The
+            light in the evening is something that no camera really captures.
+          </p>
+        </div>
+        <div class="statlist">
+          <div class="statitem">
+            <div class="statval">76 km²</div>
+            <div class="statkey">of volcanic island beauty</div>
+          </div>
+          <div class="statitem">
+            <div class="statval">3,600</div>
+            <div class="statkey">
+              years since the Minoan eruption shaped the island
+            </div>
+          </div>
+          <div class="statitem">
+            <div class="statval">300m</div>
+            <div class="statkey">caldera cliffs dropping into the sea</div>
+          </div>
+        </div>
+      </div>
+      <div class="photoheader">
+        <h2>Top Spots</h2>
+        <span>03 locations</span>
+      </div>
+      <div class="photogrid">
+        <div class="photocard">
+          <a href="images/imagesforsantorini/oia.JPG" target="saiWin">
+            <img
+              src="images/imagesforsantorini/oia.JPG"
+              alt="Oia Village"
+              style="height: 300px"
+            />
+          </a>
+          <div class="photocardoverlay">
+            <div class="photonum">01 / 03</div>
+            <div class="photoname">Oia Village</div>
+          </div>
+        </div>
+        <div class="photocard">
+          <a href="images/imagesforsantorini/caldera.JPG" target="saiWin">
+            <img
+              src="images/imagesforsantorini/caldera.JPG"
+              alt="Caldera View"
+              style="height: 300px"
+            />
+          </a>
+          <div class="photocardoverlay">
+            <div class="photonum">02 / 03</div>
+            <div class="photoname">Caldera View from Fira</div>
+          </div>
+        </div>
+        <div class="photocard">
+          <a href="images/imagesforsantorini/redbeach.JPG" target="saiWin">
+            <img
+              src="images/imagesforsantorini/redbeach.JPG"
+              alt="Red Beach"
+              style="height: 300px"
+            />
+          </a>
+          <div class="photocardoverlay">
+            <div class="photonum">03 / 03</div>
+            <div class="photoname">Red Beach</div>
+          </div>
+        </div>
+      </div>
+      <div class="sectionsep">
+        <div class="line"></div>
+        <span class="sectiontag">Essentials</span>
+        <div class="line"></div>
+      </div>
+      <div class="essentialsgrid">
+        <div class="esscard">
+          <h3>Best Time to Visit</h3>
+          <p>
+            May – June and September – October for good weather, fewer crowds,
+            and lower prices. July and August are peak season and very busy.
+          </p>
+        </div>
+        <div class="esscard">
+          <h3>Budget Feels</h3>
+          <p>
+            Gyros from around $3, local taverna meals from $15, and caldera-view
+            hotels range wildly from $80 to several hundred per night.
+          </p>
+        </div>
+        <div class="esscard">
+          <h3>Must-Eat</h3>
+          <p>
+            Fresh grilled octopus, Fava dip with capers, Tomatokeftedes
+            fritters, and a glass of Assyrtiko white wine from the volcanic
+            soil.
+          </p>
+        </div>
+      </div>
+      <div class="sectionsep">
+        <div class="line"></div>
+        <span class="sectiontag">Dream List</span>
+        <div class="line"></div>
+      </div>
+      <div class="dreamsection">
+        <div>
+          <h2>Things I Dream of Doing</h2>
+          <div class="dreamitems">
+            <div class="dreamitem">
+              <div class="dreamnum">01</div>
+              <h4>Watch the sunset from Oia with no agenda</h4>
+            </div>
+            <div class="dreamitem">
+              <div class="dreamnum">02</div>
+              <h4>Sail around the caldera on a catamaran</h4>
+            </div>
+            <div class="dreamitem">
+              <div class="dreamnum">03</div>
+              <h4>Hike the cliff path from Fira to Oia</h4>
+            </div>
+            <div class="dreamitem">
+              <div class="dreamnum">04</div>
+              <h4>Visit the ancient ruins of Akrotiri</h4>
+            </div>
+          </div>
+        </div>
+        <div class="dreamaside">
+          <div class="dreamasidecard">
+            <div class="q">
+              "Santorini doesn't look real — and that's exactly why you have to
+              see it."
+            </div>
+            <div class="src">Dream Traveler's Journal</div>
+          </div>
+          <div
+            class="dreamasidecard"
+            style="border-color: rgba(255, 255, 255, 0.15)"
+          >
+            <div
+              style="
+                font-size: 11px;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: #ffffff;
+                margin-bottom: 16px;
+              "
+            >
+              Next Steps
+            </div>
+            <p
+              style="
+                font-size: 14px;
+                line-height: 1.75;
+                color: rgba(255, 255, 255, 0.55);
+              "
+            >
+              Save money. Book the flight. Trust the moment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footerline">
+        <span>Gentle Progress · Dream Places</span>
+        <span>Santorini, Greece</span>
+        <a
+          href="imagemap.html"
+          style="
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+          "
+          >← All Destinations</a
+        >
+      </div>
+    </div>
+    <a href="#top" class="gototop">↑</a>
+  </body>
+</html>

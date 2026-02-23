@@ -260,6 +260,9 @@
       .footerheading {
         text-align: center;
         color: rgba(10, 25, 41, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .footerheading h2 {
@@ -271,6 +274,7 @@
       .footerheading p {
         font-size: 13px;
         color: rgba(10, 25, 41, 0.8);
+        margin-bottom: 12px;
       }
 
       .footercategories {
@@ -305,6 +309,13 @@
       .footercategorybutton.active {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
+      }
+
+      .back-media-btn {
+        margin-bottom: 20px;
+        font-size: 12px;
+        padding: 6px 16px;
+        opacity: 0.8;
       }
 
       @media (max-width: 1024px) {
@@ -367,6 +378,23 @@
           height: 250px;
         }
       }
+
+      .backtomedia {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 8px 22px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        display: inline-block;
+        transition: background 0.3s ease;
+        margin-top: 8px;
+      }
+
+      .backtomedia:hover {
+        background: #333;
+      }
     </style>
   </head>
   <body>
@@ -382,9 +410,9 @@
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
             <li><a href="photodump.html">Photo Gallery</a></li>
-            <li><a href="beats.html">Beats</a></li>
-            <li><a href="choosecategory.html">Film Movies</a></li>
-            <li><a href="tvshowscategory.html">TV Shows</a></li>
+            <li><a href="mediasection.html">Media Section</a></li>
+            <li><a href="imagemap.html">Dream Places</a></li>
+            <li><a href="bucketlist.html">Bucket List</a></li>
           </ul>
           <a href="index.html#contact"
             ><button class="contactbtn">Reach</button></a
@@ -424,7 +452,7 @@
                   <audio controls>
                     <source
                       src="songforpage/f witcha boy - gunna.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -441,7 +469,7 @@
                   <audio controls>
                     <source
                       src="songforpage/at my purest - gunna.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -458,7 +486,7 @@
                   <audio controls>
                     <source
                       src="songforpage/mfts - gunna.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -494,7 +522,7 @@
                   <audio controls>
                     <source
                       src="songforpage/element - kendrick.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -511,7 +539,7 @@
                   <audio controls>
                     <source
                       src="songforpage/reincarnated - kendrick.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -528,7 +556,7 @@
                   <audio controls>
                     <source
                       src="songforpage/matg - kendrick.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -561,7 +589,7 @@
                   <audio controls>
                     <source
                       src="songforpage/polar opposites - drake.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -578,7 +606,7 @@
                   <audio controls>
                     <source
                       src="songforpage/papi's home - drake.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -595,7 +623,7 @@
                   <audio controls>
                     <source
                       src="songforpage/drew a picasso - drake.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -628,7 +656,7 @@
                   <audio controls>
                     <source
                       src="songforpage/glacier - plaque.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -645,7 +673,7 @@
                   <audio controls>
                     <source
                       src="songforpage/wyd - plaque.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -662,7 +690,7 @@
                   <audio controls>
                     <source
                       src="songforpage/go - plaque.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -695,7 +723,7 @@
                   <audio controls>
                     <source
                       src="songforpage/love no t - chief.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -712,7 +740,7 @@
                   <audio controls>
                     <source
                       src="songforpage/love sosa - chief.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -729,7 +757,7 @@
                   <audio controls>
                     <source
                       src="songforpage/faneto - chief.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -756,6 +784,9 @@
           <a href="songpageRNB.html" class="footercategorybutton">R&B</a>
           <a href="songpagePOP.html" class="footercategorybutton">Pop</a>
         </div>
+        <a href="mediasection.html" class="backtomedia"
+          >← Back to Media Section</a
+        >
       </div>
     </footer>
   </body>

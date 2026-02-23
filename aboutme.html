@@ -154,24 +154,6 @@
         object-fit: cover;
       }
 
-      .videocontainer {
-        background: #000000;
-        border-radius: 8px;
-        overflow: hidden;
-        max-width: 500px;
-        margin: 0 auto;
-        position: relative;
-        width: 100%;
-      }
-
-      .videocontainer video {
-        width: 100%;
-        height: auto;
-        display: block;
-        aspect-ratio: 9 / 16;
-        object-fit: cover;
-      }
-
       .achievementslist {
         list-style: none;
         padding-left: 0;
@@ -297,9 +279,30 @@
       html {
         scroll-behavior: smooth;
       }
+
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
     </style>
   </head>
   <body>
+    <div class="top"></div>
     <nav>
       <div class="navcontainer">
         <a href="index.html" class="logoname">
@@ -312,9 +315,9 @@
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="photodump.html">Photo Gallery</a></li>
-            <li><a href="beats.html">Beats</a></li>
-            <li><a href="choosecategory.html">Film Movies</a></li>
-            <li><a href="tvshowscategory.html">TV Shows</a></li>
+            <li><a href="mediasection.html">Media Section</a></li>
+            <li><a href="imagemap.html">Dream Places</a></li>
+            <li><a href="bucketlist.html">Bucket List</a></li>
           </ul>
           <a href="index.html#contact" class="contactbtn">Reach</a>
         </div>
@@ -350,23 +353,9 @@
             promised will be.
           </p>
         </div>
-        <div class="sectionimages">
-          <div class="videocontainer">
-            <video
-              controls
-              preload="auto"
-              playsinline
-              poster="images/selfies/thumbnail.jpeg"
-            >
-              <source
-                src="video/aboutmevid.mp4"
-                type="video/mp4; codecs=avc1.42E01E,mp4a.40.2"
-              />
-              No Video? Check Internet Connection
-            </video>
-          </div>
-        </div>
       </section>
+
+      <br /><br /><br /><br /><br /><br /><br /><br />
 
       <section class="storysection" id="partner">
         <h2 class="sectiontitle">My Partner</h2>
@@ -400,6 +389,8 @@
           </div>
         </div>
       </section>
+
+      <br /><br /><br /><br /><br /><br /><br /><br />
 
       <section class="storysection" id="achievements">
         <h2 class="sectiontitle">My Achievements</h2>
@@ -440,6 +431,8 @@
         </div>
       </section>
 
+      <br /><br /><br /><br /><br /><br /><br /><br />
+
       <section class="storysection" id="hobbies">
         <h2 class="sectiontitle">My Hobbies</h2>
         <div class="sectioncontent">
@@ -463,5 +456,6 @@
         <a href="index.html" class="backbtn">Back to Home</a>
       </div>
     </div>
+    <a href="#top" class="gototop">↑</a>
   </body>
 </html>

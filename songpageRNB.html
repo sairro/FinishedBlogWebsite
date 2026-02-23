@@ -11,14 +11,12 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: sans-serif;
         background: #ffffff;
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       nav {
         position: fixed;
         top: 0;
@@ -28,11 +26,9 @@
         border-bottom: 1px solid #e5e7eb;
         z-index: 1000;
       }
-
       html {
         scroll-behavior: smooth;
       }
-
       .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
@@ -41,37 +37,31 @@
         justify-content: space-between;
         align-items: center;
       }
-
       .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
-
       .navmenu {
         display: flex;
         gap: 40px;
       }
-
       .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
-
       .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
-
       .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
-
       .contactbtn {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
@@ -83,36 +73,30 @@
         border: none;
         cursor: pointer;
       }
-
       .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 40px 20px;
       }
-
       .header {
         text-align: center;
         margin-bottom: 60px;
         margin-top: 80px;
       }
-
       .header h1 {
         font-size: 48px;
         font-weight: 700;
         margin-bottom: 12px;
       }
-
       .header p {
         font-size: 16px;
         color: #666;
       }
-
       .songsgrid {
         display: flex;
         flex-direction: column;
         gap: 48px;
       }
-
       .albumsection {
         display: grid;
         grid-template-columns: 400px 1fr;
@@ -124,13 +108,11 @@
         padding: 24px;
         align-items: start;
       }
-
       .artistcolumn {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
-
       .albumcover {
         width: 400px;
         height: 400px;
@@ -145,37 +127,31 @@
         flex-shrink: 0;
         overflow: hidden;
       }
-
       .albumcover img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 12px;
       }
-
       .artistinfo {
         padding: 0;
       }
-
       .artistname {
         font-size: 24px;
         font-weight: 700;
         color: #1a1a1a;
         margin-bottom: 8px;
       }
-
       .artistdescription {
         font-size: 13px;
         color: #666;
         line-height: 1.6;
       }
-
       .songslist {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
-
       .songitem {
         padding: 16px;
         background: #f9fafb;
@@ -183,49 +159,41 @@
         border-left: 4px solid #1a1a1a;
         transition: all 0.3s ease;
       }
-
       .songitem:last-child {
         margin-bottom: 0;
       }
-
       .songheader {
         display: flex;
         align-items: center;
         gap: 12px;
         margin-bottom: 8px;
       }
-
       .songnumber {
         font-size: 16px;
         font-weight: 700;
         color: #1a1a1a;
         min-width: 24px;
       }
-
       .songtitle {
         font-size: 16px;
         font-weight: 600;
         color: #1a1a1a;
       }
-
       .songartist {
         font-size: 13px;
         color: #666;
         margin-left: 36px;
         margin-bottom: 4px;
       }
-
       .songaudio {
         margin-top: 12px;
         margin-left: 36px;
       }
-
       .songaudio audio {
         width: 100%;
         max-width: 300px;
         height: 32px;
       }
-
       .gototop {
         position: fixed;
         bottom: 40px;
@@ -245,13 +213,11 @@
         transition: all 0.3s ease;
         z-index: 999;
       }
-
       .sitefooter {
         border-top: 1px solid #e5e7eb;
         padding: 32px 20px;
         margin-top: 80px;
       }
-
       .footerinner {
         max-width: 1200px;
         margin: 0 auto;
@@ -260,23 +226,19 @@
         align-items: center;
         gap: 16px;
       }
-
       .footerheading {
         text-align: center;
         color: rgba(10, 25, 41, 1);
       }
-
       .footerheading h2 {
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 2px;
       }
-
       .footerheading p {
         font-size: 13px;
         color: rgba(10, 25, 41, 0.8);
       }
-
       .footercategories {
         display: flex;
         flex-direction: row;
@@ -284,7 +246,6 @@
         justify-content: center;
         gap: 10px;
       }
-
       .footercategorybutton {
         background: white;
         border: 2px solid rgba(10, 25, 41, 1);
@@ -299,77 +260,77 @@
         text-align: center;
         display: inline-block;
       }
-
       .footercategorybutton:hover {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
         box-shadow: 0 4px 12px rgba(10, 25, 41, 0.2);
       }
-
       .footercategorybutton.active {
         background: rgba(10, 25, 41, 1);
         color: #ffffff;
       }
-
       @media (max-width: 1024px) {
         .albumsection {
           grid-template-columns: 300px 1fr;
         }
-
         .albumcover {
           width: 300px;
           height: 300px;
         }
       }
-
       @media (max-width: 768px) {
         .albumsection {
           grid-template-columns: 1fr;
         }
-
         .albumcover {
           width: 100%;
           height: 300px;
         }
-
         .header h1 {
           font-size: 36px;
         }
-
         .songitem {
           padding: 14px;
         }
-
         .footercategorybutton {
           font-size: 13px;
           padding: 7px 16px;
         }
       }
-
       @media (max-width: 480px) {
         .navcontainer {
           padding: 16px 24px;
         }
-
         .navmenu {
           gap: 20px;
         }
-
         .navlinks {
           gap: 20px;
         }
-
         .songtitle {
           font-size: 15px;
         }
-
         .songartist {
           margin-left: 28px;
         }
-
         .albumcover {
           height: 250px;
         }
+      }
+      .backtomedia {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 8px 22px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        display: inline-block;
+        transition: background 0.3s ease;
+        margin-top: 8px;
+      }
+      .backtomedia:hover {
+        background: #333;
       }
     </style>
   </head>
@@ -377,18 +338,16 @@
     <div class="top"></div>
     <nav>
       <div class="navcontainer">
-        <div class="logoname">
-          <span>Gentle Progress</span>
-        </div>
+        <div class="logoname"><span>Gentle Progress</span></div>
         <div class="navmenu">
           <ul class="navlinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#post-1">Blogs</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
             <li><a href="photodump.html">Photo Gallery</a></li>
-            <li><a href="beats.html">Beats</a></li>
-            <li><a href="choosecategory.html">Film Movies</a></li>
-            <li><a href="tvshowscategory.html">TV Shows</a></li>
+            <li><a href="mediasection.html">Media Section</a></li>
+            <li><a href="imagemap.html">Dream Places</a></li>
+            <li><a href="bucketlist.html">Bucket List</a></li>
           </ul>
           <a href="index.html#contact"
             ><button class="contactbtn">Reach</button></a
@@ -399,10 +358,7 @@
 
     <section class="songssection">
       <div class="container">
-        <div class="header">
-          <h1>RNB Collection</h1>
-        </div>
-
+        <div class="header"><h1>RNB Collection</h1></div>
         <div class="songsgrid">
           <div class="albumsection">
             <div class="artistcolumn">
@@ -428,13 +384,12 @@
                   <audio controls>
                     <source
                       src="songforpage/wait for u - future.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">02</span>
@@ -445,13 +400,12 @@
                   <audio controls>
                     <source
                       src="songforpage/love u better - future.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">03</span>
@@ -462,7 +416,7 @@
                   <audio controls>
                     <source
                       src="songforpage/puffin - future.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -493,15 +447,11 @@
                 <p class="songartist">Brent Faiyaz</p>
                 <div class="songaudio">
                   <audio controls>
-                    <source
-                      src="songforpage/talk 2 you.mp4"
-                      type="audio/mpeg"
-                    />
+                    <source src="songforpage/talk 2 you.mp4" type="audio/mp4" />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">02</span>
@@ -512,13 +462,12 @@
                   <audio controls>
                     <source
                       src="songforpage/first world problems - brent.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">03</span>
@@ -529,7 +478,7 @@
                   <audio controls>
                     <source
                       src="songforpage/wrong places - brent.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -565,13 +514,12 @@
                   <audio controls>
                     <source
                       src="songforpage/outta time - bryson.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">02</span>
@@ -582,13 +530,12 @@
                   <audio controls>
                     <source
                       src="songforpage/attention - bryson.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">03</span>
@@ -599,7 +546,7 @@
                   <audio controls>
                     <source
                       src="songforpage/next 2 you - bryson.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -632,13 +579,12 @@
                   <audio controls>
                     <source
                       src="songforpage/moty - schoolboy.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">02</span>
@@ -649,13 +595,12 @@
                   <audio controls>
                     <source
                       src="songforpage/tgfm - schoolboy.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">03</span>
@@ -666,7 +611,7 @@
                   <audio controls>
                     <source
                       src="songforpage/studio - schoolboy.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -702,13 +647,12 @@
                   <audio controls>
                     <source
                       src="songforpage/things n such - pnd.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">02</span>
@@ -719,13 +663,12 @@
                   <audio controls>
                     <source
                       src="songforpage/west district - pnd.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
                 </div>
               </div>
-
               <div class="songitem">
                 <div class="songheader">
                   <span class="songnumber">03</span>
@@ -736,7 +679,7 @@
                   <audio controls>
                     <source
                       src="songforpage/resentment - pnd.mp4"
-                      type="audio/mpeg"
+                      type="audio/mp4"
                     />
                     Your browser does not support the audio element.
                   </audio>
@@ -758,10 +701,12 @@
         </div>
         <div class="footercategories">
           <a href="songpageHIPHOP.html" class="footercategorybutton">Hip-Hop</a>
-
           <a href="songpageRNB.html" class="footercategorybutton active">R&B</a>
           <a href="songpagePOP.html" class="footercategorybutton">Pop</a>
         </div>
+        <a href="mediasection.html" class="backtomedia"
+          >← Back to Media Section</a
+        >
       </div>
     </footer>
   </body>

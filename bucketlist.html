@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucket List - Gentle Progress</title>
+    <link rel="icon" type="image/png" href="images/logoalex.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        background: #ffffff;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 1000;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .navcontainer {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logoname {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+      .navlinks {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        align-items: center;
+      }
+      .navlinks a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .navlinks a:hover {
+        color: rgba(10, 25, 41, 1);
+      }
+      .contactbtn {
+        background: rgba(10, 25, 41, 1);
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        border: none;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        color: rgba(10, 25, 41, 1);
+      }
+      .header h1 {
+        font-size: 38px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .category {
+        margin-bottom: 50px;
+      }
+      .categorytitle {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(10, 25, 41, 0.4);
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(10, 25, 41, 0.1);
+      }
+      .goalitem {
+        padding: 18px 0;
+        border-bottom: 1px solid rgba(10, 25, 41, 0.07);
+      }
+      .goalitem:last-child {
+        border-bottom: none;
+      }
+      .goaltitle {
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(10, 25, 41, 1);
+        margin-bottom: 3px;
+      }
+      .goaldesc {
+        font-size: 14px;
+        color: rgb(10, 25, 41);
+      }
+      .gototop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background: rgba(10, 25, 41, 0.9);
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+      }
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 36px;
+        }
+        .navlinks {
+          display: none;
+        }
+        .navcontainer {
+          padding: 16px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navcontainer">
+        <div class="logoname">Gentle Progress</div>
+        <div style="display: flex; gap: 40px; align-items: center">
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#post-1">Blogs</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="photodump.html">Photo Gallery</a></li>
+            <li><a href="mediasection.html">Media Section</a></li>
+            <li><a href="imagemap.html">Dream Places</a></li>
+            <li><a href="bucketlist.html">Bucket List</a></li>
+          </ul>
+          <a href="index.html#contact"
+            ><button class="contactbtn">Reach</button></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="header"><h1>Pledge To Self</h1></div>
+
+      <div class="category">
+        <div class="categorytitle">Travel & Exploration</div>
+        <div class="goalitem">
+          <div class="goaltitle">Visit all 7 Continents</div>
+          <div class="goaldesc">
+            Stand on every continent before my time is up.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">See the Northern Lights</div>
+          <div class="goaldesc">
+            Watch the sky come alive in Iceland or Norway.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Watch the sunrise at Machu Picchu</div>
+          <div class="goaldesc">
+            See the mist roll off the ancient city at first light.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Road trip along Route 66</div>
+          <div class="goaldesc">
+            Absolutely floor the gas while blasting Ama Louise on the radio.
+          </div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="categorytitle">Career & Learning</div>
+        <div class="goalitem">
+          <div class="goaltitle">Publish my very own website</div>
+          <div class="goaldesc">
+            Just to test my skills and how much i have grown.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Speak on a Stage</div>
+          <div class="goaldesc">
+            Share an idea in front of a crowd that actually moves them.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Learn a New Language</div>
+          <div class="goaldesc">
+            Hold a real conversation in another language with a native speaker.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Build Something From Scratch</div>
+          <div class="goaldesc">
+            Start a business, product, or project with just an idea and make it
+            real.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Master a Skill That Scares Me</div>
+          <div class="goaldesc">
+            Take on something I thought I could never do and actually get good
+            at it.
+          </div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="categorytitle">Health & Fitness</div>
+        <div class="goalitem">
+          <div class="goaltitle">Run a Full Marathon</div>
+          <div class="goaldesc">
+            42 km of pure grit cross the finish line with everything left on the
+            road.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Build a Daily Mindfulness Practice</div>
+          <div class="goaldesc">
+            30 straight days of showing up for myself with discipline and
+            intention.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Hike a Famous Trail</div>
+          <div class="goaldesc">Appalachian Trail.</div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Learn to Scuba Dive</div>
+          <div class="goaldesc">
+            Get certified and explore a world most people never get to see.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Train a Martial Art</div>
+          <div class="goaldesc">
+            Pick one discipline and commit until I actually know what I'm doing.
+          </div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="categorytitle">Family & Relationships</div>
+        <div class="goalitem">
+          <div class="goaltitle">Write Letters to People Who Shaped Me</div>
+          <div class="goaldesc">
+            Handwritten, honest, and overdue. They deserve to know.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Plan a Family Trip All of Us</div>
+          <div class="goaldesc">
+            Everyone in one place making memories that get told at future
+            tables.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Throw a Surprise Party for Someone I Love</div>
+          <div class="goaldesc">
+            Plan every detail and see the look on their face when they walk in.
+          </div>
+        </div>
+        <div class="goalitem">
+          <div class="goaltitle">Mentor Someone Younger Than Me</div>
+          <div class="goaldesc">
+            Be the person someone else needed at my age.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#top" class="gototop">↑</a>
+  </body>
+</html>
