@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
-  <head target="saiphoto">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Dump - Gentle Progress</title>
+    <title>Photo Gallery - Gentle Progress</title>
     <link rel="icon" type="image/png" href="images/logoalex.png" />
     <style>
       * {
@@ -11,14 +11,12 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: sans-serif;
         background: #ffffff;
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       nav {
         position: fixed;
         top: 0;
@@ -28,11 +26,9 @@
         border-bottom: 1px solid #e5e7eb;
         z-index: 1000;
       }
-
       html {
         scroll-behavior: smooth;
       }
-
       .navcontainer {
         max-width: 1400px;
         margin: 0 auto;
@@ -41,39 +37,33 @@
         justify-content: space-between;
         align-items: center;
       }
-
       .logoname {
         display: flex;
         font-size: 20px;
         font-weight: 600;
         color: #1a1a1a;
       }
-
       .navmenu {
         display: flex;
         gap: 40px;
       }
-
       .navlinks {
         display: flex;
         gap: 40px;
         list-style: none;
         align-items: center;
       }
-
       .navlinks a {
         color: #1a1a1a;
         text-decoration: none;
         font-size: 15px;
         font-weight: 500;
       }
-
       .navlinks a:hover {
         color: rgba(10, 25, 41, 1);
       }
-
       .contactbtn {
-        background: #0a1929;
+        background: rgba(10, 25, 41, 1);
         color: #ffffff;
         padding: 10px 24px;
         border-radius: 25px;
@@ -83,68 +73,49 @@
         border: none;
         cursor: pointer;
       }
-
       .photodump {
-        margin-top: 80px;
+        margin-top: 100px;
         padding: 64px 48px;
         max-width: 1400px;
         margin-left: auto;
         margin-right: auto;
       }
-
       .photosgrid {
         display: grid;
         grid-template-columns: repeat(2, 400px);
-        gap: 150px 100px;
+        gap: 100px 80px;
         justify-content: center;
       }
-
       .photocard {
         background: #ffffff;
         border-radius: 15px;
         overflow: hidden;
-        cursor: pointer;
         transition: transform 0.3s ease;
       }
-
       .photoimage {
         width: 100%;
         height: 280px;
         background: #f3f4f6;
-        position: relative;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-
       .photoimage img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
-
       .photocontent {
         padding: 24px;
       }
-
       .phototitle {
         font-size: 20px;
         font-weight: 500;
         color: #1a1a1a;
-        margin-bottom: 12px;
-        line-height: 1.4;
+        text-transform: capitalize;
       }
-
-      .photodate {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #0a1929;
-        font-size: 14px;
-      }
-
       .gototop {
         position: fixed;
         bottom: 40px;
@@ -164,21 +135,14 @@
         transition: all 0.3s ease;
         z-index: 999;
       }
-
       @media (max-width: 768px) {
         .navcontainer {
           padding: 16px 24px;
         }
-
         .navlinks {
           gap: 20px;
           font-size: 14px;
         }
-
-        .photodump {
-          padding: 32px 24px;
-        }
-
         .photosgrid {
           grid-template-columns: 1fr;
         }
@@ -187,7 +151,6 @@
   </head>
   <body>
     <div id="top"></div>
-
     <nav>
       <div class="navcontainer">
         <div class="logoname">
@@ -213,241 +176,250 @@
     <section class="photodump">
       <div class="photosgrid">
         <article class="photocard">
-          <a href="images/listofartist/artist1.JPG" target="saiWin"
+          <a href="images/imagesforbali/baliposter.JPG" target="saiWin"
             ><div class="photoimage">
               <img
-                src="images/listofartist/artist1.JPG"
-                alt="Photo 1"
-                title="Kendrick"
+                src="images/imagesforbali/baliposter.JPG"
+                alt="Bali Poster"
+                title="Bali Poster"
               /></div
           ></a>
-
           <div class="photocontent">
-            <h3 class="phototitle">Kendrick Lamar</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist2.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist2.JPG"
-                alt="Photo 2"
-                title="Aubrey Drake Graham"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Drake</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist3.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist3.JPG"
-                alt="Photo 3"
-                title="Gunna"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Gunna</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist4.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist4.JPG"
-                alt="Photo 4"
-                title="Max"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">plaqueboymax</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist5.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist5.JPG"
-                alt="Photo 5"
-                title="Keef"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Chief Keef</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist6.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist6.JPG"
-                alt="Photo 6"
-                title="Brent Faiyaz"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Brent Faiyaz</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist7.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist7.JPG"
-                alt="Photo 6"
-                title="Pen Griffey"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Bryson Tiller</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist8.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist8.JPG"
-                alt="Photo 6"
-                title="Schoolboy Q"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Schoolboy Q</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/astist9.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/astist9.JPG"
-                alt="Photo 6"
-                title="Tory"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Tory Lanez</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist10.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist10.JPG"
-                alt="Photo 6"
-                title="Future"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Future</h3>
-            <div class="photodate"></div>
-          </div>
-        </article>
-
-        <article class="photocard">
-          <a href="images/listofartist/artist11.JPG" target="saiWin"
-            ><div class="photoimage">
-              <img
-                src="images/listofartist/artist11.JPG"
-                alt="Photo 6"
-                title="Summer"
-              /></div
-          ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Summer Walker</h3>
-            <div class="photodate"></div>
+            <h3 class="phototitle">Bali Poster</h3>
           </div>
         </article>
         <article class="photocard">
-          <a href="images/listofartist/artist12.JPG" target="saiWin"
+          <a href="images/imagesforbali/nusa penida.JPG" target="saiWin"
             ><div class="photoimage">
               <img
-                src="images/listofartist/artist12.JPG"
-                alt="Photo 6"
-                title="Momma Jhene"
+                src="images/imagesforbali/nusa penida.JPG"
+                alt="Nusa Penida"
+                title="Nusa Penida"
               /></div
           ></a>
-
           <div class="photocontent">
-            <h3 class="phototitle">Jhene Aiko</h3>
-            <div class="photodate"></div>
+            <h3 class="phototitle">Nusa Penida</h3>
           </div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforbali/sunset.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforbali/sunset.JPG"
+                alt="Sunset"
+                title="Sunset"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Sunset</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforbali/tanah lot.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforbali/tanah lot.JPG"
+                alt="Tanah Lot"
+                title="Tanah Lot"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Tanah Lot</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforbali/terraces.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforbali/terraces.JPG"
+                alt="Terraces"
+                title="Terraces"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Terraces</h3></div>
         </article>
 
         <article class="photocard">
-          <a href="images/listofartist/artist17.JPG" target="saiWin"
+          <a href="images/imagesforcyprus/cyprus.JPG" target="saiWin"
             ><div class="photoimage">
               <img
-                src="images/listofartist/artist17.JPG"
-                alt="Photo 6"
-                title="Ama Louise"
+                src="images/imagesforcyprus/cyprus.JPG"
+                alt="Cyprus"
+                title="Cyprus"
               /></div
           ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Ama Louise</h3>
-            <div class="photodate"></div>
-          </div>
+          <div class="photocontent"><h3 class="phototitle">Cyprus</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforcyprus/kykkos.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforcyprus/kykkos.JPG"
+                alt="Kykkos"
+                title="Kykkos"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Kykkos</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforcyprus/nissi.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforcyprus/nissi.JPG"
+                alt="Nissi"
+                title="Nissi"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Nissi</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforcyprus/petra.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforcyprus/petra.JPG"
+                alt="Petra"
+                title="Petra"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Petra</h3></div>
         </article>
 
         <article class="photocard">
-          <a href="images/listofartist/artist16.JPG" target="saiWin"
+          <a href="images/imagesformadagascar/baobab.JPG" target="saiWin"
             ><div class="photoimage">
               <img
-                src="images/listofartist/artist16.JPG"
-                alt="Photo 6"
-                title="Chase"
+                src="images/imagesformadagascar/baobab.JPG"
+                alt="Baobab"
+                title="Baobab"
               /></div
           ></a>
-
-          <div class="photocontent">
-            <h3 class="phototitle">Chase Shakur</h3>
-            <div class="photodate"></div>
-          </div>
+          <div class="photocontent"><h3 class="phototitle">Baobab</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesformadagascar/madagascar.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesformadagascar/madagascar.JPG"
+                alt="Madagascar"
+                title="Madagascar"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Madagascar</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesformadagascar/nosy.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesformadagascar/nosy.JPG"
+                alt="Nosy"
+                title="Nosy Be"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Nosy Be</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesformadagascar/tsingy.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesformadagascar/tsingy.JPG"
+                alt="Tsingy"
+                title="Tsingy"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Tsingy</h3></div>
         </article>
 
         <article class="photocard">
-          <a href="images/listofartist/artist15.JPG" target="saiWin"
+          <a href="images/imagesformalta/bluelagoon.JPG" target="saiWin"
             ><div class="photoimage">
               <img
-                src="images/listofartist/artist15.JPG"
-                alt="Photo 6"
-                title="Maraiah"
+                src="images/imagesformalta/bluelagoon.JPG"
+                alt="Blue Lagoon"
+                title="Blue Lagoon"
               /></div
           ></a>
-
           <div class="photocontent">
-            <h3 class="phototitle">Mariah The Scientist</h3>
-            <div class="photodate"></div>
+            <h3 class="phototitle">Blue Lagoon</h3>
+          </div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesformalta/maltaposter.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesformalta/maltaposter.JPG"
+                alt="Malta Poster"
+                title="Malta Poster"
+              /></div
+          ></a>
+          <div class="photocontent">
+            <h3 class="phototitle">Malta Poster</h3>
+          </div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesformalta/mdina.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesformalta/mdina.JPG"
+                alt="Mdina"
+                title="Mdina"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Mdina</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesformalta/valletta.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesformalta/valletta.JPG"
+                alt="Valletta"
+                title="Valletta"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Valletta</h3></div>
+        </article>
+
+        <article class="photocard">
+          <a href="images/imagesforsantorini/caldera.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforsantorini/caldera.JPG"
+                alt="Caldera"
+                title="Caldera"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Caldera</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforsantorini/oia.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforsantorini/oia.JPG"
+                alt="Oia"
+                title="Oia"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Oia</h3></div>
+        </article>
+        <article class="photocard">
+          <a href="images/imagesforsantorini/redbeach.JPG" target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforsantorini/redbeach.JPG"
+                alt="Red Beach"
+                title="Red Beach"
+              /></div
+          ></a>
+          <div class="photocontent"><h3 class="phototitle">Red Beach</h3></div>
+        </article>
+        <article class="photocard">
+          <a
+            href="images/imagesforsantorini/santoriniposter.JPG"
+            target="saiWin"
+            ><div class="photoimage">
+              <img
+                src="images/imagesforsantorini/santoriniposter.JPG"
+                alt="Santorini Poster"
+                title="Santorini Poster"
+              /></div
+          ></a>
+          <div class="photocontent">
+            <h3 class="phototitle">Santorini Poster</h3>
           </div>
         </article>
       </div>
